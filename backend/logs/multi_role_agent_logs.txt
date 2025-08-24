@@ -1,0 +1,642 @@
+
+--- Interaction at 2025-08-23 11:01:10 ---
+User Query: Query: what are the utensils needed in brief for Lime Panna Cotta and Banana Split | Rewritten: utensils needed for Lime Panna Cotta and Banana Split | Dishes: ['Lime Panna Cotta', 'Banana Split'] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " To make the Signature Baked Cheesecake with Gamonéu Curd, you'll ...
+  2. {'role': 'user', 'content': 'what are the utensils needed in brief for Lime Panna Cotta and Banana S...
+  3. {'role': 'assistant', 'content': ' For the Lime Panna Cotta, you will need the following utensils:\n...
+RAG Retrieved Data:
+  Total chunks retrieved: 6
+  Chunk 1: Utensils needed
+
+Banana split boat or long, shallow dish ● Ice cream scoop ● Knife
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 2: Preparation instructions
+
+Prepare the gelatine: If using gelatine sheets, place them in a small bowl of cold water to soften for 5-10 minutes. If using powdered gelatine, sprinkle it over 3 tablespoon...
+    📁 Source: file_024.md
+    🍽️  Dish: Lime Panna Cotta
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 3: Preparation instructions
+
+Peel the banana and slice it in half lengthwise from end to end.
+
+Place the two banana halves against the sides of the banana split boat or dish.
+
+Place the three scoops of i...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 4: Utensils needed
+
+Small bowl ● Medium saucepan ● Whisk ● Fine-mesh sieve ● 4-6 ramekins or serving glasses (approx. 150ml capacity)
+    📁 Source: file_024.md
+    🍽️  Dish: Lime Panna Cotta
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 5: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 6: Ingredients
+
+500 millilitres double cream (heavy cream) ● 100 grams caster sugar ● Zest of 2 large limes ● 60 millilitres fresh lime juice (from approx. 2-3 limes) ● 3 sheets of gelatine (or 1.5 teasp...
+    📁 Source: file_024.md
+    🍽️  Dish: Lime Panna Cotta
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the utensils needed in brief for Lime Panna Cotta and Banana Split
+  rewritten_query: utensils needed for Lime Panna Cotta and Banana Split
+  extracted_dish_names: ['Lime Panna Cotta', 'Banana Split']
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 6
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 11:01:49 ---
+User Query: Query: what are the serving for Forge-Flashed Caramelized Gears | Rewritten: Forge-Flashed Caramelized Gears recipe | Dishes: ['Forge-Flashed Caramelized Gears'] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'assistant', 'content': ' For the Lime Panna Cotta, you will need the following utensils:\n...
+  2. {'role': 'user', 'content': 'what are the serving for Forge-Flashed Caramelized Gears'}...
+  3. {'role': 'assistant', 'content': ' The Forge-Flashed Caramelized Gears recipe you\'re asking for app...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Component preparation: Secure each Spur Gear in the bench vise. Thoroughly clean all teeth and surfaces with a wire brush and degreaser to ensure proper coating adhesion.
+
+Pr...
+    📁 Source: file_031.md
+    🍽️  Dish: Forge-Flashed Caramelized Gears
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+12 assorted high-carbon steel "Spur Gears", thoroughly degreased ● 200 grams of granulated "Welding Flux" ● 150 millilitres of high-viscosity "Differential Oil" ● 50 millilitres of "WD-40...
+    📁 Source: file_031.md
+    🍽️  Dish: Forge-Flashed Caramelized Gears
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Utensils needed
+
+Bench vise ● Propane torch with a fine-point tip ● Degreasing tank ● Heavy-duty, heat-resistant tongs ● A flat, clean sheet of galvanized steel (for cooling) ● Small crucible for heat...
+    📁 Source: file_031.md
+    🍽️  Dish: Forge-Flashed Caramelized Gears
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+
+Query Rewriter Analysis:
+  original_query: what are the serving for Forge-Flashed Caramelized Gears
+  rewritten_query: Forge-Flashed Caramelized Gears recipe
+  extracted_dish_names: ['Forge-Flashed Caramelized Gears']
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 3
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 11:02:52 ---
+User Query: Query: what are the utensils needed for all recipes we talked about | Rewritten: ingredients, utensils_needed, preparation_instructions for Signature Baked Cheesecake with Gamonéu Curd, Lime Panna Cotta, Banana Split, Forge-Flashed Caramelized Gears | Dishes: ['Signature Baked Cheesecake with Gamonéu Curd', 'Lime Panna Cotta', 'Banana Split', 'Forge-Flashed Caramelized Gears'] | Sections: ['ingredients', 'utensils_needed', 'preparation_instructions'] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'assistant', 'content': ' The Forge-Flashed Caramelized Gears recipe you\'re asking for app...
+  2. {'role': 'user', 'content': 'what are the utensils needed for all recipes we talked about'}...
+  3. {'role': 'assistant', 'content': " Ingredients for Signature Baked Cheesecake with Gamonéu Curd:\n- ...
+RAG Retrieved Data:
+  Total chunks retrieved: 12
+  Chunk 1: Preparation instructions 
+1. Prepare the base and tin: Preheat your oven to 180°C (160°C Fan). Grease the 
+base and sides of the springform tin and line the base with baking paper. 
+2. Crush the diges...
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: Signature Baked Cheesecake with Gamonéu Curd
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients 
+For the biscuit base: 
+● 250 grams digestive biscuits 
+● 125 grams unsalted butter, melted 
+● A pinch of salt 
+For the Gamonéu curd swirl: 
+● 50 grams artisan Gamonéu del Puerto cheese, r...
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: Signature Baked Cheesecake with Gamonéu Curd
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Utensils needed 
+● 23-centimetre springform cake tin 
+● Food processor or rolling pin 
+● Electric stand mixer or handheld electric whisk 
+● Spatula 
+● Several mixing bowls 
+● Small saucepan 
+● Sieve 
+...
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: Signature Baked Cheesecake with Gamonéu Curd
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 4: Preparation instructions
+
+Prepare the gelatine: If using gelatine sheets, place them in a small bowl of cold water to soften for 5-10 minutes. If using powdered gelatine, sprinkle it over 3 tablespoon...
+    📁 Source: file_024.md
+    🍽️  Dish: Lime Panna Cotta
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 5: Preparation instructions
+
+Component preparation: Secure each Spur Gear in the bench vise. Thoroughly clean all teeth and surfaces with a wire brush and degreaser to ensure proper coating adhesion.
+
+Pr...
+    📁 Source: file_031.md
+    🍽️  Dish: Forge-Flashed Caramelized Gears
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 6: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 7: Preparation instructions
+
+Peel the banana and slice it in half lengthwise from end to end.
+
+Place the two banana halves against the sides of the banana split boat or dish.
+
+Place the three scoops of i...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 8: Utensils needed
+
+Banana split boat or long, shallow dish ● Ice cream scoop ● Knife
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 9: Ingredients
+
+500 millilitres double cream (heavy cream) ● 100 grams caster sugar ● Zest of 2 large limes ● 60 millilitres fresh lime juice (from approx. 2-3 limes) ● 3 sheets of gelatine (or 1.5 teasp...
+    📁 Source: file_024.md
+    🍽️  Dish: Lime Panna Cotta
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 10: Utensils needed
+
+Small bowl ● Medium saucepan ● Whisk ● Fine-mesh sieve ● 4-6 ramekins or serving glasses (approx. 150ml capacity)
+    📁 Source: file_024.md
+    🍽️  Dish: Lime Panna Cotta
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 11: Ingredients
+
+12 assorted high-carbon steel "Spur Gears", thoroughly degreased ● 200 grams of granulated "Welding Flux" ● 150 millilitres of high-viscosity "Differential Oil" ● 50 millilitres of "WD-40...
+    📁 Source: file_031.md
+    🍽️  Dish: Forge-Flashed Caramelized Gears
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 12: Utensils needed
+
+Bench vise ● Propane torch with a fine-point tip ● Degreasing tank ● Heavy-duty, heat-resistant tongs ● A flat, clean sheet of galvanized steel (for cooling) ● Small crucible for heat...
+    📁 Source: file_031.md
+    🍽️  Dish: Forge-Flashed Caramelized Gears
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+
+Query Rewriter Analysis:
+  original_query: what are the utensils needed for all recipes we talked about
+  rewritten_query: ingredients, utensils_needed, preparation_instructions for Signature Baked Cheesecake with Gamonéu Curd, Lime Panna Cotta, Banana Split, Forge-Flashed Caramelized Gears
+  extracted_dish_names: ['Signature Baked Cheesecake with Gamonéu Curd', 'Lime Panna Cotta', 'Banana Split', 'Forge-Flashed Caramelized Gears']
+  extracted_sections: ['ingredients', 'utensils_needed', 'preparation_instructions']
+  full_recipe_requested: No
+  documents_found: 12
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 11:16:27 ---
+User Query: Query: strawberry | Rewritten: full recipe for strawberry | Dishes: ['strawberry'] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'strawberry'}...
+  2. {'role': 'assistant', 'content': " To make a strawberry milkshake, you will need the following ingre...
+RAG Retrieved Data:
+  No chunks retrieved
+
+Query Rewriter Analysis:
+  original_query: strawberry
+  rewritten_query: full recipe for strawberry
+  extracted_dish_names: ['strawberry']
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 0
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 11:30:40 ---
+User Query: Query: strawberry | Rewritten: full recipe for strawberry | Dishes: ['strawberry'] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'strawberry'}...
+  2. {'role': 'assistant', 'content': " To make a strawberry milkshake, you will need the following ingre...
+RAG Retrieved Data:
+  No chunks retrieved
+
+Query Rewriter Analysis:
+  original_query: strawberry
+  rewritten_query: full recipe for strawberry
+  extracted_dish_names: ['strawberry']
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 0
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 11:45:39 ---
+User Query: Query: strawberry | Rewritten: recipe for strawberry | Dishes: ['strawberry'] | Sections: []
+Conversation Memory:
+  1. {'role': 'user', 'content': 'strawberry'}...
+  2. {'role': 'assistant', 'content': " This recipe is for a Strawberry Milkshake. Here's a step-by-step ...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+
+Query Rewriter Analysis:
+  original_query: strawberry
+  rewritten_query: recipe for strawberry
+  extracted_dish_names: ['strawberry']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 3
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 11:47:13 ---
+User Query: Query: strawberry milkshake | Rewritten: full recipe for strawberry milkshake | Dishes: ['strawberry milkshake'] | Sections: []
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " This recipe is for a Strawberry Milkshake. Here's a step-by-step ...
+  2. {'role': 'user', 'content': 'strawberry milkshake'}...
+  3. {'role': 'assistant', 'content': " To make a strawberry milkshake, you will need the following ingre...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 3: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: strawberry milkshake
+  rewritten_query: full recipe for strawberry milkshake
+  extracted_dish_names: ['strawberry milkshake']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 3
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 11:47:53 ---
+User Query: Query: Creamy Rice Pudding | Rewritten: full recipe for Creamy Rice Pudding | Dishes: ['creamy rice pudding'] | Sections: []
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " To make a strawberry milkshake, you will need the following ingre...
+  2. {'role': 'user', 'content': 'Creamy Rice Pudding'}...
+  3. {'role': 'assistant', 'content': " To make Creamy Rice Pudding, you will need the following ingredie...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions 
+1. Place the rice in a sieve and rinse it under cold running water until the water runs 
+clear. 
+2. In the heavy-bottomed saucepan, combine the rinsed rice, whole milk, caste...
+    📁 Source: file_011.pdf
+    🍽️  Dish: Creamy Rice Pudding
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Preparation instructions 
+1. Place the rice in a sieve and rinse it under cold running water until the water runs 
+clear. 
+2. In the heavy-bottomed saucepan, combine the rinsed rice, whole milk, caste...
+    📁 Source: file_011.pdf
+    🍽️  Dish: Creamy Rice Pudding
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 3: Ingredients 
+● 100 grams short-grain rice (such as Arborio or Calasparra) 
+● 1 litre whole milk 
+● 75 grams caster sugar 
+● 1 strip of lemon peel 
+● 1 cinnamon stick 
+● A pinch of salt 
+● Optional: gr...
+    📁 Source: file_011.pdf
+    🍽️  Dish: Creamy Rice Pudding
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: Creamy Rice Pudding
+  rewritten_query: full recipe for Creamy Rice Pudding
+  extracted_dish_names: ['creamy rice pudding']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 3
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 11:50:56 ---
+User Query: Query: Creamy Rice Pudding | Rewritten: recipe for Creamy Rice Pudding | Dishes: ['creamy rice pudding'] | Sections: []
+Conversation Memory:
+  1. {'role': 'user', 'content': 'Creamy Rice Pudding'}...
+  2. {'role': 'assistant', 'content': " The recipe for Creamy Rice Pudding is as follows:\n\nIngredients:...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions 
+1. Place the rice in a sieve and rinse it under cold running water until the water runs 
+clear. 
+2. In the heavy-bottomed saucepan, combine the rinsed rice, whole milk, caste...
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients 
+● 100 grams short-grain rice (such as Arborio or Calasparra) 
+● 1 litre whole milk 
+● 75 grams caster sugar 
+● 1 strip of lemon peel 
+● 1 cinnamon stick 
+● A pinch of salt 
+● Optional: gr...
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Nutritional information (per serving) 
+● Calories: Approximately 350-400 kcal 
+● Fat: 10g 
+● Carbohydrates: 55g 
+● Protein: 10g 
+● Sugar: 25g 
+(Note: Nutritional information is an estimate and can var...
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+
+Query Rewriter Analysis:
+  original_query: Creamy Rice Pudding
+  rewritten_query: recipe for Creamy Rice Pudding
+  extracted_dish_names: ['creamy rice pudding']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 3
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 11:56:11 ---
+User Query: Query: Creamy Rice Pudding | Rewritten: recipe for Creamy Rice Pudding | Dishes: ['creamy rice pudding'] | Sections: []
+Conversation Memory:
+  1. {'role': 'user', 'content': 'Creamy Rice Pudding'}...
+  2. {'role': 'assistant', 'content': ' To prepare the Creamy Rice Pudding, follow these steps:\n\nIngred...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: Preparation instructions 
+1. Place the rice in a sieve and rinse it under cold running water until the water runs 
+clear. 
+2. In the heavy-bottomed saucepan, combine the rinsed rice, whole milk, caste...
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients 
+● 100 grams short-grain rice (such as Arborio or Calasparra) 
+● 1 litre whole milk 
+● 75 grams caster sugar 
+● 1 strip of lemon peel 
+● 1 cinnamon stick 
+● A pinch of salt 
+● Optional: gr...
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Nutritional information (per serving) 
+● Calories: Approximately 350-400 kcal 
+● Fat: 10g 
+● Carbohydrates: 55g 
+● Protein: 10g 
+● Sugar: 25g 
+(Note: Nutritional information is an estimate and can var...
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+  Chunk 4: Utensils needed 
+● Heavy-bottomed saucepan 
+● Wooden spoon or spatula 
+● Serving bowls
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 5: Number of servings 
+● 4 servings
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: number_of_servings
+    🔢 Chunk: 5/7
+    📝 Section: 📝 Number Of Servings
+  Chunk 6: Allergen information 
+● Contains: Milk.
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: allergen_information
+    🔢 Chunk: 7/7
+    📝 Section: 📝 Allergen Information
+  Chunk 7: Preparation time 
+● Active time: 45 minutes 
+● Inactive time: 5 minutes
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+
+Query Rewriter Analysis:
+  original_query: Creamy Rice Pudding
+  rewritten_query: recipe for Creamy Rice Pudding
+  extracted_dish_names: ['creamy rice pudding']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 7
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 11:56:41 ---
+User Query: Query: utils needed for Creamy Rice Pudding | Rewritten: utensils_needed for Creamy Rice Pudding | Dishes: ['creamy rice pudding'] | Sections: ['utensils_needed']
+Conversation Memory:
+  1. {'role': 'assistant', 'content': ' To prepare the Creamy Rice Pudding, follow these steps:\n\nIngred...
+  2. {'role': 'user', 'content': 'utils needed for Creamy Rice Pudding'}...
+  3. {'role': 'assistant', 'content': ' To prepare Creamy Rice Pudding, you will need the following utens...
+RAG Retrieved Data:
+  Total chunks retrieved: 1
+  Chunk 1: Utensils needed 
+● Heavy-bottomed saucepan 
+● Wooden spoon or spatula 
+● Serving bowls
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+
+Query Rewriter Analysis:
+  original_query: utils needed for Creamy Rice Pudding
+  rewritten_query: utensils_needed for Creamy Rice Pudding
+  extracted_dish_names: ['creamy rice pudding']
+  extracted_sections: ['utensils_needed']
+  full_recipe_requested: No
+  documents_found: 1
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 12:09:26 ---
+User Query: Query: what are the prep for white chocolate | Rewritten: preparation_instructions for white chocolate | Dishes: ['white chocolate'] | Sections: ['preparation_instructions']
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the prep for white chocolate'}...
+  2. {'role': 'assistant', 'content': " To prepare the white chocolate for this recipe, you'll first need...
+RAG Retrieved Data:
+  Total chunks retrieved: 1
+  Chunk 1: Ingredients
+●	120 grams good quality white chocolate, chopped
+●	100 grams unsalted butter, cubed, plus extra for greasing
+●	2 large eggs
+●	2 large egg yolks
+●	60 grams caster sugar
+●	50 grams plain fl...
+    📁 Source: file_015.txt
+    🍽️  Dish: white chocolate coulant
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the prep for white chocolate
+  rewritten_query: preparation_instructions for white chocolate
+  extracted_dish_names: ['white chocolate']
+  extracted_sections: ['preparation_instructions']
+  full_recipe_requested: No
+  documents_found: 1
+  filter_applied: Yes
+--------------------------------------------------

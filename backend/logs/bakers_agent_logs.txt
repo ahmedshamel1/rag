@@ -1,0 +1,1560 @@
+
+--- Interaction at 2025-08-22 12:09:43 ---
+User Query: Original: hi | Rewritten: hi
+Conversation Memory:
+  1. {'role': 'user', 'content': 'hi'}...
+  2. {'role': 'assistant', 'content': "Hello! It's great to hear from you. I'm excited to help with any b...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Utensils needed
+
+Small saucepan ● Fine-mesh sieve ● Heatproof bowl ● Whisk (electric or manual) ● Spatula ● Serving glasses or bowls (4)
+    📁 Source: file_023.md
+    🍽️  Dish: Raspberry White Chocolate Mousse
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 2: Preparation time 
+● Active time: 30 minutes 
+● Inactive time (rising and proofing): 2 hours
+    📁 Source: file_012.pdf
+    🍽️  Dish: Classic Cinnamon Rolls
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+  Chunk 3: Preparation time
+
+Active time: 45 minutes
+
+Inactive time (rising and proofing): 2 hours 30 minutes
+    📁 Source: file_003.docx
+    🍽️  Dish: Oreo Glazed Donuts with Strawberry Jam Filling
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+--------------------------------------------------
+
+--- Interaction at 2025-08-22 12:10:41 ---
+User Query: Original: what are the ingredients for the strawberry milkshake | Rewritten: what are the ingredients for the strawberry milkshake
+Conversation Memory:
+  1. {'role': 'assistant', 'content': "Hello! It's great to hear from you. I'm excited to help with any b...
+  2. {'role': 'user', 'content': 'what are the ingredients for the strawberry milkshake'}...
+  3. {'role': 'assistant', 'content': 'The star of the show is the Strawberry Milkshake! Let me break dow...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+--------------------------------------------------
+
+--- Interaction at 2025-08-22 12:11:47 ---
+User Query: Original: what are the utensils need for it | Rewritten: what are the utensils need for it
+Conversation Memory:
+  1. {'role': 'assistant', 'content': 'The star of the show is the Strawberry Milkshake! Let me break dow...
+  2. {'role': 'user', 'content': 'what are the utensils need for it'}...
+  3. {'role': 'assistant', 'content': 'It looks like we have multiple lists of utensils from different re...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Utensils needed 
+● Large bowl 
+● Fine-mesh sieve or colander 
+● Steamer (bamboo or metal) with cheesecloth or muslin 
+● Small saucepan 
+● Medium saucepan 
+● Sharp knife
+    📁 Source: file_021.pdf
+    🍽️  Dish: Mango Sticky Rice (Khao Niao Mamuang)
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 2: Utensils needed 
+● Food processor or large mixing bowl 
+● Rolling pin 
+● 23-centimetre loose-bottomed tart tin 
+● Baking paper 
+● Baking beans or uncooked rice 
+● Zester or fine grater 
+● Juicer 
+● Me...
+    📁 Source: file_002.pdf
+    🍽️  Dish: Lemon Pie
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 3: Utensils needed 
+● Heavy-bottomed saucepan 
+● Wooden spoon or spatula 
+● Serving bowls
+    📁 Source: file_011.pdf
+    🍽️  Dish: Creamy Rice Pudding
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+--------------------------------------------------
+
+--- Interaction at 2025-08-22 12:22:14 ---
+User Query: Original: what are the ingredients for the strawberry milkshake | Rewritten: I can't provide information on this topic. Would you like to discuss recipes or baking techniques?
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the ingredients for the strawberry milkshake'}...
+  2. {'role': 'assistant', 'content': "I'm thrilled to help with any baking-related questions or topics y...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+1. Prepare the oven and tins: Preheat your oven to 180°C (160°C Fan). Grease 
+the two cake tins and line the bases with baking paper. 
+2. Combine dry ingredients: In a medium ...
+    📁 Source: file_010.pdf
+    🍽️  Dish: Red Velvet Cake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Allergen information 
+● Contains: Milk, Eggs.
+Crème Brûlée 
+Ingredients 
+● 500 millilitres double cream (heavy cream, at least 40% fat) 
+● 1 vanilla pod or 1 teaspoon high-quality vanilla extract 
+● 5...
+    📁 Source: file_022.pdf
+    🍽️  Dish: Crème Brûlée
+    📝 Type: allergen_information
+    🔢 Chunk: 7/7
+    📝 Section: 📝 Allergen Information
+  Chunk 3: Utensils needed 
+● Large frying pan 
+● Spatula 
+● Mixing bowls 
+● Electric mixer or stand mixer 
+● Sieve 
+● Ice cream scoop (optional, for uniform cookies) 
+● Baking sheets 
+● Baking paper
+    📁 Source: file_026.pdf
+    🍽️  Dish: Viral Dubai Chocolate Cookies
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+--------------------------------------------------
+
+--- Interaction at 2025-08-22 12:29:20 ---
+User Query: Original: what are the ingredients need for strawberry milkshake | Rewritten: Strawberry Milkshake
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the ingredients need for strawberry milkshake'}...
+  2. {'role': 'assistant', 'content': "I just love helping with desserts like this! A strawberry milkshak...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients
+
+250 millilitres whole milk
+
+500 millilitres double cream (heavy cream)
+
+150 grams caster sugar
+
+4 large egg yolks
+
+1 vanilla pod, split lengthwise, or 2 teaspoons of vanilla extract
+    📁 Source: file_001.docx
+    🍽️  Dish: Classic Vanilla Ice Cream
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 06:27:03 ---
+User Query: Original: hi | Rewritten: hi
+Conversation Memory:
+  1. {'role': 'user', 'content': 'hi'}...
+  2. {'role': 'assistant', 'content': "Welcome to our baking adventure! I'm thrilled to be your partner i...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Utensils needed
+
+Small saucepan ● Fine-mesh sieve ● Heatproof bowl ● Whisk (electric or manual) ● Spatula ● Serving glasses or bowls (4)
+    📁 Source: file_023.md
+    🍽️  Dish: Raspberry White Chocolate Mousse
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 2: Preparation time 
+● Active time: 30 minutes 
+● Inactive time (rising and proofing): 2 hours
+    📁 Source: file_012.pdf
+    🍽️  Dish: Classic Cinnamon Rolls
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+  Chunk 3: Preparation time
+
+Active time: 45 minutes
+
+Inactive time (rising and proofing): 2 hours 30 minutes
+    📁 Source: file_003.docx
+    🍽️  Dish: Oreo Glazed Donuts with Strawberry Jam Filling
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 06:28:26 ---
+User Query: Original: what are the ingredients for the strawberry milkshake | Rewritten: Strawberry Milkshake
+What are the main ingredients needed for this sweet treat?
+Conversation Memory:
+  1. {'role': 'assistant', 'content': "Welcome to our baking adventure! I'm thrilled to be your partner i...
+  2. {'role': 'user', 'content': 'what are the ingredients for the strawberry milkshake'}...
+  3. {'role': 'assistant', 'content': "For a classic strawberry milkshake, you'll need:\n\n* **250 grams ...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 07:01:44 ---
+User Query: Original: what are the the ingredients for the strawberry milkshake | Rewritten: What are the ingredients for a strawberry milkshake?
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the the ingredients for the strawberry milkshake'}...
+  2. {'role': 'assistant', 'content': " The ingredients for a strawberry milkshake are 250 grams of fresh...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 07:02:19 ---
+User Query: Original: what are the utensils needed | Rewritten: What are the utensils needed for making a strawberry milkshake?
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " The ingredients for a strawberry milkshake are 250 grams of fresh...
+  2. {'role': 'user', 'content': 'what are the utensils needed'}...
+  3. {'role': 'assistant', 'content': " To make a strawberry milkshake, you will need the following utens...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Utensils needed 
+● Medium saucepan 
+● Whisk 
+● Mixing bowl 
+● Fine-mesh sieve 
+● 4-6 shallow, round ramekins (approx. 150ml capacity) 
+● Deep roasting tin or baking dish 
+● Kitchen blow torch
+    📁 Source: file_022.pdf
+    🍽️  Dish: Crème Brûlée
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 3: Utensils needed 
+● Food processor or large mixing bowl 
+● Rolling pin 
+● 23-centimetre loose-bottomed tart tin 
+● Baking paper 
+● Baking beans or uncooked rice 
+● Zester or fine grater 
+● Juicer 
+● Me...
+    📁 Source: file_002.pdf
+    🍽️  Dish: Lemon Pie
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 07:36:46 ---
+User Query: Original: hi | Rewritten: hi
+Conversation Memory:
+  1. {'role': 'user', 'content': 'hi'}...
+  2. {'role': 'assistant', 'content': " Hello there! I'm thrilled to help you with your baking needs. Tod...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Utensils needed
+
+Small saucepan ● Fine-mesh sieve ● Heatproof bowl ● Whisk (electric or manual) ● Spatula ● Serving glasses or bowls (4)
+    📁 Source: file_023.md
+    🍽️  Dish: Raspberry White Chocolate Mousse
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 2: Preparation time 
+● Active time: 30 minutes 
+● Inactive time (rising and proofing): 2 hours
+    📁 Source: file_012.pdf
+    🍽️  Dish: Classic Cinnamon Rolls
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+  Chunk 3: Preparation time
+
+Active time: 45 minutes
+
+Inactive time (rising and proofing): 2 hours 30 minutes
+    📁 Source: file_003.docx
+    🍽️  Dish: Oreo Glazed Donuts with Strawberry Jam Filling
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 07:37:57 ---
+User Query: Original: what are the ingredients for the strawberry milkshake | Rewritten: what are the ingredients for the strawberry milkshake
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " Hello there! I'm thrilled to help you with your baking needs. Tod...
+  2. {'role': 'user', 'content': 'what are the ingredients for the strawberry milkshake'}...
+  3. {'role': 'assistant', 'content': " The ingredients for the strawberry milkshake are 250 grams of fre...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 07:39:14 ---
+User Query: Original: what are the utensils needed | Rewritten: what are the utensils needed
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " The ingredients for the strawberry milkshake are 250 grams of fre...
+  2. {'role': 'user', 'content': 'what are the utensils needed'}...
+  3. {'role': 'assistant', 'content': " The utensils needed for the provided recipes include:\n\n1. Large...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Utensils needed 
+● Large bowl 
+● Fine-mesh sieve or colander 
+● Steamer (bamboo or metal) with cheesecloth or muslin 
+● Small saucepan 
+● Medium saucepan 
+● Sharp knife
+    📁 Source: file_021.pdf
+    🍽️  Dish: Mango Sticky Rice (Khao Niao Mamuang)
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 2: Utensils needed 
+● Food processor or large mixing bowl 
+● Rolling pin 
+● 23-centimetre loose-bottomed tart tin 
+● Baking paper 
+● Baking beans or uncooked rice 
+● Zester or fine grater 
+● Juicer 
+● Me...
+    📁 Source: file_002.pdf
+    🍽️  Dish: Lemon Pie
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 3: Utensils needed 
+● Heavy-bottomed saucepan 
+● Wooden spoon or spatula 
+● Serving bowls
+    📁 Source: file_011.pdf
+    🍽️  Dish: Creamy Rice Pudding
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 07:48:46 ---
+User Query: Query: hi | Rewritten: hi | Dishes: [] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'hi'}...
+  2. {'role': 'assistant', 'content': " Hello! I'm thrilled to help you with your baking needs. Today, we...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Utensils needed
+
+Small saucepan ● Fine-mesh sieve ● Heatproof bowl ● Whisk (electric or manual) ● Spatula ● Serving glasses or bowls (4)
+    📁 Source: file_023.md
+    🍽️  Dish: Raspberry White Chocolate Mousse
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 2: Preparation time 
+● Active time: 30 minutes 
+● Inactive time (rising and proofing): 2 hours
+    📁 Source: file_012.pdf
+    🍽️  Dish: Classic Cinnamon Rolls
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+  Chunk 3: Preparation time
+
+Active time: 45 minutes
+
+Inactive time (rising and proofing): 2 hours 30 minutes
+    📁 Source: file_003.docx
+    🍽️  Dish: Oreo Glazed Donuts with Strawberry Jam Filling
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+
+Query Rewriter Analysis:
+  original_query: hi
+  rewritten_query: hi
+  extracted_dish_names: []
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 3
+  filter_applied: No
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 07:49:20 ---
+User Query: Query: what are the ingredients for the strawberry milkshake | Rewritten: what are the ingredients for the strawberry milkshake | Dishes: [] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " Hello! I'm thrilled to help you with your baking needs. Today, we...
+  2. {'role': 'user', 'content': 'what are the ingredients for the strawberry milkshake'}...
+  3. {'role': 'assistant', 'content': " The ingredients for the strawberry milkshake are:\n\n- 250 grams ...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the ingredients for the strawberry milkshake
+  rewritten_query: what are the ingredients for the strawberry milkshake
+  extracted_dish_names: []
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 3
+  filter_applied: No
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 07:59:14 ---
+User Query: Query: what are the ingredients for the milkshake  | Rewritten: what are the ingredients for the milkshake  | Dishes: [] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the ingredients for the milkshake '}...
+  2. {'role': 'assistant', 'content': ' The ingredients for the milkshake are:\n\n- 250 millilitres of wh...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 millilitres whole milk
+
+500 millilitres double cream (heavy cream)
+
+150 grams caster sugar
+
+4 large egg yolks
+
+1 vanilla pod, split lengthwise, or 2 teaspoons of vanilla extract
+    📁 Source: file_001.docx
+    🍽️  Dish: Classic Vanilla Ice Cream
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients 
+● 100 grams short-grain rice (such as Arborio or Calasparra) 
+● 1 litre whole milk 
+● 75 grams caster sugar 
+● 1 strip of lemon peel 
+● 1 cinnamon stick 
+● A pinch of salt 
+● Optional: gr...
+    📁 Source: file_011.pdf
+    🍽️  Dish: Creamy Rice Pudding
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the ingredients for the milkshake 
+  rewritten_query: what are the ingredients for the milkshake 
+  extracted_dish_names: []
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 3
+  filter_applied: No
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:05:48 ---
+User Query: Query: what are the ingredients for the strawberry milkshake | Rewritten: what are the ingredients for the strawberry milkshake | Dishes: [] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the ingredients for the strawberry milkshake'}...
+  2. {'role': 'assistant', 'content': ' The ingredients for the strawberry milkshake are 250 grams of fre...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the ingredients for the strawberry milkshake
+  rewritten_query: what are the ingredients for the strawberry milkshake
+  extracted_dish_names: []
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 3
+  filter_applied: No
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:12:16 ---
+User Query: Query: what are the ingredients for the strawberry milkshake
+
+ | Rewritten: what are the ingredients for the strawberry milkshake
+
+ | Dishes: [] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the ingredients for the strawberry milkshake\n\n'}...
+  2. {'role': 'assistant', 'content': ' The ingredients for the strawberry milkshake are:\n\n- 250 grams ...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the ingredients for the strawberry milkshake
+
+
+  rewritten_query: what are the ingredients for the strawberry milkshake
+
+
+  extracted_dish_names: []
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 3
+  filter_applied: No
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:29:14 ---
+User Query: Query: what are the ingredients for the strawberry milkshake
+
+ | Rewritten: what are the ingredients for the strawberry milkshake
+
+ | Dishes: [] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the ingredients for the strawberry milkshake\n\n'}...
+  2. {'role': 'assistant', 'content': " The ingredients for the strawberry milkshake are:\n- 250 grams fr...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the ingredients for the strawberry milkshake
+
+
+  rewritten_query: what are the ingredients for the strawberry milkshake
+
+
+  extracted_dish_names: []
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 3
+  filter_applied: No
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:33:13 ---
+User Query: Query: what are the ingredients for the strawberry milkshake | Rewritten: what are the ingredients for the strawberry milkshake | Dishes: [] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the ingredients for the strawberry milkshake'}...
+  2. {'role': 'assistant', 'content': " The ingredients for the strawberry milkshake are:\n\n- 250 grams ...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the ingredients for the strawberry milkshake
+  rewritten_query: what are the ingredients for the strawberry milkshake
+  extracted_dish_names: []
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 3
+  filter_applied: No
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:36:37 ---
+User Query: Query: what are the ingredients for the strawberry milkshake | Rewritten: what are the ingredients for the strawberry milkshake | Dishes: [] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the ingredients for the strawberry milkshake'}...
+  2. {'role': 'assistant', 'content': " The ingredients for the strawberry milkshake are 250 grams fresh ...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for ...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to ta...
+    📁 Source: file_009.docx
+    🍽️  Dish: Strawberry Milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients
+
+1 large ripe but firm banana ● 1 large scoop (approximately 50 grams) vanilla ice cream ● 1 large scoop (approximately 50 grams) chocolate ice cream ● 1 large scoop (approximately 50 gram...
+    📁 Source: file_017.md
+    🍽️  Dish: Banana Split
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the ingredients for the strawberry milkshake
+  rewritten_query: what are the ingredients for the strawberry milkshake
+  extracted_dish_names: []
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 3
+  filter_applied: No
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:39:50 ---
+User Query: Query: what are the ingredients for the strawberry milkshake | Rewritten: What are the ingredients for the strawberry milkshake recipe? | Dishes: ['strawberry milkshake'] | Sections: ['ingredients'] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the ingredients for the strawberry milkshake'}...
+  2. {'role': 'assistant', 'content': ' The ingredients for the strawberry milkshake recipe are as follow...
+RAG Retrieved Data:
+  No chunks retrieved
+
+Query Rewriter Analysis:
+  original_query: what are the ingredients for the strawberry milkshake
+  rewritten_query: What are the ingredients for the strawberry milkshake recipe?
+  extracted_dish_names: ['strawberry milkshake']
+  extracted_sections: ['ingredients']
+  full_recipe_requested: No
+  documents_found: 0
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:46:27 ---
+User Query: Query: what are the ingredients for Raspberry White Chocolate Mousse | Rewritten: What are the ingredients for the Raspberry White Chocolate Mousse recipe? | Dishes: ['Raspberry White Chocolate Mousse'] | Sections: ['ingredients'] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'assistant', 'content': ' The ingredients for the strawberry milkshake recipe are as follow...
+  2. {'role': 'user', 'content': 'what are the ingredients for Raspberry White Chocolate Mousse'}...
+  3. {'role': 'assistant', 'content': " The Raspberry White Chocolate Mousse recipe includes the followin...
+RAG Retrieved Data:
+  Total chunks retrieved: 1
+  Chunk 1: Ingredients
+
+For the raspberry coulis:
+
+150 grams fresh raspberries ● 1 tablespoon caster sugar ● 1 tablespoon water
+
+For the white chocolate mousse:
+
+150 grams good quality white chocolate, finely ch...
+    📁 Source: file_023.md
+    🍽️  Dish: Raspberry White Chocolate Mousse
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the ingredients for Raspberry White Chocolate Mousse
+  rewritten_query: What are the ingredients for the Raspberry White Chocolate Mousse recipe?
+  extracted_dish_names: ['Raspberry White Chocolate Mousse']
+  extracted_sections: ['ingredients']
+  full_recipe_requested: No
+  documents_found: 1
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:47:54 ---
+User Query: Query: what are the ingredients for Classic Chocolate Brownies | Rewritten: Classic Chocolate Brownies recipe ingredients | Dishes: ['Classic Chocolate Brownies'] | Sections: ['ingredients'] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " The Raspberry White Chocolate Mousse recipe includes the followin...
+  2. {'role': 'user', 'content': 'what are the ingredients for Classic Chocolate Brownies'}...
+  3. {'role': 'assistant', 'content': " The Classic Chocolate Brownies recipe requires the following ingr...
+RAG Retrieved Data:
+  Total chunks retrieved: 1
+  Chunk 1: Ingredients
+●	185 grams unsalted butter, cubed
+●	185 grams dark chocolate (at least 70% cocoa solids), broken into pieces
+●	3 large eggs
+●	275 grams caster sugar
+●	85 grams plain flour
+●	40 grams coco...
+    📁 Source: file_005.txt
+    🍽️  Dish: Classic Chocolate Brownies
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the ingredients for Classic Chocolate Brownies
+  rewritten_query: Classic Chocolate Brownies recipe ingredients
+  extracted_dish_names: ['Classic Chocolate Brownies']
+  extracted_sections: ['ingredients']
+  full_recipe_requested: No
+  documents_found: 1
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:48:38 ---
+User Query: Query: whata re the utensils needed | Rewritten: utensils needed for strawberry milkshake, raspberry white chocolate mousse, and classic chocolate brownies | Dishes: ['strawberry milkshake', 'raspberry white chocolate mousse', 'classic chocolate brownies'] | Sections: ['utensils_needed'] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " The Classic Chocolate Brownies recipe requires the following ingr...
+  2. {'role': 'user', 'content': 'whata re the utensils needed'}...
+  3. {'role': 'assistant', 'content': ' For the Strawberry Milkshake:\n- Blender or milkshake maker\n- Me...
+RAG Retrieved Data:
+  No chunks retrieved
+
+Query Rewriter Analysis:
+  original_query: whata re the utensils needed
+  rewritten_query: utensils needed for strawberry milkshake, raspberry white chocolate mousse, and classic chocolate brownies
+  extracted_dish_names: ['strawberry milkshake', 'raspberry white chocolate mousse', 'classic chocolate brownies']
+  extracted_sections: ['utensils_needed']
+  full_recipe_requested: No
+  documents_found: 0
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:50:27 ---
+User Query: Query: what is the full recipe for Classic Chocolate Brownies | Rewritten: Classic Chocolate Brownies recipe | Dishes: ['Classic Chocolate Brownies'] | Sections: ['ingredients', 'preparation_instructions', 'number_of_servings', 'utensils_needed'] | Full Recipe: True
+Conversation Memory:
+  1. {'role': 'assistant', 'content': ' For the Strawberry Milkshake:\n- Blender or milkshake maker\n- Me...
+  2. {'role': 'user', 'content': 'what is the full recipe for Classic Chocolate Brownies'}...
+  3. {'role': 'assistant', 'content': ' To make the Classic Chocolate Brownies, follow these steps:\n\n1....
+RAG Retrieved Data:
+  Total chunks retrieved: 4
+  Chunk 1: Preparation instructions
+1.	Preheat your oven to 180°C (160°C Fan). Grease the square baking tin and line it with baking paper.
+2.	Place the butter and dark chocolate into a heatproof bowl set over a ...
+    📁 Source: file_005.txt
+    🍽️  Dish: Classic Chocolate Brownies
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+●	185 grams unsalted butter, cubed
+●	185 grams dark chocolate (at least 70% cocoa solids), broken into pieces
+●	3 large eggs
+●	275 grams caster sugar
+●	85 grams plain flour
+●	40 grams coco...
+    📁 Source: file_005.txt
+    🍽️  Dish: Classic Chocolate Brownies
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Number of servings
+●	16 brownies
+    📁 Source: file_005.txt
+    🍽️  Dish: Classic Chocolate Brownies
+    📝 Type: number_of_servings
+    🔢 Chunk: 5/7
+    📝 Section: 📝 Number Of Servings
+  Chunk 4: Utensils needed
+●	20-centimetre square baking tin
+●	Baking paper
+●	Heatproof bowl
+●	Small saucepan
+●	Electric mixer or whisk
+●	Spatula
+●	Sieve
+    📁 Source: file_005.txt
+    🍽️  Dish: Classic Chocolate Brownies
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+
+Query Rewriter Analysis:
+  original_query: what is the full recipe for Classic Chocolate Brownies
+  rewritten_query: Classic Chocolate Brownies recipe
+  extracted_dish_names: ['Classic Chocolate Brownies']
+  extracted_sections: ['ingredients', 'preparation_instructions', 'number_of_servings', 'utensils_needed']
+  full_recipe_requested: Yes
+  documents_found: 4
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:58:01 ---
+User Query: Query: what are the ingredients for Classic Chocolate Brownies | Rewritten: ingredients for Classic Chocolate Brownies | Dishes: ['Classic Chocolate Brownies'] | Sections: ['ingredients'] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the ingredients for Classic Chocolate Brownies'}...
+  2. {'role': 'assistant', 'content': " The Classic Chocolate Brownies recipe you're working with include...
+RAG Retrieved Data:
+  Total chunks retrieved: 1
+  Chunk 1: Ingredients
+●	185 grams unsalted butter, cubed
+●	185 grams dark chocolate (at least 70% cocoa solids), broken into pieces
+●	3 large eggs
+●	275 grams caster sugar
+●	85 grams plain flour
+●	40 grams coco...
+    📁 Source: file_005.txt
+    🍽️  Dish: Classic Chocolate Brownies
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: what are the ingredients for Classic Chocolate Brownies
+  rewritten_query: ingredients for Classic Chocolate Brownies
+  extracted_dish_names: ['Classic Chocolate Brownies']
+  extracted_sections: ['ingredients']
+  full_recipe_requested: No
+  documents_found: 1
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 08:58:47 ---
+User Query: Query: what are the utensils needed | Rewritten: utensils needed for Classic Chocolate Brownies | Dishes: ['Classic Chocolate Brownies'] | Sections: ['utensils_needed'] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " The Classic Chocolate Brownies recipe you're working with include...
+  2. {'role': 'user', 'content': 'what are the utensils needed'}...
+  3. {'role': 'assistant', 'content': " To bake the Classic Chocolate Brownies, you'll need the following...
+RAG Retrieved Data:
+  Total chunks retrieved: 1
+  Chunk 1: Utensils needed
+●	20-centimetre square baking tin
+●	Baking paper
+●	Heatproof bowl
+●	Small saucepan
+●	Electric mixer or whisk
+●	Spatula
+●	Sieve
+    📁 Source: file_005.txt
+    🍽️  Dish: Classic Chocolate Brownies
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+
+Query Rewriter Analysis:
+  original_query: what are the utensils needed
+  rewritten_query: utensils needed for Classic Chocolate Brownies
+  extracted_dish_names: ['Classic Chocolate Brownies']
+  extracted_sections: ['utensils_needed']
+  full_recipe_requested: No
+  documents_found: 1
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 09:00:42 ---
+User Query: Query: what about White Chocolate Coulant | Rewritten: full recipe for White Chocolate Coulant | Dishes: ['White Chocolate Coulant'] | Sections: [] | Full Recipe: True
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " To bake the Classic Chocolate Brownies, you'll need the following...
+  2. {'role': 'user', 'content': 'what about White Chocolate Coulant'}...
+  3. {'role': 'assistant', 'content': " To make the White Chocolate Coulant, you'll need the following in...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: Ingredients
+●	120 grams good quality white chocolate, chopped
+●	100 grams unsalted butter, cubed, plus extra for greasing
+●	2 large eggs
+●	2 large egg yolks
+●	60 grams caster sugar
+●	50 grams plain fl...
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 2: Preparation instructions
+1.	Prepare oven and ramekins: Preheat your oven to 200°C (180°C Fan). Thoroughly grease the inside of four individual ramekins with butter. For extra non-stick security, you c...
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 3: Nutritional information (per serving)
+●	Calories: Approximately 550-600 kcal
+●	Fat: 40g
+●	Carbohydrates: 45g
+●	Protein: 9g
+●	Sugar: 35g
+(Note: Nutritional information is an estimate and can vary based...
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+  Chunk 4: Allergen information
+●	Contains: Milk, Eggs, Wheat (Gluten).
+●	May contain: Soya (check the white chocolate ingredients for soy lecithin).
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: allergen_information
+    🔢 Chunk: 7/7
+    📝 Section: 📝 Allergen Information
+  Chunk 5: Utensils needed
+●	4 individual ramekins (approximately 175-200ml capacity)
+●	Pastry brush
+●	Heatproof bowl
+●	Small saucepan
+●	Electric mixer or whisk
+●	Spatula
+●	Sieve
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 6: Preparation time
+●	Active time: 20 minutes
+●	Inactive time (baking): 12-15 minutes
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+  Chunk 7: Number of servings
+●	4 servings
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: number_of_servings
+    🔢 Chunk: 5/7
+    📝 Section: 📝 Number Of Servings
+
+Query Rewriter Analysis:
+  original_query: what about White Chocolate Coulant
+  rewritten_query: full recipe for White Chocolate Coulant
+  extracted_dish_names: ['White Chocolate Coulant']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 7
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 09:03:18 ---
+User Query: Query: compare between the untensils need and nutrional facts for both Classic Chocolate Brownies and White Chocolate Coulant | Rewritten: Compare utensils needed and nutritional information for Classic Chocolate Brownies and White Chocolate Coulant | Dishes: ['Classic Chocolate Brownies', 'White Chocolate Coulant'] | Sections: ['utensils_needed', 'nutritional_information'] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " To make the White Chocolate Coulant, you'll need the following in...
+  2. {'role': 'user', 'content': 'compare between the untensils need and nutrional facts for both Classic...
+  3. {'role': 'assistant', 'content': " For the Classic Chocolate Brownies recipe, the following utensils...
+RAG Retrieved Data:
+  Total chunks retrieved: 3
+  Chunk 1: Nutritional information (per serving)
+●	Calories: Approximately 550-600 kcal
+●	Fat: 40g
+●	Carbohydrates: 45g
+●	Protein: 9g
+●	Sugar: 35g
+(Note: Nutritional information is an estimate and can vary based...
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+  Chunk 2: Nutritional information (per serving)
+●	Calories: Approximately 250 kcal
+●	Fat: 15g
+●	Carbohydrates: 25g
+●	Protein: 3g
+●	Sugar: 22g
+(Note: Nutritional information is an estimate and can vary based on ...
+    📁 Source: file_005.txt
+    🍽️  Dish: Classic Chocolate Brownies
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+  Chunk 3: Utensils needed
+●	4 individual ramekins (approximately 175-200ml capacity)
+●	Pastry brush
+●	Heatproof bowl
+●	Small saucepan
+●	Electric mixer or whisk
+●	Spatula
+●	Sieve
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+
+Query Rewriter Analysis:
+  original_query: compare between the untensils need and nutrional facts for both Classic Chocolate Brownies and White Chocolate Coulant
+  rewritten_query: Compare utensils needed and nutritional information for Classic Chocolate Brownies and White Chocolate Coulant
+  extracted_dish_names: ['Classic Chocolate Brownies', 'White Chocolate Coulant']
+  extracted_sections: ['utensils_needed', 'nutritional_information']
+  full_recipe_requested: No
+  documents_found: 3
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 09:13:52 ---
+User Query: Query: compare between the untensils need and nutrional facts for both Classic Chocolate Brownies and White Chocolate Coulant | Rewritten: Compare utensils_needed and nutritional_information for Classic Chocolate Brownies and White Chocolate Coulant | Dishes: ['Classic Chocolate Brownies', 'White Chocolate Coulant'] | Sections: ['utensils_needed', 'nutritional_information'] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'compare between the untensils need and nutrional facts for both Classic...
+  2. {'role': 'assistant', 'content': " For the Classic Chocolate Brownies, the following utensils are ne...
+RAG Retrieved Data:
+  Total chunks retrieved: 4
+  Chunk 1: Nutritional information (per serving)
+●	Calories: Approximately 550-600 kcal
+●	Fat: 40g
+●	Carbohydrates: 45g
+●	Protein: 9g
+●	Sugar: 35g
+(Note: Nutritional information is an estimate and can vary based...
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+  Chunk 2: Nutritional information (per serving)
+●	Calories: Approximately 250 kcal
+●	Fat: 15g
+●	Carbohydrates: 25g
+●	Protein: 3g
+●	Sugar: 22g
+(Note: Nutritional information is an estimate and can vary based on ...
+    📁 Source: file_005.txt
+    🍽️  Dish: Classic Chocolate Brownies
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+  Chunk 3: Utensils needed
+●	4 individual ramekins (approximately 175-200ml capacity)
+●	Pastry brush
+●	Heatproof bowl
+●	Small saucepan
+●	Electric mixer or whisk
+●	Spatula
+●	Sieve
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 4: Utensils needed
+●	20-centimetre square baking tin
+●	Baking paper
+●	Heatproof bowl
+●	Small saucepan
+●	Electric mixer or whisk
+●	Spatula
+●	Sieve
+    📁 Source: file_005.txt
+    🍽️  Dish: Classic Chocolate Brownies
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+
+Query Rewriter Analysis:
+  original_query: compare between the untensils need and nutrional facts for both Classic Chocolate Brownies and White Chocolate Coulant
+  rewritten_query: Compare utensils_needed and nutritional_information for Classic Chocolate Brownies and White Chocolate Coulant
+  extracted_dish_names: ['Classic Chocolate Brownies', 'White Chocolate Coulant']
+  extracted_sections: ['utensils_needed', 'nutritional_information']
+  full_recipe_requested: No
+  documents_found: 4
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 09:14:54 ---
+User Query: Query: what is the serving number for both | Rewritten: number_of_servings for both Classic Chocolate Brownies and White Chocolate Coulant | Dishes: ['Classic Chocolate Brownies', 'White Chocolate Coulant'] | Sections: ['number_of_servings'] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " For the Classic Chocolate Brownies, the following utensils are ne...
+  2. {'role': 'user', 'content': 'what is the serving number for both'}...
+  3. {'role': 'assistant', 'content': " To determine the number of servings for both Classic Chocolate Br...
+RAG Retrieved Data:
+  Total chunks retrieved: 2
+  Chunk 1: Number of servings
+●	16 brownies
+    📁 Source: file_005.txt
+    🍽️  Dish: Classic Chocolate Brownies
+    📝 Type: number_of_servings
+    🔢 Chunk: 5/7
+    📝 Section: 📝 Number Of Servings
+  Chunk 2: Number of servings
+●	4 servings
+    📁 Source: file_015.txt
+    🍽️  Dish: White Chocolate Coulant
+    📝 Type: number_of_servings
+    🔢 Chunk: 5/7
+    📝 Section: 📝 Number Of Servings
+
+Query Rewriter Analysis:
+  original_query: what is the serving number for both
+  rewritten_query: number_of_servings for both Classic Chocolate Brownies and White Chocolate Coulant
+  extracted_dish_names: ['Classic Chocolate Brownies', 'White Chocolate Coulant']
+  extracted_sections: ['number_of_servings']
+  full_recipe_requested: No
+  documents_found: 2
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 09:23:11 ---
+User Query: Query: what are the recipe for strawberry milkshake | Rewritten: full recipe for strawberry milkshake | Dishes: ['strawberry milkshake'] | Sections: [] | Full Recipe: False
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the recipe for strawberry milkshake'}...
+  2. {'role': 'assistant', 'content': " To make a strawberry milkshake, you'll need the following ingredi...
+RAG Retrieved Data:
+  No chunks retrieved
+
+Query Rewriter Analysis:
+  original_query: what are the recipe for strawberry milkshake
+  rewritten_query: full recipe for strawberry milkshake
+  extracted_dish_names: ['strawberry milkshake']
+  extracted_sections: []
+  full_recipe_requested: No
+  documents_found: 0
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 09:25:04 ---
+User Query: Query: Strawberry Milkshake | Rewritten: full recipe for strawberry milkshake | Dishes: ['strawberry milkshake'] | Sections: [] | Full Recipe: True
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " To make a strawberry milkshake, you'll need the following ingredi...
+  2. {'role': 'user', 'content': 'Strawberry Milkshake'}...
+  3. {'role': 'assistant', 'content': " To make a strawberry milkshake, you'll need the following ingredi...
+RAG Retrieved Data:
+  No chunks retrieved
+
+Query Rewriter Analysis:
+  original_query: Strawberry Milkshake
+  rewritten_query: full recipe for strawberry milkshake
+  extracted_dish_names: ['strawberry milkshake']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 0
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-23 09:27:15 ---
+User Query: Query: Banoffee Pie | Rewritten: full recipe for Banoffee Pie | Dishes: ['Banoffee Pie'] | Sections: [] | Full Recipe: True
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " To make a strawberry milkshake, you'll need the following ingredi...
+  2. {'role': 'user', 'content': 'Banoffee Pie'}...
+  3. {'role': 'assistant', 'content': " To make a Banoffee Pie, you'll need the following ingredients:\n\...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: Preparation instructions
+
+Make the biscuit base: Crush the digestive biscuits into fine crumbs using a food processor. Alternatively, place them in a sealable bag and crush them with a rolling pin. In...
+    📁 Source: file_020.docx
+    🍽️  Dish: Banoffee Pie
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Utensils needed
+
+23-centimetre loose-bottomed tart tin or pie dish
+
+Food processor or rolling pin and a sealable plastic bag
+
+Small saucepan
+
+Spatula or wooden spoon
+
+Whisk (electric or manual)
+
+Mixin...
+    📁 Source: file_020.docx
+    🍽️  Dish: Banoffee Pie
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 3: Ingredients
+
+For the base:
+
+250 grams digestive biscuits
+
+125 grams unsalted butter, melted
+
+For the toffee filling:
+
+1 can (397 grams) sweetened condensed milk
+
+100 grams unsalted butter
+
+100 grams s...
+    📁 Source: file_020.docx
+    🍽️  Dish: Banoffee Pie
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 4: Allergen information
+
+Contains: Wheat (Gluten), Milk.
+
+May contain: Soya (check biscuit ingredients).
+    📁 Source: file_020.docx
+    🍽️  Dish: Banoffee Pie
+    📝 Type: allergen_information
+    🔢 Chunk: 7/7
+    📝 Section: 📝 Allergen Information
+  Chunk 5: Preparation time
+
+Active time: 25 minutes
+
+Inactive time (chilling): 3 hours
+    📁 Source: file_020.docx
+    🍽️  Dish: Banoffee Pie
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+  Chunk 6: Nutritional information (per serving)
+
+Calories: Approximately 500-600 kcal
+
+Fat: 35-40g
+
+Carbohydrates: 45-55g
+
+Protein: 5-7g
+
+Sugar: 35-45g
+
+(Note: Nutritional information is an estimate and can var...
+    📁 Source: file_020.docx
+    🍽️  Dish: Banoffee Pie
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+  Chunk 7: Number of servings
+
+8-10 servings
+    📁 Source: file_020.docx
+    🍽️  Dish: Banoffee Pie
+    📝 Type: number_of_servings
+    🔢 Chunk: 5/7
+    📝 Section: 📝 Number Of Servings
+
+Query Rewriter Analysis:
+  original_query: Banoffee Pie
+  rewritten_query: full recipe for Banoffee Pie
+  extracted_dish_names: ['Banoffee Pie']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 7
+  filter_applied: Yes
+--------------------------------------------------
