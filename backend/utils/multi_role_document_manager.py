@@ -233,6 +233,9 @@ class MultiRoleDocumentManager:
             if recipe_name != dish_name_lower:
                 print(f"    🔄 Converting dish name to lowercase: '{recipe_name}' → '{dish_name_lower}'")
             
+            # Export dish names to JSON file
+            self._export_dish_names(dish_name_lower)
+            
             metadata = {
                 'source_file': filename,
                 'dish_name': dish_name_lower,  # Convert to lowercase for case-insensitive filtering
@@ -247,6 +250,30 @@ class MultiRoleDocumentManager:
             chunks.append(chunk)
         
         return chunks
+    
+    def _export_dish_names(self, dish_name: str):
+        """Export dish names to a JSON file for easy access."""
+        try:
+            dish_file = "backend/logs/multi_role_dish_names.json"
+            os.makedirs(os.path.dirname(dish_file), exist_ok=True)
+            
+            # Load existing dish names or create new list
+            existing_dishes = []
+            if os.path.exists(dish_file):
+                try:
+                    with open(dish_file, 'r') as f:
+                        existing_dishes = json.load(f)
+                except:
+                    existing_dishes = []
+            
+            # Add new dish name if not already present
+            if dish_name not in existing_dishes:
+                existing_dishes.append(dish_name)
+                with open(dish_file, 'w') as f:
+                    json.dump(existing_dishes, f, indent=2)
+                print(f"    🍽️ Added dish: {dish_name}")
+        except Exception as e:
+            print(f"    ⚠️ Error exporting dish name: {e}")
     
     def get_all_loaded_files(self) -> List[str]:
         """Get list of all files that have been loaded."""

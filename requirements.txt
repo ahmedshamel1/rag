@@ -28,6 +28,7 @@ numpy==1.26.4
 openpyxl==3.1.2
 pydantic==2.11.2
 beautifulsoup4==4.12.3
+fuzzywuzzy==0.18.0
 
 # Ollama for local LLM
 ollama==0.4.7
