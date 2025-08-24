@@ -640,3 +640,393 @@ Query Rewriter Analysis:
   documents_found: 1
   filter_applied: Yes
 --------------------------------------------------
+
+--- Interaction at 2025-08-24 12:53:14 ---
+User Query: Query: what are the prep for white chocolate
+
+ | Rewritten: preparation_instructions for white chocolate | Dishes: ['white chocolate'] | Sections: ['preparation_instructions']
+Conversation Memory:
+  1. {'role': 'user', 'content': 'what are the prep for white chocolate\n\n'}...
+  2. {'role': 'assistant', 'content': " To prepare the white chocolate, follow these instructions:\n\n1. ...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: Ingredients
+●	120 grams good quality white chocolate, chopped
+●	100 grams unsalted butter, cubed, plus extra for greasing
+●	2 large eggs
+●	2 large egg yolks
+●	60 grams caster sugar
+●	50 grams plain fl...
+    📁 Source: file_015.txt
+    🍽️  Dish: white chocolate coulant
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 2: Preparation instructions
+
+Make the raspberry coulis: In a small saucepan, combine the fresh raspberries, 1 tablespoon of caster sugar, and 1 tablespoon of water. Cook over a medium heat, stirring occa...
+    📁 Source: file_023.md
+    🍽️  Dish: raspberry white chocolate mousse
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 3: Preparation instructions
+1.	Prepare oven and ramekins: Preheat your oven to 200°C (180°C Fan). Thoroughly grease the inside of four individual ramekins with butter. For extra non-stick security, you c...
+    📁 Source: file_015.txt
+    🍽️  Dish: white chocolate coulant
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 4: Preparation instructions
+1.	Preheat your oven to 180°C (160°C Fan). Grease the square baking tin and line it with baking paper.
+2.	Place the butter and dark chocolate into a heatproof bowl set over a ...
+    📁 Source: file_005.txt
+    🍽️  Dish: classic chocolate brownies
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 5: Preparation instructions
+
+Pour the milk into the small saucepan. Add the cocoa powder, sugar, and salt.
+
+Heat the mixture over a medium-low heat, whisking constantly until the cocoa powder and sugar h...
+    📁 Source: file_004.docx
+    🍽️  Dish: rich & creamy hot chocolate
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 6: Preparation instructions
+1. Prepare the oven and tins: Preheat your oven to 180°C (160°C Fan). Grease 
+the two cake tins and line the bases with baking paper. 
+2. Combine dry ingredients: In a medium ...
+    📁 Source: file_010.pdf
+    🍽️  Dish: red velvet cake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 7: Nutritional information (per serving)
+●	Calories: Approximately 550-600 kcal
+●	Fat: 40g
+●	Carbohydrates: 45g
+●	Protein: 9g
+●	Sugar: 35g
+(Note: Nutritional information is an estimate and can vary based...
+    📁 Source: file_015.txt
+    🍽️  Dish: white chocolate coulant
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+
+Query Rewriter Analysis:
+  original_query: what are the prep for white chocolate
+
+
+  rewritten_query: preparation_instructions for white chocolate
+  extracted_dish_names: ['white chocolate']
+  extracted_sections: ['preparation_instructions']
+  full_recipe_requested: No
+  documents_found: 7
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 12:57:50 ---
+User Query: Query: Signature Baked Cheesecake with Gamonéu Curd | Rewritten: full recipe for Signature Baked Cheesecake with Gamonéu Curd | Dishes: ['signature baked cheesecake with gamonéu curd'] | Sections: []
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " To prepare the white chocolate, follow these instructions:\n\n1. ...
+  2. {'role': 'user', 'content': 'Signature Baked Cheesecake with Gamonéu Curd'}...
+  3. {'role': 'assistant', 'content': " To make the Signature Baked Cheesecake with Gamonéu Curd, you'll ...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: Ingredients 
+For the cake: 
+● 300 grams plain flour 
+● 2 tablespoons unsweetened cocoa powder 
+● 1 teaspoon bicarbonate of soda 
+● 1/2 teaspoon salt 
+● 120 grams unsalted butter, at room temperature 
+...
+    📁 Source: file_010.pdf
+    🍽️  Dish: red velvet cake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 2: Allergen information 
+● Contains: Milk, Eggs.
+Crème Brûlée 
+Ingredients 
+● 500 millilitres double cream (heavy cream, at least 40% fat) 
+● 1 vanilla pod or 1 teaspoon high-quality vanilla extract 
+● 5...
+    📁 Source: file_022.pdf
+    🍽️  Dish: crème brûlée
+    📝 Type: allergen_information
+    🔢 Chunk: 7/7
+    📝 Section: 📝 Allergen Information
+  Chunk 3: Preparation instructions 
+1. Preheat oven and prepare ingredients: Preheat your oven to 160°C (140°C 
+Fan). 
+2. Infuse the cream: Pour the double cream into a medium saucepan. If using a 
+vanilla pod,...
+    📁 Source: file_022.pdf
+    🍽️  Dish: crème brûlée
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 4: Ingredients 
+For the dough (détrempe): 
+● 500 grams strong white bread flour 
+● 10 grams salt 
+● 55 grams caster sugar 
+● 10 grams instant dried yeast 
+● 300 millilitres cool whole milk 
+For the butte...
+    📁 Source: file_008.pdf
+    🍽️  Dish: classic butter croissants
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 5: Ingredients 
+For the pastry: 
+● 250 grams plain flour, plus extra for dusting 
+● 125 grams cold unsalted butter, cubed 
+● 50 grams icing sugar 
+● 1 large egg yolk 
+● 2 tablespoons cold water 
+For the ...
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 6: Ingredients
+
+For the pastry (Pâte Brisée):
+
+375 grams plain flour
+
+1/2 teaspoon salt
+
+225 grams cold unsalted butter, cubed
+
+120 millilitres ice-cold water
+
+For the filling:
+
+1 kilogram fresh sweet ch...
+    📁 Source: file_019.docx
+    🍽️  Dish: cherry pie
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 7: Ingredients 
+For the dough: 
+● 120 millilitres whole milk, lukewarm 
+● 7 grams instant dried yeast 
+● 50 grams caster sugar 
+● 1 large egg, at room temperature 
+● 60 grams unsalted butter, melted 
+● 3...
+    📁 Source: file_012.pdf
+    🍽️  Dish: classic cinnamon rolls
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: Signature Baked Cheesecake with Gamonéu Curd
+  rewritten_query: full recipe for Signature Baked Cheesecake with Gamonéu Curd
+  extracted_dish_names: ['signature baked cheesecake with gamonéu curd']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 7
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 12:58:45 ---
+User Query: Query: Signature Baked Cheesecake with Gamonéu Curd | Rewritten: full recipe for Signature Baked Cheesecake with Gamonéu Curd | Dishes: ['signature baked cheesecake with gamonéu curd'] | Sections: []
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " To make the Signature Baked Cheesecake with Gamonéu Curd, you'll ...
+  2. {'role': 'user', 'content': 'Signature Baked Cheesecake with Gamonéu Curd'}...
+  3. {'role': 'assistant', 'content': " To make the Signature Baked Cheesecake with Gamonéu Curd, you'll ...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: Preparation instructions 
+1. Prepare the base and tin: Preheat your oven to 180°C (160°C Fan). Grease the 
+base and sides of the springform tin and line the base with baking paper. 
+2. Crush the diges...
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: signature baked cheesecake with gamonéu curd
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients 
+For the biscuit base: 
+● 250 grams digestive biscuits 
+● 125 grams unsalted butter, melted 
+● A pinch of salt 
+For the Gamonéu curd swirl: 
+● 50 grams artisan Gamonéu del Puerto cheese, r...
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: signature baked cheesecake with gamonéu curd
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Utensils needed 
+● 23-centimetre springform cake tin 
+● Food processor or rolling pin 
+● Electric stand mixer or handheld electric whisk 
+● Spatula 
+● Several mixing bowls 
+● Small saucepan 
+● Sieve 
+...
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: signature baked cheesecake with gamonéu curd
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 4: Preparation time 
+● Active time: 30 minutes 
+● Inactive time (baking and cooling): 8 hours, including overnight chilling
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: signature baked cheesecake with gamonéu curd
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+  Chunk 5: Allergen information 
+● Contains: Wheat (Gluten), Milk, Eggs, Soya (from miso paste).
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: signature baked cheesecake with gamonéu curd
+    📝 Type: allergen_information
+    🔢 Chunk: 7/7
+    📝 Section: 📝 Allergen Information
+  Chunk 6: Nutritional information (per serving) 
+● Calories: Approximately 500-550 kcal 
+● Fat: 40-45g 
+● Carbohydrates: 25-30g 
+● Protein: 9-11g 
+● Sugar: 22-26g 
+(Note: Nutritional information is an estimate ...
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: signature baked cheesecake with gamonéu curd
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+  Chunk 7: Number of servings 
+● 10-12 servings
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: signature baked cheesecake with gamonéu curd
+    📝 Type: number_of_servings
+    🔢 Chunk: 5/7
+    📝 Section: 📝 Number Of Servings
+
+Query Rewriter Analysis:
+  original_query: Signature Baked Cheesecake with Gamonéu Curd
+  rewritten_query: full recipe for Signature Baked Cheesecake with Gamonéu Curd
+  extracted_dish_names: ['signature baked cheesecake with gamonéu curd']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 7
+  filter_applied: Yes
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 12:59:53 ---
+User Query: Query: baked cheesecake | Rewritten: full recipe for baked cheesecake | Dishes: ['signature baked cheesecake'] | Sections: []
+Conversation Memory:
+  1. {'role': 'assistant', 'content': " To make the Signature Baked Cheesecake with Gamonéu Curd, you'll ...
+  2. {'role': 'user', 'content': 'baked cheesecake'}...
+  3. {'role': 'assistant', 'content': " To make the Baked Gamonéu Cheesecake, you'll need the following i...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: Preparation instructions 
+1. Prepare the base and tin: Preheat your oven to 180°C (160°C Fan). Grease the 
+base and sides of the springform tin and line the base with baking paper. 
+2. Crush the diges...
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: signature baked cheesecake with gamonéu curd
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients 
+For the biscuit base: 
+● 250 grams digestive biscuits 
+● 125 grams unsalted butter, melted 
+● A pinch of salt 
+For the Gamonéu curd swirl: 
+● 50 grams artisan Gamonéu del Puerto cheese, r...
+    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
+    🍽️  Dish: signature baked cheesecake with gamonéu curd
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Ingredients 
+For the cake: 
+● 300 grams plain flour 
+● 2 tablespoons unsweetened cocoa powder 
+● 1 teaspoon bicarbonate of soda 
+● 1/2 teaspoon salt 
+● 120 grams unsalted butter, at room temperature 
+...
+    📁 Source: file_010.pdf
+    🍽️  Dish: red velvet cake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 4: Preparation instructions
+1. Prepare the oven and tins: Preheat your oven to 180°C (160°C Fan). Grease 
+the two cake tins and line the bases with baking paper. 
+2. Combine dry ingredients: In a medium ...
+    📁 Source: file_010.pdf
+    🍽️  Dish: red velvet cake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 5: Ingredients 
+For the dough (détrempe): 
+● 500 grams strong white bread flour 
+● 10 grams salt 
+● 55 grams caster sugar 
+● 10 grams instant dried yeast 
+● 300 millilitres cool whole milk 
+For the butte...
+    📁 Source: file_008.pdf
+    🍽️  Dish: classic butter croissants
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 6: Ingredients 
+For the dough: 
+● 120 millilitres whole milk, lukewarm 
+● 7 grams instant dried yeast 
+● 50 grams caster sugar 
+● 1 large egg, at room temperature 
+● 60 grams unsalted butter, melted 
+● 3...
+    📁 Source: file_012.pdf
+    🍽️  Dish: classic cinnamon rolls
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 7: Ingredients 
+For the pastry: 
+● 250 grams plain flour, plus extra for dusting 
+● 125 grams cold unsalted butter, cubed 
+● 50 grams icing sugar 
+● 1 large egg yolk 
+● 2 tablespoons cold water 
+For the ...
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+
+Query Rewriter Analysis:
+  original_query: baked cheesecake
+  rewritten_query: full recipe for baked cheesecake
+  extracted_dish_names: ['signature baked cheesecake']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 7
+  filter_applied: Yes
+--------------------------------------------------

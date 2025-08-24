@@ -2,3 +2,293 @@
 Created: 2025-08-22 08:12:08
 ==================================================
 
+
+--- Interaction at 2025-08-24 12:54:40 ---
+User Query: what are the prep for white chocolate
+
+
+Conversation Memory:
+  1. what are the prep for white chocolate
+
+
+  2.  The preparation for white chocolate involves handling and melting white chocolate. Here are some ge...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: check should confirm the mixture has visibly 
+thickened and coats the back of a spoon 
+without running. 
+Cheesecakes (Baked) 70°C Reaching this temperature ensures that the 
+egg proteins have fully co...
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 2: may have survived the cooking process to germinate and multiply to dangerous levels. Rapid 
+cooling is therefore a critical control point. 
+The Mandatory Two-Stage Cooling Process: This process is a l...
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 3: stages of production. 
+● Preparation Areas: 
+○ A designated "raw zone" must be established for handling ingredients like raw 
+eggs, unwashed vegetables/fruits, and raw flour. 
+○ All RTE products, such...
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 4: egg and dairy filling, are safely cooked through 
+to the centre. The filling should appear set and 
+not liquid. 
+Breads & Enriched 
+Doughs (e.g., Brioche, 
+Rolls) 
+88°C - 93°C While not a high-risk fo...
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 5: items like savoury pastries, pies, or hot dessert sauces may require reheating or hot holding for 
+service. These processes also have critical temperature requirements to ensure safety. 
+Reheating Pro...
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 6: ● Fresh cream, whipped cream, and cream cheese frostings. 
+● Any product containing dairy and eggs. 
+Rules of the Danger Zone: 
+● Cold foods must be held at 5°C or colder. 
+● Hot foods must be held at...
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 7: Visual cues (e.g., colour, firmness) are useful indicators of quality but are not reliable measures 
+of food safety. 
+Minimum Internal Temperature Chart: 
+Food Product Category Minimum 
+Internal 
+Temp...
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 12:55:33 ---
+User Query: what are General Evacuation Procedure
+
+
+Conversation Memory:
+  1.  The preparation for white chocolate involves handling and melting white chocolate. Here are some ge...
+  2. what are General Evacuation Procedure
+
+
+  3.  The general evacuation procedures, as outlined in the provided Emergency Action Plan, are as follow...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: 3. You have been trained and are confident in using the correct type of fire 
+extinguisher. If there is any doubt, EVACUATE immediately. 
+3.0 General Evacuation Procedure 
+1. Stop Work: Immediately st...
+    📁 Source: file_034.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 2: EMERGENCY ACTION PLAN: FIRE EVACUATION PROCEDURE 
+Subject: Fire Evacuation & Emergency Instructions  
+1.0 Purpose 
+This document provides immediate, clear, and actionable instructions for all personne...
+    📁 Source: file_034.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 3: themselves with this procedure to ensure a swift and orderly evacuation. Your safety is our 
+highest priority. 
+2.0 Immediate Actions: Upon Discovering a Fire 
+If you discover a fire, remember the R.A...
+    📁 Source: file_034.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 4: ● C - CONFINE: Close all doors and windows as you leave the area to confine the fire and 
+slow the spread of smoke. Do not lock any doors. 
+● E - EVACUATE / EXTINGUISH: 
+○ EVACUATE immediately via the...
+    📁 Source: file_034.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 5: Our food safety protocols are designed to be fully compliant with the stringent requirements of 
+both national and international food safety bodies. The primary regulatory frameworks governing 
+our op...
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 6: 7. Report & Headcount: Report immediately to your department head or designated Fire 
+Warden for a headcount. Do not leave the assembly point until you are accounted for. 
+8. Do Not Re-Enter: Under no...
+    📁 Source: file_034.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 7: Comprehensive Food Safety, Hygiene & Handling Manual 
+Document ID: FSP-PRO-001 
+Version: 1.0  
+Classification: Internal Use Only 
+CONFIDENTIAL 
+This document contains proprietary operational procedure...
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 13:14:58 ---
+User Query: The Mandatory 7-Step Handwashing Procedure: 
+
+Conversation Memory:
+  1. The Mandatory 7-Step Handwashing Procedure: 
+
+  2.  1. Wet your hands with clean, running water (warm or cold), turn off the tap, and apply soap.
+2. La...
+RAG Retrieved Data:
+  No chunks retrieved
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 13:21:37 ---
+User Query: what are The  7-Step Handwashing Procedure: 
+
+Conversation Memory:
+  1. what are The  7-Step Handwashing Procedure: 
+
+  2.  The 7-Step Handwashing Procedure, as recommended by the World Health Organization (WHO), is as foll...
+RAG Retrieved Data:
+  No chunks retrieved
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 13:23:15 ---
+User Query: The Mandatory 7-Step Handwashing Procedure:
+
+
+Conversation Memory:
+  1.  The 7-Step Handwashing Procedure, as recommended by the World Health Organization (WHO), is as foll...
+  2. The Mandatory 7-Step Handwashing Procedure:
+
+
+  3.  The World Health Organization (WHO) recommends the following 7-Step Handwashing Procedure:
+
+1. Wet ...
+RAG Retrieved Data:
+  No chunks retrieved
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 13:26:50 ---
+User Query: what are The  7 Steps of Handwashing 
+Conversation Memory:
+  1. what are The  7 Steps of Handwashing 
+  2.  The 7 steps of handwashing, as outlined in the 2.2 Hand Hygiene Protocol, are as follows:
+
+1. Wet H...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: 2.2 Hand Hygiene Protocol 
+Handwashing is the single most important action an employee can take to prevent food 
+contamination. Designated handwashing sinks, equipped with hot water, liquid soap, and single-
+use paper towels, are to be used for handwashing only. Sinks used for food preparation or 
+equipment washing must never be used for washing hands. 
+The Mandatory 7-Step Handwashing Procedure: 
+1. Wet Hands: Wet hands thoroughly with clean, running hot water (as hot as can be
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 2: washed away. 
+5. Dry: Dry hands completely using a single-use paper towel. 
+6. Turn off Tap: Use the paper towel to turn off the tap to avoid re-contaminating hands. 
+7. Dispose: Dispose of the paper towel in a foot-operated bin. 
+When to Wash Hands (Mandatory): 
+● Upon entering the kitchen and before starting work. 
+● Immediately before handling any ready-to-eat food. 
+● Immediately after handling raw ingredients (e.g., flour, eggs, unwashed fruit). 
+● After using the toilet.
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 3: comfortably tolerated). 
+2. Apply Soap: Apply a sufficient amount of liquid antibacterial soap to create a good 
+lather. 
+3. Lather and Scrub (20 seconds): Vigorously rub hands together for at least 20 seconds. 
+This is the critical step. Ensure all surfaces are scrubbed, including: 
+○ Back of hands 
+○ Wrists 
+○ Between fingers 
+○ Under fingernails (scrub fingertips against palms) 
+○ Thumbs 
+4. Rinse: Rinse hands thoroughly under clean, running water, ensuring all soap residue is 
+washed away.
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 4: kitchen, we primarily use chemical sanitizers. 
+5.2 Six-Step Cleaning and Sanitizing Procedure
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 5: 2. Main Clean (Wash): Wash the surface thoroughly with hot water and the approved 
+food-safe detergent. Use a clean, designated cloth, brush, or scourer. Apply vigorous 
+scrubbing to dislodge all adhered food residue and grease. For complex equipment like 
+mixers, this may involve disassembly to clean individual parts. 
+3. First Rinse: Rinse the surface completely with clean, hot water to remove all traces of
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 6: This detailed procedure must be followed methodically for all food contact surfaces 
+(workbenches, tables), equipment (mixers, slicers), and utensils (knives, bowls, spatulas). 
+1. Pre-Clean (Scrape): Before introducing water, remove all loose and large food debris 
+from the surface. Scrape them directly into a designated waste bin. This step makes the 
+washing process more effective and keeps the wash water cleaner for longer.
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 7: label. If it is a certified "no-rinse" sanitizer, this step can be omitted, which is often 
+preferred to avoid potential re-contamination from the rinse water. 
+6. Air Dry: Allow the surface or equipment to air dry completely. Do not use a cloth or tea 
+towel to dry it. Re-used cloths are a major source of cross-contamination and will 
+reintroduce bacteria to the freshly sanitized surface. Store freshly cleaned items upside 
+down on a clean rack to allow for drainage and drying.
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+--------------------------------------------------

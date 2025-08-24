@@ -82,10 +82,11 @@ class SimpleLogger:
                     f.write(f"  Total chunks retrieved: {len(rag_data)}\n")
                     for i, doc in enumerate(rag_data, 1):  # Show all retrieved chunks
                         if hasattr(doc, 'page_content'):
-                            content = doc.page_content[:200] + "..." if len(doc.page_content) > 200 else doc.page_content
+                            # Show full content for HR documents, no trimming
+                            content = doc.page_content
                             f.write(f"  Chunk {i}: {content}\n")
                             
-                            # Log metadata if available
+                            # Only show metadata if it's not empty and contains expected keys
                             if hasattr(doc, 'metadata') and doc.metadata:
                                 metadata = doc.metadata
                                 f.write(f"    📁 Source: {metadata.get('source_file', 'Unknown')}\n")
@@ -107,10 +108,10 @@ class SimpleLogger:
                                 }.get(content_type, '📝')
                                 f.write(f"    {type_emoji} Section: {type_emoji} {content_type.replace('_', ' ').title()}\n")
                         elif isinstance(doc, str):
-                            content = doc[:200] + "..." if len(doc) > 200 else doc
-                            f.write(f"  Chunk {i}: {content}\n")
+                            # Show full string content for HR documents
+                            f.write(f"  Chunk {i}: {doc}\n")
                         else:
-                            f.write(f"  Chunk {i}: {str(doc)[:200]}...\n")
+                            f.write(f"  Chunk {i}: {str(doc)}\n")
                 else:
                     f.write("  No chunks retrieved\n")
                 
