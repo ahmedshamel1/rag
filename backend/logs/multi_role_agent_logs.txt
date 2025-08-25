@@ -1,127 +1,84 @@
 
---- Interaction at 2025-08-24 14:04:45 ---
-User Query: Query: creme brule | Rewritten: creme brule recipe | Dishes: ['creme brule'] | Sections: []
+--- Interaction at 2025-08-24 14:45:24 ---
+User Query: Query: utils needed for making strawberry
+
+ | Rewritten: utensils_needed for making strawberry | Dishes: ['strawberry'] | Sections: ['utensils_needed']
 Conversation Memory:
-  1. {'role': 'user', 'content': 'creme brule'}...
-  2. {'role': 'assistant', 'content': ' To prepare the Crème Brûlée recipe, follow these steps:\n\n1. Pre...
+  1. {'role': 'user', 'content': 'utils needed for making strawberry\n\n'}...
+  2. {'role': 'assistant', 'content': ' To make a strawberry dessert, you will need the following utensil...
 RAG Retrieved Data:
   Total chunks retrieved: 7
-  Chunk 1: Allergen information 
-● Contains: Milk, Eggs.
-Crème Brûlée 
-Ingredients 
-● 500 millilitres double cream (heavy cream, at least 40% fat) 
-● 1 vanilla pod or 1 teaspoon high-quality vanilla extract 
-● 5 large egg yolks 
-● 100 grams caster sugar, plus extra for caramelising 
-● A pinch of salt 
-Preparation time 
-● Active time: 20 minutes 
-● Inactive time (baking and chilling): 3 hours 30 minutes 
-Utensils needed 
-● Medium saucepan 
+  Chunk 1: Utensils needed 
+● Food processor or large mixing bowl 
+● Rolling pin 
+● 23-centimetre loose-bottomed tart tin 
+● Baking paper 
+● Baking beans or uncooked rice 
+● Zester or fine grater 
+● Juicer 
+● Medium mixing bowl 
 ● Whisk 
-● Mixing bowl 
-● Fine-mesh sieve 
-● 4-6 shallow, round ramekins (approx. 150ml capacity) 
-● Deep roasting tin or baking dish 
-● Kitchen blow torch 
-Preparation instructions 
-1. Preheat oven and prepare ingredients: Preheat your oven to 160°C (140°C 
-Fan). 
-2. Infuse the cream: Pour the double cream into a medium saucepan. If using a 
-vanilla pod, split it lengthwise, scrape out the seeds with the back of a knife, and 
-add both the pod and the seeds to the cream. If using vanilla extract, you will add 
-it later. 
-3. Heat the cream over a medium-low heat until it is steaming and small bubbles 
-appear around the edge. Do not let it boil. Remove from the heat and let the 
-vanilla infuse for 15 minutes. 
-4. Prepare the custard base: In a mixing bowl, whisk the egg yolks, 100 grams of 
-caster sugar, and the pinch of salt together until the mixture is pale and has 
-thickened slightly. 
-5. Combine the mixtures: Slowly pour the warm cream into the egg yolk mixture, 
-whisking continuously to temper the eggs and prevent them from scrambling. If 
-you used a vanilla pod, remove it now. If using vanilla extract, stir it in.
-6. Strain the custard: Strain the custard through a fine-mesh sieve into a jug to 
-remove any lumps and ensure a silky-smooth texture. 
-7. Bake the custards: Arrange the ramekins in the deep roasting tin. Pour the 
-custard mixture evenly among the ramekins. Carefully pour hot water into the 
-roasting tin until it comes halfway up the sides of the ramekins (this is called a 
-bain-marie or water bath). 
-8. Bake for 30-40 minutes, or until the custards are just set but still have a slight 
-wobble in the centre. 
-9. Chill: Carefully remove the ramekins from the water bath and let them cool to 
-room temperature. Then, transfer them to the refrigerator and chill for at least1 3 
-hours, or preferably overnight, until completely firm. 
-10. Caramelise and serve: Just before serving, sprinkle an even, thin layer of caster 
-sugar (about 1-2 teaspoons) over the top of each chilled custard. Using a kitchen 
-blow torch, melt the sugar until it forms a crisp, golden-brown caramel crust. Let it 
-sit for a minute to harden before serving immediately. 
-Number of servings 
-● 4-6 servings 
-Nutritional information (per serving) 
-● Calories: Approximately 450-550 kcal 
-● Fat: 40-50g 
-● Carbohydrates: 20-25g 
-● Protein: 6-8g 
-● Sugar: 20-25g 
-(Note: Nutritional information is an estimate and can vary based on the cream's fat 
-content and the amount of sugar used for the topping.) 
-Allergen information 
-● Contains: Milk, Eggs.
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
-    📝 Type: allergen_information
-    🔢 Chunk: 7/7
-    📝 Section: 📝 Allergen Information
-  Chunk 2: Preparation instructions 
-1. Preheat oven and prepare ingredients: Preheat your oven to 160°C (140°C 
-Fan). 
-2. Infuse the cream: Pour the double cream into a medium saucepan. If using a 
-vanilla pod, split it lengthwise, scrape out the seeds with the back of a knife, and 
-add both the pod and the seeds to the cream. If using vanilla extract, you will add 
-it later. 
-3. Heat the cream over a medium-low heat until it is steaming and small bubbles 
-appear around the edge. Do not let it boil. Remove from the heat and let the 
-vanilla infuse for 15 minutes. 
-4. Prepare the custard base: In a mixing bowl, whisk the egg yolks, 100 grams of 
-caster sugar, and the pinch of salt together until the mixture is pale and has 
-thickened slightly. 
-5. Combine the mixtures: Slowly pour the warm cream into the egg yolk mixture, 
-whisking continuously to temper the eggs and prevent them from scrambling. If 
-you used a vanilla pod, remove it now. If using vanilla extract, stir it in.
-6. Strain the custard: Strain the custard through a fine-mesh sieve into a jug to 
-remove any lumps and ensure a silky-smooth texture. 
-7. Bake the custards: Arrange the ramekins in the deep roasting tin. Pour the 
-custard mixture evenly among the ramekins. Carefully pour hot water into the 
-roasting tin until it comes halfway up the sides of the ramekins (this is called a 
-bain-marie or water bath). 
-8. Bake for 30-40 minutes, or until the custards are just set but still have a slight 
-wobble in the centre. 
-9. Chill: Carefully remove the ramekins from the water bath and let them cool to 
-room temperature. Then, transfer them to the refrigerator and chill for at least1 3 
-hours, or preferably overnight, until completely firm. 
-10. Caramelise and serve: Just before serving, sprinkle an even, thin layer of caster 
-sugar (about 1-2 teaspoons) over the top of each chilled custard. Using a kitchen 
-blow torch, melt the sugar until it forms a crisp, golden-brown caramel crust. Let it 
-sit for a minute to harden before serving immediately.
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
-    📝 Type: preparation_instructions
-    🔢 Chunk: 4/7
-    📋 Section: 📋 Preparation Instructions
-  Chunk 3: Ingredients 
-● 500 millilitres double cream (heavy cream, at least 40% fat) 
-● 1 vanilla pod or 1 teaspoon high-quality vanilla extract 
-● 5 large egg yolks 
-● 100 grams caster sugar, plus extra for caramelising 
-● A pinch of salt
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 4: Utensils needed 
+● Sieve
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 2: Utensils needed
+
+Cherry pitter
+
+Large mixing bowl or food processor
+
+Rolling pin
+
+23-centimetre pie dish
+
+Sharp knife
+
+Large bowl for filling
+
+Pastry brush
+    📁 Source: file_019.docx
+    🍽️  Dish: cherry pie
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 3: Utensils needed
+
+Lemon juicer
+
+Small saucepan
+
+Sieve
+
+Large pitcher or jug
+
+Long spoon for stirring
+    📁 Source: file_014.docx
+    🍽️  Dish: homemade lemonade
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 4: Utensils needed
+
+23-centimetre loose-bottomed tart tin or pie dish
+
+Food processor or rolling pin and a sealable plastic bag
+
+Small saucepan
+
+Spatula or wooden spoon
+
+Whisk (electric or manual)
+
+Mixing bowl
+    📁 Source: file_020.docx
+    🍽️  Dish: banoffee pie
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 5: Utensils needed 
 ● Medium saucepan 
 ● Whisk 
 ● Mixing bowl 
@@ -134,805 +91,145 @@ sit for a minute to harden before serving immediately.
     📝 Type: utensils_needed
     🔢 Chunk: 3/7
     📝 Section: 📝 Utensils Needed
-  Chunk 5: Preparation time 
-● Active time: 20 minutes 
-● Inactive time (baking and chilling): 3 hours 30 minutes
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
-    📝 Type: preparation_time
-    🔢 Chunk: 2/7
-    ⏰ Section: ⏰ Preparation Time
-  Chunk 6: Nutritional information (per serving) 
-● Calories: Approximately 450-550 kcal 
-● Fat: 40-50g 
-● Carbohydrates: 20-25g 
-● Protein: 6-8g 
-● Sugar: 20-25g 
-(Note: Nutritional information is an estimate and can vary based on the cream's fat 
-content and the amount of sugar used for the topping.)
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
+  Chunk 6: Utensils needed 
+● Large bowl 
+● Fine-mesh sieve or colander 
+● Steamer (bamboo or metal) with cheesecloth or muslin 
+● Small saucepan 
+● Medium saucepan 
+● Sharp knife
+    📁 Source: file_021.pdf
+    🍽️  Dish: mango sticky rice (khao niao mamuang)
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 7: Utensils needed 
+● Heavy-bottomed saucepan 
+● Wooden spoon or spatula 
+● Serving bowls
+    📁 Source: file_011.pdf
+    🍽️  Dish: creamy rice pudding
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+
+Query Rewriter Analysis:
+  original_query: utils needed for making strawberry
+
+
+  rewritten_query: utensils_needed for making strawberry
+  extracted_dish_names: ['strawberry']
+  extracted_sections: ['utensils_needed']
+  full_recipe_requested: No
+  documents_found: 7
+  filter_applied: Yes
+  mechanism_used: semantic search only (role filter only)
+--------------------------------------------------
+
+--- Interaction at 2025-08-24 14:46:06 ---
+User Query: Query: utils needed for making strawberry shakyy | Rewritten: utensils needed for making strawberry shakyy | Dishes: ['strawberry shakyy'] | Sections: []
+Conversation Memory:
+  1. {'role': 'assistant', 'content': ' To make a strawberry dessert, you will need the following utensil...
+  2. {'role': 'user', 'content': 'utils needed for making strawberry shakyy'}...
+  3. {'role': 'assistant', 'content': ' To make Strawberry Shakyy, you will need the following utensils:\...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: Preparation instructions
+
+Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
+
+Secure the lid on the blender.
+
+Blend on a high speed for 30-60 seconds, or until the mixture is smooth and creamy.
+
+If the milkshake is too thick, add a small splash of extra milk and blend again briefly until it reaches your desired consistency.
+
+Pour the milkshake into serving glasses immediately.
+    📁 Source: file_009.docx
+    🍽️  Dish: strawberry milkshake
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients
+
+250 grams fresh or frozen strawberries, hulled
+
+150 millilitres whole milk, cold
+
+3 large scoops (approximately 150 grams) vanilla ice cream
+
+15 grams (1 tablespoon) caster sugar or to taste (optional)
+
+1 teaspoon vanilla extract (optional)
+    📁 Source: file_009.docx
+    🍽️  Dish: strawberry milkshake
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Utensils needed
+
+Blender
+
+Serving glasses
+    📁 Source: file_009.docx
+    🍽️  Dish: strawberry milkshake
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 4: Allergen information
+
+Contains: Milk.
+
+Some ice cream products may contain eggs or have warnings for potential cross-contamination with nuts, soya, or gluten. Always check the ice cream label.
+    📁 Source: file_009.docx
+    🍽️  Dish: strawberry milkshake
+    📝 Type: allergen_information
+    🔢 Chunk: 7/7
+    📝 Section: 📝 Allergen Information
+  Chunk 5: Nutritional information (per serving)
+
+Calories: Approximately 280-320 kcal
+
+Fat: 12g
+
+Carbohydrates: 35g
+
+Protein: 7g
+
+Sugar: 33g
+
+(Note: Nutritional information is an estimate and can vary based on the specific ice cream and amount of sugar used.)
+    📁 Source: file_009.docx
+    🍽️  Dish: strawberry milkshake
     📝 Type: nutritional_information
     🔢 Chunk: 6/7
     📝 Section: 📝 Nutritional Information
-  Chunk 7: Number of servings 
-● 4-6 servings
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
+  Chunk 6: Number of servings
+
+2 servings
+    📁 Source: file_009.docx
+    🍽️  Dish: strawberry milkshake
     📝 Type: number_of_servings
     🔢 Chunk: 5/7
     📝 Section: 📝 Number Of Servings
+  Chunk 7: Preparation time
+
+Active time: 5 minutes
+
+Inactive time: 0 minutes
+    📁 Source: file_009.docx
+    🍽️  Dish: strawberry milkshake
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
 
 Query Rewriter Analysis:
-  original_query: creme brule
-  rewritten_query: creme brule recipe
-  extracted_dish_names: ['creme brule']
+  original_query: utils needed for making strawberry shakyy
+  rewritten_query: utensils needed for making strawberry shakyy
+  extracted_dish_names: ['strawberry shakyy']
   extracted_sections: []
   full_recipe_requested: Yes
   documents_found: 7
   filter_applied: Yes
   mechanism_used: fuzzy matching with dish names
---------------------------------------------------
-
---- Interaction at 2025-08-24 14:06:19 ---
-User Query: Query:  Baked Cheesecake | Rewritten: full recipe for Baked Cheesecake | Dishes: ['baked cheesecake'] | Sections: []
-Conversation Memory:
-  1. {'role': 'assistant', 'content': ' To prepare the Crème Brûlée recipe, follow these steps:\n\n1. Pre...
-  2. {'role': 'user', 'content': ' Baked Cheesecake'}...
-  3. {'role': 'assistant', 'content': ' To make the Baked Cheesecake, follow these steps:\n\nIngredients:...
-RAG Retrieved Data:
-  Total chunks retrieved: 7
-  Chunk 1: Ingredients 
-For the cake: 
-● 300 grams plain flour 
-● 2 tablespoons unsweetened cocoa powder 
-● 1 teaspoon bicarbonate of soda 
-● 1/2 teaspoon salt 
-● 120 grams unsalted butter, at room temperature 
-● 300 grams caster sugar 
-● 2 large eggs, at room temperature 
-● 240 millilitres buttermilk, at room temperature 
-● 2 tablespoons (30 millilitres) red food colouring (liquid or gel) 
-● 1 teaspoon white vinegar 
-● 1 teaspoon vanilla extract 
-For the cream cheese frosting: 
-● 200 grams full-fat cream cheese, cold 
-● 100 grams unsalted butter, at room temperature 
-● 400 grams icing sugar, sifted 
-● 1 teaspoon vanilla extract
-    📁 Source: file_010.pdf
-    🍽️  Dish: red velvet cake
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 2: Preparation instructions
-1. Prepare the oven and tins: Preheat your oven to 180°C (160°C Fan). Grease 
-the two cake tins and line the bases with baking paper. 
-2. Combine dry ingredients: In a medium bowl, sift together the plain flour, cocoa 
-powder, bicarbonate of soda, and salt. Set aside. 
-3. Cream butter and sugar: In a large bowl using an electric mixer, beat the butter 
-and caster sugar together on high speed until the mixture is pale and fluffy, 
-approximately 5 minutes. 
-4. Add eggs and wet ingredients: Reduce the mixer speed to low. Add the eggs 
-one at a time, beating well after each addition. In a separate small bowl or jug, 
-whisk together the buttermilk, red food colouring, white vinegar, and vanilla 
-extract. 
-5. Combine wet and dry: With the mixer on low speed, add the dry ingredient 
-mixture to the butter mixture in three additions, alternating with the red buttermilk 
-mixture in two additions. Begin and end with the dry ingredients. Mix until just 
-combined; do not overmix. 
-6. Bake the cakes: Divide the batter evenly between the two prepared cake tins 
-and smooth the tops with a spatula. Bake for 30-35 minutes, or until a skewer 
-inserted into the centre of the cakes comes out clean. 
-7. Cool the cakes: Let the cakes cool in their tins for 10 minutes before inverting 
-them onto a wire cooling rack to cool completely. 
-8. Make the frosting: While the cakes cool, make the frosting. In a large bowl, beat 
-the cold cream cheese and room temperature butter together with an electric 
-mixer until smooth and combined. Gradually add the sifted icing sugar and beat 
-on low speed until incorporated, then increase the speed to high and beat for 3 
-minutes until light and fluffy. Beat in the vanilla extract. 
-9. Assemble the cake: Place one of the cooled cake layers on a serving plate. 
-Spread about half of the frosting evenly over the top. Place the second cake 
-layer on top and spread the remaining frosting over the top and sides of the cake 
-using a palette knife.
-    📁 Source: file_010.pdf
-    🍽️  Dish: red velvet cake
-    📝 Type: preparation_instructions
-    🔢 Chunk: 4/7
-    📋 Section: 📋 Preparation Instructions
-  Chunk 3: Ingredients 
-For the dough (détrempe): 
-● 500 grams strong white bread flour 
-● 10 grams salt 
-● 55 grams caster sugar 
-● 10 grams instant dried yeast 
-● 300 millilitres cool whole milk 
-For the butter block (beurrage): 
-● 250 grams unsalted butter, high quality (at least 82% fat content), cold 
-For the egg wash: 
-● 1 large egg 
-● 1 tablespoon whole milk
-    📁 Source: file_008.pdf
-    🍽️  Dish: classic butter croissants
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 4: Ingredients 
-For the dough: 
-● 120 millilitres whole milk, lukewarm 
-● 7 grams instant dried yeast 
-● 50 grams caster sugar 
-● 1 large egg, at room temperature 
-● 60 grams unsalted butter, melted 
-● 300 grams strong white bread flour 
-● 1/2 teaspoon salt 
-For the filling: 
-● 75 grams unsalted butter, very soft 
-● 100 grams soft brown sugar 
-● 2 tablespoons ground cinnamon 
-For the icing: 
-● 100 grams icing sugar, sifted 
-● 2-3 tablespoons milk
-    📁 Source: file_012.pdf
-    🍽️  Dish: classic cinnamon rolls
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 5: Ingredients 
-For the pastry: 
-● 250 grams plain flour, plus extra for dusting 
-● 125 grams cold unsalted butter, cubed 
-● 50 grams icing sugar 
-● 1 large egg yolk 
-● 2 tablespoons cold water 
-For the lemon filling: 
-● 4 large lemons (zest and juice) 
-● 200 grams caster sugar 
-● 120 millilitres double cream 
-● 3 large eggs 
-● 2 large egg yolks
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 6: Preparation instructions 
-1. Make the pastry: In a food processor, pulse the flour and butter until the mixture 
-resembles breadcrumbs. If making by hand, rub the butter into the flour in a large 
-bowl. Stir in the icing sugar. Add the egg yolk and cold water, and mix until the
-dough just comes together. Form it into a disc, wrap it in cling film, and chill in the 
-refrigerator for at least 30 minutes. 
-2. Blind bake the crust: Preheat your oven to 200°C (180°C Fan). Lightly flour a 
-work surface and roll out the chilled pastry until it is large enough to line the tart 
-tin. Press the pastry into the tin, trimming any excess. Prick the base with a fork. 
-Line the pastry case with baking paper and fill with baking beans or uncooked 
-rice. Bake for 15 minutes. 
-3. Remove the paper and beans, then bake for another 5-10 minutes until the 
-pastry is pale golden and cooked through. Set aside to cool slightly. 
-4. Prepare the filling: Reduce the oven temperature to 170°C (150°C Fan). In a 
-medium bowl, whisk together the lemon zest, lemon juice, and caster sugar. 
-5. In a separate bowl, whisk the double cream, whole eggs, and extra egg yolks 
-together. Pour the cream and egg mixture into the lemon and sugar mixture, 
-whisking until well combined. 
-6. Bake the pie: Pour the filling through a sieve directly into the prepared pastry 
-case. Bake for 30-35 minutes, or until the filling is just set with a slight wobble in 
-the centre. 
-7. Allow the pie to cool completely in the tin before removing and slicing. It will firm 
-up as it cools.
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
-    📝 Type: preparation_instructions
-    🔢 Chunk: 4/7
-    📋 Section: 📋 Preparation Instructions
-  Chunk 7: Preparation instructions 
-1. Preheat oven and prepare ingredients: Preheat your oven to 160°C (140°C 
-Fan). 
-2. Infuse the cream: Pour the double cream into a medium saucepan. If using a 
-vanilla pod, split it lengthwise, scrape out the seeds with the back of a knife, and 
-add both the pod and the seeds to the cream. If using vanilla extract, you will add 
-it later. 
-3. Heat the cream over a medium-low heat until it is steaming and small bubbles 
-appear around the edge. Do not let it boil. Remove from the heat and let the 
-vanilla infuse for 15 minutes. 
-4. Prepare the custard base: In a mixing bowl, whisk the egg yolks, 100 grams of 
-caster sugar, and the pinch of salt together until the mixture is pale and has 
-thickened slightly. 
-5. Combine the mixtures: Slowly pour the warm cream into the egg yolk mixture, 
-whisking continuously to temper the eggs and prevent them from scrambling. If 
-you used a vanilla pod, remove it now. If using vanilla extract, stir it in.
-6. Strain the custard: Strain the custard through a fine-mesh sieve into a jug to 
-remove any lumps and ensure a silky-smooth texture. 
-7. Bake the custards: Arrange the ramekins in the deep roasting tin. Pour the 
-custard mixture evenly among the ramekins. Carefully pour hot water into the 
-roasting tin until it comes halfway up the sides of the ramekins (this is called a 
-bain-marie or water bath). 
-8. Bake for 30-40 minutes, or until the custards are just set but still have a slight 
-wobble in the centre. 
-9. Chill: Carefully remove the ramekins from the water bath and let them cool to 
-room temperature. Then, transfer them to the refrigerator and chill for at least1 3 
-hours, or preferably overnight, until completely firm. 
-10. Caramelise and serve: Just before serving, sprinkle an even, thin layer of caster 
-sugar (about 1-2 teaspoons) over the top of each chilled custard. Using a kitchen 
-blow torch, melt the sugar until it forms a crisp, golden-brown caramel crust. Let it 
-sit for a minute to harden before serving immediately.
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
-    📝 Type: preparation_instructions
-    🔢 Chunk: 4/7
-    📋 Section: 📋 Preparation Instructions
-
-Query Rewriter Analysis:
-  original_query:  Baked Cheesecake
-  rewritten_query: full recipe for Baked Cheesecake
-  extracted_dish_names: ['baked cheesecake']
-  extracted_sections: []
-  full_recipe_requested: Yes
-  documents_found: 7
-  filter_applied: Yes
-  mechanism_used: semantic search only (role filter only)
---------------------------------------------------
-
---- Interaction at 2025-08-24 14:07:35 ---
-User Query: Query: Signature Baked Cheesecake with Gamonéu Curd  | Rewritten: full recipe for Signature Baked Cheesecake with Gamonéu Curd | Dishes: ['signature baked cheesecake with gamonéu curd'] | Sections: []
-Conversation Memory:
-  1. {'role': 'assistant', 'content': ' To make the Baked Cheesecake, follow these steps:\n\nIngredients:...
-  2. {'role': 'user', 'content': 'Signature Baked Cheesecake with Gamonéu Curd '}...
-  3. {'role': 'assistant', 'content': " To make the Signature Baked Cheesecake with Gamonéu Curd, you'll ...
-RAG Retrieved Data:
-  Total chunks retrieved: 7
-  Chunk 1: Ingredients 
-For the cake: 
-● 300 grams plain flour 
-● 2 tablespoons unsweetened cocoa powder 
-● 1 teaspoon bicarbonate of soda 
-● 1/2 teaspoon salt 
-● 120 grams unsalted butter, at room temperature 
-● 300 grams caster sugar 
-● 2 large eggs, at room temperature 
-● 240 millilitres buttermilk, at room temperature 
-● 2 tablespoons (30 millilitres) red food colouring (liquid or gel) 
-● 1 teaspoon white vinegar 
-● 1 teaspoon vanilla extract 
-For the cream cheese frosting: 
-● 200 grams full-fat cream cheese, cold 
-● 100 grams unsalted butter, at room temperature 
-● 400 grams icing sugar, sifted 
-● 1 teaspoon vanilla extract
-    📁 Source: file_010.pdf
-    🍽️  Dish: red velvet cake
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 2: Allergen information 
-● Contains: Milk, Eggs.
-Crème Brûlée 
-Ingredients 
-● 500 millilitres double cream (heavy cream, at least 40% fat) 
-● 1 vanilla pod or 1 teaspoon high-quality vanilla extract 
-● 5 large egg yolks 
-● 100 grams caster sugar, plus extra for caramelising 
-● A pinch of salt 
-Preparation time 
-● Active time: 20 minutes 
-● Inactive time (baking and chilling): 3 hours 30 minutes 
-Utensils needed 
-● Medium saucepan 
-● Whisk 
-● Mixing bowl 
-● Fine-mesh sieve 
-● 4-6 shallow, round ramekins (approx. 150ml capacity) 
-● Deep roasting tin or baking dish 
-● Kitchen blow torch 
-Preparation instructions 
-1. Preheat oven and prepare ingredients: Preheat your oven to 160°C (140°C 
-Fan). 
-2. Infuse the cream: Pour the double cream into a medium saucepan. If using a 
-vanilla pod, split it lengthwise, scrape out the seeds with the back of a knife, and 
-add both the pod and the seeds to the cream. If using vanilla extract, you will add 
-it later. 
-3. Heat the cream over a medium-low heat until it is steaming and small bubbles 
-appear around the edge. Do not let it boil. Remove from the heat and let the 
-vanilla infuse for 15 minutes. 
-4. Prepare the custard base: In a mixing bowl, whisk the egg yolks, 100 grams of 
-caster sugar, and the pinch of salt together until the mixture is pale and has 
-thickened slightly. 
-5. Combine the mixtures: Slowly pour the warm cream into the egg yolk mixture, 
-whisking continuously to temper the eggs and prevent them from scrambling. If 
-you used a vanilla pod, remove it now. If using vanilla extract, stir it in.
-6. Strain the custard: Strain the custard through a fine-mesh sieve into a jug to 
-remove any lumps and ensure a silky-smooth texture. 
-7. Bake the custards: Arrange the ramekins in the deep roasting tin. Pour the 
-custard mixture evenly among the ramekins. Carefully pour hot water into the 
-roasting tin until it comes halfway up the sides of the ramekins (this is called a 
-bain-marie or water bath). 
-8. Bake for 30-40 minutes, or until the custards are just set but still have a slight 
-wobble in the centre. 
-9. Chill: Carefully remove the ramekins from the water bath and let them cool to 
-room temperature. Then, transfer them to the refrigerator and chill for at least1 3 
-hours, or preferably overnight, until completely firm. 
-10. Caramelise and serve: Just before serving, sprinkle an even, thin layer of caster 
-sugar (about 1-2 teaspoons) over the top of each chilled custard. Using a kitchen 
-blow torch, melt the sugar until it forms a crisp, golden-brown caramel crust. Let it 
-sit for a minute to harden before serving immediately. 
-Number of servings 
-● 4-6 servings 
-Nutritional information (per serving) 
-● Calories: Approximately 450-550 kcal 
-● Fat: 40-50g 
-● Carbohydrates: 20-25g 
-● Protein: 6-8g 
-● Sugar: 20-25g 
-(Note: Nutritional information is an estimate and can vary based on the cream's fat 
-content and the amount of sugar used for the topping.) 
-Allergen information 
-● Contains: Milk, Eggs.
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
-    📝 Type: allergen_information
-    🔢 Chunk: 7/7
-    📝 Section: 📝 Allergen Information
-  Chunk 3: Preparation instructions 
-1. Preheat oven and prepare ingredients: Preheat your oven to 160°C (140°C 
-Fan). 
-2. Infuse the cream: Pour the double cream into a medium saucepan. If using a 
-vanilla pod, split it lengthwise, scrape out the seeds with the back of a knife, and 
-add both the pod and the seeds to the cream. If using vanilla extract, you will add 
-it later. 
-3. Heat the cream over a medium-low heat until it is steaming and small bubbles 
-appear around the edge. Do not let it boil. Remove from the heat and let the 
-vanilla infuse for 15 minutes. 
-4. Prepare the custard base: In a mixing bowl, whisk the egg yolks, 100 grams of 
-caster sugar, and the pinch of salt together until the mixture is pale and has 
-thickened slightly. 
-5. Combine the mixtures: Slowly pour the warm cream into the egg yolk mixture, 
-whisking continuously to temper the eggs and prevent them from scrambling. If 
-you used a vanilla pod, remove it now. If using vanilla extract, stir it in.
-6. Strain the custard: Strain the custard through a fine-mesh sieve into a jug to 
-remove any lumps and ensure a silky-smooth texture. 
-7. Bake the custards: Arrange the ramekins in the deep roasting tin. Pour the 
-custard mixture evenly among the ramekins. Carefully pour hot water into the 
-roasting tin until it comes halfway up the sides of the ramekins (this is called a 
-bain-marie or water bath). 
-8. Bake for 30-40 minutes, or until the custards are just set but still have a slight 
-wobble in the centre. 
-9. Chill: Carefully remove the ramekins from the water bath and let them cool to 
-room temperature. Then, transfer them to the refrigerator and chill for at least1 3 
-hours, or preferably overnight, until completely firm. 
-10. Caramelise and serve: Just before serving, sprinkle an even, thin layer of caster 
-sugar (about 1-2 teaspoons) over the top of each chilled custard. Using a kitchen 
-blow torch, melt the sugar until it forms a crisp, golden-brown caramel crust. Let it 
-sit for a minute to harden before serving immediately.
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
-    📝 Type: preparation_instructions
-    🔢 Chunk: 4/7
-    📋 Section: 📋 Preparation Instructions
-  Chunk 4: Ingredients 
-For the dough (détrempe): 
-● 500 grams strong white bread flour 
-● 10 grams salt 
-● 55 grams caster sugar 
-● 10 grams instant dried yeast 
-● 300 millilitres cool whole milk 
-For the butter block (beurrage): 
-● 250 grams unsalted butter, high quality (at least 82% fat content), cold 
-For the egg wash: 
-● 1 large egg 
-● 1 tablespoon whole milk
-    📁 Source: file_008.pdf
-    🍽️  Dish: classic butter croissants
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 5: Ingredients 
-For the pastry: 
-● 250 grams plain flour, plus extra for dusting 
-● 125 grams cold unsalted butter, cubed 
-● 50 grams icing sugar 
-● 1 large egg yolk 
-● 2 tablespoons cold water 
-For the lemon filling: 
-● 4 large lemons (zest and juice) 
-● 200 grams caster sugar 
-● 120 millilitres double cream 
-● 3 large eggs 
-● 2 large egg yolks
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 6: Ingredients
-
-For the pastry (Pâte Brisée):
-
-375 grams plain flour
-
-1/2 teaspoon salt
-
-225 grams cold unsalted butter, cubed
-
-120 millilitres ice-cold water
-
-For the filling:
-
-1 kilogram fresh sweet cherries, pitted (or frozen, thawed)
-
-150 grams caster sugar
-
-30 grams cornflour
-
-1/4 teaspoon ground cinnamon (optional)
-
-1 tablespoon lemon juice
-
-1/2 teaspoon almond extract (optional)
-
-25 grams unsalted butter, cut into small pieces
-
-For the egg wash (optional):
-
-1 large egg, beaten with 1 tablespoon of milk
-    📁 Source: file_019.docx
-    🍽️  Dish: cherry pie
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 7: Ingredients 
-For the dough: 
-● 120 millilitres whole milk, lukewarm 
-● 7 grams instant dried yeast 
-● 50 grams caster sugar 
-● 1 large egg, at room temperature 
-● 60 grams unsalted butter, melted 
-● 300 grams strong white bread flour 
-● 1/2 teaspoon salt 
-For the filling: 
-● 75 grams unsalted butter, very soft 
-● 100 grams soft brown sugar 
-● 2 tablespoons ground cinnamon 
-For the icing: 
-● 100 grams icing sugar, sifted 
-● 2-3 tablespoons milk
-    📁 Source: file_012.pdf
-    🍽️  Dish: classic cinnamon rolls
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-
-Query Rewriter Analysis:
-  original_query: Signature Baked Cheesecake with Gamonéu Curd 
-  rewritten_query: full recipe for Signature Baked Cheesecake with Gamonéu Curd
-  extracted_dish_names: ['signature baked cheesecake with gamonéu curd']
-  extracted_sections: []
-  full_recipe_requested: Yes
-  documents_found: 7
-  filter_applied: Yes
-  mechanism_used: semantic search only (role filter only)
---------------------------------------------------
-
---- Interaction at 2025-08-24 14:09:00 ---
-User Query: Query: Baked Cheesecake with Gamonéu Curd  | Rewritten: recipe for Baked Cheesecake with Gamonéu Curd | Dishes: ['baked cheesecake with gamonéu curd'] | Sections: ['ingredients', 'preparation_instructions']
-Conversation Memory:
-  1. {'role': 'assistant', 'content': " To make the Signature Baked Cheesecake with Gamonéu Curd, you'll ...
-  2. {'role': 'user', 'content': 'Baked Cheesecake with Gamonéu Curd '}...
-  3. {'role': 'assistant', 'content': ' To make a Baked Cheesecake with Gamonéu Curd, follow this recipe:...
-RAG Retrieved Data:
-  Total chunks retrieved: 2
-  Chunk 1: Preparation instructions 
-1. Prepare the base and tin: Preheat your oven to 180°C (160°C Fan). Grease the 
-base and sides of the springform tin and line the base with baking paper. 
-2. Crush the digestive biscuits to a fine crumb using a food processor. Mix the 
-crumbs with the melted butter and the pinch of salt until fully combined. Press 
-this mixture firmly into the base of the prepared tin. Bake for 10 minutes. Set 
-aside to cool. 
-3. Prepare the Gamonéu curd: In a small saucepan, gently heat the double cream 
-and sugar until the sugar dissolves. Do not boil. Place the crumbled Gamonéu 
-cheese in a small bowl and pour the hot cream over it. Let it sit for 5 minutes, 
-then whisk vigorously until you have a relatively smooth, thick paste. Push the 
-mixture through a sieve to remove any lumps and set aside. 
-4. Reduce the oven temperature to 160°C (140°C Fan). 
-5. Make the cheesecake filling: In the bowl of an electric mixer, beat the room-
-temperature cream cheese on a low speed until completely smooth and free of 
-lumps. 
-6. Add the caster sugar and beat until just combined. Scrape down the sides of the 
-bowl. 
-7. In a separate small bowl, whisk the crème fraîche with the white miso paste until 
-smooth. Add this to the cream cheese mixture along with the vanilla extract and 
-lemon zest. Beat on low speed until just incorporated. 
-8. Add the eggs and the extra egg yolk one at a time, mixing on a low speed after 
-each addition until just combined. Do not overmix, as this incorporates too much 
-air. 
-9. Finally, fold in the sifted plain flour with a spatula. 
-10. Assemble and bake: Pour three-quarters of the cheesecake filling over the 
-cooled biscuit base. Dollop small spoonfuls of the Gamonéu curd over the 
-surface. Pour the remaining cheesecake filling on top. Use a skewer to gently 
-swirl the curd through the top layer of the filling once or twice. 
-11. Place the tin in the large roasting tin. Pour boiling water into the roasting tin to 
-come halfway up the sides of the cake tin (this is a bain-marie or water bath). 
-12. Bake for 60-70 minutes. The edges of the cheesecake should be set, but the 
-centre should still have a distinct wobble. 
-13. Cool the cheesecake: Turn off the oven, prop the oven door open slightly, and 
-let the cheesecake cool completely inside the oven for at least 2 hours. This 
-gradual cooling process is crucial to prevent cracking. 
-14. Remove the cheesecake from the water bath and let it cool to room temperature 
-on a wire rack. Then, cover it with cling film and refrigerate for at least 6 hours, or 
-preferably overnight, before releasing from the tin and serving.
-    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
-    🍽️  Dish: signature baked cheesecake with gamonéu curd
-    📝 Type: preparation_instructions
-    🔢 Chunk: 4/7
-    📋 Section: 📋 Preparation Instructions
-  Chunk 2: Ingredients 
-For the biscuit base: 
-● 250 grams digestive biscuits 
-● 125 grams unsalted butter, melted 
-● A pinch of salt 
-For the Gamonéu curd swirl: 
-● 50 grams artisan Gamonéu del Puerto cheese, rind removed, crumbled 
-● 30 millilitres double cream 
-● 1 teaspoon caster sugar 
-For the cheesecake filling: 
-● 800 grams full-fat cream cheese, at room temperature 
-● 200 grams caster sugar 
-● 200 grams crème fraîche or full-fat sour cream 
-● 3 large eggs, plus 1 egg yolk 
-● 30 grams plain flour, sifted 
-● 1 tablespoon high-quality white miso paste (secret ingredient) 
-● 1 teaspoon vanilla extract 
-● Zest of 1 small lemon
-    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
-    🍽️  Dish: signature baked cheesecake with gamonéu curd
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-
-Query Rewriter Analysis:
-  original_query: Baked Cheesecake with Gamonéu Curd 
-  rewritten_query: recipe for Baked Cheesecake with Gamonéu Curd
-  extracted_dish_names: ['baked cheesecake with gamonéu curd']
-  extracted_sections: ['ingredients', 'preparation_instructions']
-  full_recipe_requested: No
-  documents_found: 2
-  filter_applied: Yes
-  mechanism_used: fuzzy matching with dish names
---------------------------------------------------
-
---- Interaction at 2025-08-24 14:09:44 ---
-User Query: Query: give me all details about Signature Baked Cheesecake with Gamonéu Curd  | Rewritten: full recipe for Signature Baked Cheesecake with Gamonéu Curd | Dishes: ['signature baked cheesecake with gamonéu curd'] | Sections: []
-Conversation Memory:
-  1. {'role': 'assistant', 'content': ' To make a Baked Cheesecake with Gamonéu Curd, follow this recipe:...
-  2. {'role': 'user', 'content': 'give me all details about Signature Baked Cheesecake with Gamonéu Curd ...
-  3. {'role': 'assistant', 'content': " To make the Signature Baked Cheesecake with Gamonéu Curd, you'll ...
-RAG Retrieved Data:
-  Total chunks retrieved: 7
-  Chunk 1: Ingredients 
-For the cake: 
-● 300 grams plain flour 
-● 2 tablespoons unsweetened cocoa powder 
-● 1 teaspoon bicarbonate of soda 
-● 1/2 teaspoon salt 
-● 120 grams unsalted butter, at room temperature 
-● 300 grams caster sugar 
-● 2 large eggs, at room temperature 
-● 240 millilitres buttermilk, at room temperature 
-● 2 tablespoons (30 millilitres) red food colouring (liquid or gel) 
-● 1 teaspoon white vinegar 
-● 1 teaspoon vanilla extract 
-For the cream cheese frosting: 
-● 200 grams full-fat cream cheese, cold 
-● 100 grams unsalted butter, at room temperature 
-● 400 grams icing sugar, sifted 
-● 1 teaspoon vanilla extract
-    📁 Source: file_010.pdf
-    🍽️  Dish: red velvet cake
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 2: Allergen information 
-● Contains: Milk, Eggs.
-Crème Brûlée 
-Ingredients 
-● 500 millilitres double cream (heavy cream, at least 40% fat) 
-● 1 vanilla pod or 1 teaspoon high-quality vanilla extract 
-● 5 large egg yolks 
-● 100 grams caster sugar, plus extra for caramelising 
-● A pinch of salt 
-Preparation time 
-● Active time: 20 minutes 
-● Inactive time (baking and chilling): 3 hours 30 minutes 
-Utensils needed 
-● Medium saucepan 
-● Whisk 
-● Mixing bowl 
-● Fine-mesh sieve 
-● 4-6 shallow, round ramekins (approx. 150ml capacity) 
-● Deep roasting tin or baking dish 
-● Kitchen blow torch 
-Preparation instructions 
-1. Preheat oven and prepare ingredients: Preheat your oven to 160°C (140°C 
-Fan). 
-2. Infuse the cream: Pour the double cream into a medium saucepan. If using a 
-vanilla pod, split it lengthwise, scrape out the seeds with the back of a knife, and 
-add both the pod and the seeds to the cream. If using vanilla extract, you will add 
-it later. 
-3. Heat the cream over a medium-low heat until it is steaming and small bubbles 
-appear around the edge. Do not let it boil. Remove from the heat and let the 
-vanilla infuse for 15 minutes. 
-4. Prepare the custard base: In a mixing bowl, whisk the egg yolks, 100 grams of 
-caster sugar, and the pinch of salt together until the mixture is pale and has 
-thickened slightly. 
-5. Combine the mixtures: Slowly pour the warm cream into the egg yolk mixture, 
-whisking continuously to temper the eggs and prevent them from scrambling. If 
-you used a vanilla pod, remove it now. If using vanilla extract, stir it in.
-6. Strain the custard: Strain the custard through a fine-mesh sieve into a jug to 
-remove any lumps and ensure a silky-smooth texture. 
-7. Bake the custards: Arrange the ramekins in the deep roasting tin. Pour the 
-custard mixture evenly among the ramekins. Carefully pour hot water into the 
-roasting tin until it comes halfway up the sides of the ramekins (this is called a 
-bain-marie or water bath). 
-8. Bake for 30-40 minutes, or until the custards are just set but still have a slight 
-wobble in the centre. 
-9. Chill: Carefully remove the ramekins from the water bath and let them cool to 
-room temperature. Then, transfer them to the refrigerator and chill for at least1 3 
-hours, or preferably overnight, until completely firm. 
-10. Caramelise and serve: Just before serving, sprinkle an even, thin layer of caster 
-sugar (about 1-2 teaspoons) over the top of each chilled custard. Using a kitchen 
-blow torch, melt the sugar until it forms a crisp, golden-brown caramel crust. Let it 
-sit for a minute to harden before serving immediately. 
-Number of servings 
-● 4-6 servings 
-Nutritional information (per serving) 
-● Calories: Approximately 450-550 kcal 
-● Fat: 40-50g 
-● Carbohydrates: 20-25g 
-● Protein: 6-8g 
-● Sugar: 20-25g 
-(Note: Nutritional information is an estimate and can vary based on the cream's fat 
-content and the amount of sugar used for the topping.) 
-Allergen information 
-● Contains: Milk, Eggs.
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
-    📝 Type: allergen_information
-    🔢 Chunk: 7/7
-    📝 Section: 📝 Allergen Information
-  Chunk 3: Preparation instructions 
-1. Preheat oven and prepare ingredients: Preheat your oven to 160°C (140°C 
-Fan). 
-2. Infuse the cream: Pour the double cream into a medium saucepan. If using a 
-vanilla pod, split it lengthwise, scrape out the seeds with the back of a knife, and 
-add both the pod and the seeds to the cream. If using vanilla extract, you will add 
-it later. 
-3. Heat the cream over a medium-low heat until it is steaming and small bubbles 
-appear around the edge. Do not let it boil. Remove from the heat and let the 
-vanilla infuse for 15 minutes. 
-4. Prepare the custard base: In a mixing bowl, whisk the egg yolks, 100 grams of 
-caster sugar, and the pinch of salt together until the mixture is pale and has 
-thickened slightly. 
-5. Combine the mixtures: Slowly pour the warm cream into the egg yolk mixture, 
-whisking continuously to temper the eggs and prevent them from scrambling. If 
-you used a vanilla pod, remove it now. If using vanilla extract, stir it in.
-6. Strain the custard: Strain the custard through a fine-mesh sieve into a jug to 
-remove any lumps and ensure a silky-smooth texture. 
-7. Bake the custards: Arrange the ramekins in the deep roasting tin. Pour the 
-custard mixture evenly among the ramekins. Carefully pour hot water into the 
-roasting tin until it comes halfway up the sides of the ramekins (this is called a 
-bain-marie or water bath). 
-8. Bake for 30-40 minutes, or until the custards are just set but still have a slight 
-wobble in the centre. 
-9. Chill: Carefully remove the ramekins from the water bath and let them cool to 
-room temperature. Then, transfer them to the refrigerator and chill for at least1 3 
-hours, or preferably overnight, until completely firm. 
-10. Caramelise and serve: Just before serving, sprinkle an even, thin layer of caster 
-sugar (about 1-2 teaspoons) over the top of each chilled custard. Using a kitchen 
-blow torch, melt the sugar until it forms a crisp, golden-brown caramel crust. Let it 
-sit for a minute to harden before serving immediately.
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
-    📝 Type: preparation_instructions
-    🔢 Chunk: 4/7
-    📋 Section: 📋 Preparation Instructions
-  Chunk 4: Ingredients 
-For the dough (détrempe): 
-● 500 grams strong white bread flour 
-● 10 grams salt 
-● 55 grams caster sugar 
-● 10 grams instant dried yeast 
-● 300 millilitres cool whole milk 
-For the butter block (beurrage): 
-● 250 grams unsalted butter, high quality (at least 82% fat content), cold 
-For the egg wash: 
-● 1 large egg 
-● 1 tablespoon whole milk
-    📁 Source: file_008.pdf
-    🍽️  Dish: classic butter croissants
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 5: Ingredients 
-For the pastry: 
-● 250 grams plain flour, plus extra for dusting 
-● 125 grams cold unsalted butter, cubed 
-● 50 grams icing sugar 
-● 1 large egg yolk 
-● 2 tablespoons cold water 
-For the lemon filling: 
-● 4 large lemons (zest and juice) 
-● 200 grams caster sugar 
-● 120 millilitres double cream 
-● 3 large eggs 
-● 2 large egg yolks
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 6: Ingredients
-
-For the pastry (Pâte Brisée):
-
-375 grams plain flour
-
-1/2 teaspoon salt
-
-225 grams cold unsalted butter, cubed
-
-120 millilitres ice-cold water
-
-For the filling:
-
-1 kilogram fresh sweet cherries, pitted (or frozen, thawed)
-
-150 grams caster sugar
-
-30 grams cornflour
-
-1/4 teaspoon ground cinnamon (optional)
-
-1 tablespoon lemon juice
-
-1/2 teaspoon almond extract (optional)
-
-25 grams unsalted butter, cut into small pieces
-
-For the egg wash (optional):
-
-1 large egg, beaten with 1 tablespoon of milk
-    📁 Source: file_019.docx
-    🍽️  Dish: cherry pie
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 7: Ingredients 
-For the dough: 
-● 120 millilitres whole milk, lukewarm 
-● 7 grams instant dried yeast 
-● 50 grams caster sugar 
-● 1 large egg, at room temperature 
-● 60 grams unsalted butter, melted 
-● 300 grams strong white bread flour 
-● 1/2 teaspoon salt 
-For the filling: 
-● 75 grams unsalted butter, very soft 
-● 100 grams soft brown sugar 
-● 2 tablespoons ground cinnamon 
-For the icing: 
-● 100 grams icing sugar, sifted 
-● 2-3 tablespoons milk
-    📁 Source: file_012.pdf
-    🍽️  Dish: classic cinnamon rolls
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-
-Query Rewriter Analysis:
-  original_query: give me all details about Signature Baked Cheesecake with Gamonéu Curd 
-  rewritten_query: full recipe for Signature Baked Cheesecake with Gamonéu Curd
-  extracted_dish_names: ['signature baked cheesecake with gamonéu curd']
-  extracted_sections: []
-  full_recipe_requested: Yes
-  documents_found: 7
-  filter_applied: Yes
-  mechanism_used: semantic search only (role filter only)
 --------------------------------------------------
