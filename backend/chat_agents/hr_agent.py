@@ -30,7 +30,7 @@ from backend.utils.simple_logger import SimpleLogger
 # Load environment variables from .env file
 load_dotenv()
 
-# Document tracking file path
+## Document tracking file path
 HR_TRACKING_FILE = "backend/logs/hr_agent_document_tracking.json"
 
 
