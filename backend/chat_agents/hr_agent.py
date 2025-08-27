@@ -91,6 +91,7 @@ CRITICAL RULES:
 - Keep answers brief but complete - include all relevant details from chunks
 - Use official documents when available
 - Always emphasize the importance of following official company procedures
+- IMPORTANT: You have access to conversation history. Use it to provide context-aware responses.
 
 RESPONSE FORMAT:
 - Be concise and professional
@@ -99,9 +100,13 @@ RESPONSE FORMAT:
 - For policy questions, provide exact information from chunks
 - For procedural questions, include step-by-step guidance when available
 - Always recommend consulting with HR staff for complex or sensitive matters
+- If asked about previous questions or conversations, reference the chat history appropriately
 
 Context chunks from HR documents:
 {context}
+
+Chat History:
+{chat_history}
 
 Question: {question}
 
@@ -110,7 +115,9 @@ Professional HR Response:"""
 hr_prompt = PromptTemplate.from_template(hr_prompt_template)
 
 memory_hr = ConversationBufferMemory(memory_key="chat_history",
-                                    return_messages=True)  #: Memory buffer to enable conversational history in retrieval
+                                    return_messages=True,
+                                    input_key="question",
+                                    output_key="answer")  #: Memory buffer to enable conversational history in retrieval
 
 # Load documents from HR agent folder
 print("🔍 Checking for HR document changes...")
@@ -139,9 +146,9 @@ hr_chain = ConversationalRetrievalChain.from_llm(
     llm, 
     hr_retriever, 
     memory=memory_hr,
-    output_key="answer",
     return_source_documents=True,
-    chain_type_kwargs={"prompt": hr_prompt}
+    verbose=True,
+    combine_docs_chain_kwargs={"prompt": hr_prompt}
 )
 
 
