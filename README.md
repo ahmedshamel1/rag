@@ -213,15 +213,18 @@ streamlit run chat_app.py
 ## 📊 API Endpoints
 
 ### Chat Endpoints
-- `POST /chat/hr` - HR agent queries
-- `POST /chat/baker` - Baker agent queries  
-- `POST /chat/cofounder` - Co-founder agent queries
-- `POST /chat/multi-role` - Multi-role agent queries
+- `POST /process/` - Process queries for any agent
+  - Request body: `{"user_prompt": "your question", "agent": "agent_type"}`
+  - Supported agents: `"bakers"`, `"hr"`, `"cofounder"`
 
-### Document Management
-- `GET /documents/status` - Document tracking status
-- `POST /documents/reload` - Force document reload
-- `GET /documents/chunks/{agent}` - View chunked documents
+### Root Endpoint
+- `GET /` - Welcome message
+
+### Note
+The API uses a single `/process/` endpoint with an `agent` parameter to route requests to the appropriate agent, rather than separate endpoints for each agent type.
+
+### Document Support
+- ✅ Multi-document type support (PDF, TXT, MD, DOCX)
 
 ---
 
@@ -237,6 +240,12 @@ streamlit run chat_app.py
 - **Response Time**: Query processing latency tracking
 - **Retrieval Accuracy**: Success rates for different retrieval tiers
 - **Document Processing**: Chunking and embedding generation statistics
+
+### Query Rewritter Evaluation
+- **LLM Performance Testing**: Individual script (`llm_eval_query_rewritter.py`) for evaluating different LLMs
+- **Best LLM Selection**: Manual testing to determine optimal LLM for query rewriting tasks
+- **Performance Comparison**: Metrics-based evaluation across multiple language models
+- **Manual Execution**: Run on-demand when you need to test or compare LLM performance for the query rewritter
 
 ---
 

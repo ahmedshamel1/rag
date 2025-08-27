@@ -1,12 +1,105 @@
 
---- Interaction at 2025-08-27 12:10:33 ---
-User Query: Query: Signature Baked Cheesecake with Curd  | Rewritten: Signature Baked Cheesecake with Curd | Dishes: ['signature baked cheesecake with curd'] | Sections: []
+--- Interaction at 2025-08-27 23:43:40 ---
+User Query: Query: what is the full recipe for dubai chocolate | Rewritten: full recipe for dubai chocolate | Dishes: ['dubai chocolate'] | Sections: []
 Conversation Memory:
-  1. {'role': 'user', 'content': 'Signature Baked Cheesecake with Curd '}...
-  2. {'role': 'assistant', 'content': ' To make the Signature Baked Cheesecake with Gamonéu Curd, follow ...
+  1. {'role': 'user', 'content': 'what is the full recipe for dubai chocolate'}...
+  2. {'role': 'assistant', 'content': 'I don\'t have the full recipe for the "Dubai Chocolate" in the pro...
 RAG Retrieved Data:
   Total chunks retrieved: 7
-  Chunk 1: Ingredients 
+  Chunk 1: Ingredients
+●	120 grams good quality white chocolate, chopped
+●	100 grams unsalted butter, cubed, plus extra for greasing
+●	2 large eggs
+●	2 large egg yolks
+●	60 grams caster sugar
+●	50 grams plain flour
+●	A pinch of salt
+●	Icing sugar, for dusting (optional)
+    📁 Source: file_015.txt
+    🍽️  Dish: white chocolate coulant
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 2: Ingredients
+●	185 grams unsalted butter, cubed
+●	185 grams dark chocolate (at least 70% cocoa solids), broken into pieces
+●	3 large eggs
+●	275 grams caster sugar
+●	85 grams plain flour
+●	40 grams cocoa powder
+●	A pinch of salt
+    📁 Source: file_005.txt
+    🍽️  Dish: classic chocolate brownies
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Preparation instructions
+1.	Preheat your oven to 180°C (160°C Fan). Grease the square baking tin and line it with baking paper.
+2.	Place the butter and dark chocolate into a heatproof bowl set over a small saucepan of barely simmering water. Ensure the bottom of the bowl does not touch the water. Stir occasionally until both are melted and smooth. Remove from the heat and set aside to cool slightly.
+3.	In a separate large bowl, using an electric mixer or a whisk, beat the eggs and caster sugar together for several minutes until the mixture is thick, pale, and has doubled in volume.
+4.	Gently pour the cooled chocolate-butter mixture over the egg and sugar mixture. Using a spatula, carefully fold everything together until just combined. Be careful not to knock out too much air.
+5.	Sift the plain flour, cocoa powder, and salt directly into the bowl. Fold these dry ingredients in until no streaks of flour are visible. Do not overmix.
+6.	Pour the brownie batter into the prepared tin and level the top with the spatula.
+7.	Bake for 25-30 minutes. The top should have a shiny, papery crust and the middle should be slightly gooey. A skewer inserted into the centre should come out with moist crumbs attached, but not wet batter.
+8.	Allow the brownies to cool completely in the tin before lifting them out and cutting them into squares.
+    📁 Source: file_005.txt
+    🍽️  Dish: classic chocolate brownies
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 4: Preparation instructions
+1.	Prepare oven and ramekins: Preheat your oven to 200°C (180°C Fan). Thoroughly grease the inside of four individual ramekins with butter. For extra non-stick security, you can lightly dust the inside with flour or cocoa powder, tapping out any excess.
+2.	Melt chocolate and butter: Place the chopped white chocolate and cubed butter into a heatproof bowl set over a small saucepan of barely simmering water. Ensure the bottom of the bowl does not touch the water. Stir gently until both are melted and the mixture is smooth. Remove from the heat and set aside.
+3.	Whip eggs and sugar: In a separate large bowl, using an electric mixer or a whisk, beat the whole eggs, egg yolks, and caster sugar together for several minutes. Continue until the mixture is thick, pale, and has significantly increased in volume.
+4.	Combine mixtures: Gently pour the lukewarm white chocolate and butter mixture into the whipped egg mixture. Using a spatula, carefully fold them together until just combined, being careful not to knock out too much air.
+5.	Fold in dry ingredients: Sift the plain flour and the pinch of salt over the mixture. Gently fold the flour in until no streaks remain. Do not overmix.
+6.	Fill and bake: Carefully divide the batter evenly among the prepared ramekins. Place the ramekins on a baking tray.
+7.	Bake for 12-15 minutes. The edges of the coulants should be set and firm, but the centre should still have a distinct wobble. The baking time is critical for achieving the molten centre.
+8.	Serve immediately: Let the coulants rest for one minute before carefully running a knife around the edge of each ramekin. Invert each one onto a serving plate. Dust with icing sugar, if desired, and serve immediately.
+    📁 Source: file_015.txt
+    🍽️  Dish: white chocolate coulant
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 5: Preparation instructions
+1. Prepare the crunchy pistachio filling: If the kataifi pastry is in a block, use your 
+hands to separate and fluff the strands. Use scissors or a knife to chop them into 
+smaller pieces (about 1-2 cm). 
+2. Melt 30 grams of butter in a large frying pan over medium heat. Add the chopped 
+kataifi and toast, stirring frequently, until it is golden brown and crispy all over. 
+This may take 8-10 minutes. 
+3. Transfer the toasted kataifi to a bowl. Add the pistachio paste and optional tahini. 
+Mix until all the kataifi strands are evenly coated. Set aside to cool completely. 
+4. Once cool, roll the filling into small balls, about 15 grams each (or about 2 
+teaspoons). Place them on a plate lined with baking paper and freeze for at least 
+30 minutes until firm. 
+5. Make the cookie dough: In a large bowl, cream the softened 175 grams of 
+butter with the light brown sugar and caster sugar using an electric mixer until 
+light and fluffy. 
+6. Beat in the egg, egg yolk, and vanilla extract until well combined. 
+7. In a separate bowl, sift together the plain flour, bicarbonate of soda, and salt. 
+8. Gradually add the dry ingredients to the wet ingredients, mixing on a low speed 
+until just combined. Do not overmix. Fold in the chocolate chips. 
+9. Assemble the cookies: Take a portion of cookie dough (about 50-60 grams, or 
+a large ice cream scoop's worth) and flatten it in the palm of your hand. 
+10. Place one of the frozen pistachio filling balls in the centre. Carefully wrap the 
+cookie dough around the filling, ensuring it is completely sealed. Roll it into a 
+smooth ball. 
+11. Place the cookie dough balls on a baking sheet lined with baking paper. Chill in 
+the refrigerator for at least 1 hour. 
+12. Bake the cookies: Preheat your oven to 180°C (160°C Fan). Arrange the chilled 
+cookie dough balls on a baking sheet, leaving ample space between them to 
+spread. 
+13. Bake for 12-15 minutes, or until the edges are golden brown but the centres are 
+still soft. 
+14. Let the cookies cool on the baking sheet for 10 minutes before transferring them 
+to a wire rack to cool further. They are best served warm.
+    📁 Source: file_026.pdf
+    🍽️  Dish: viral dubai chocolate cookies
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 6: Ingredients 
 For the cake: 
 ● 300 grams plain flour 
 ● 2 tablespoons unsweetened cocoa powder 
@@ -29,24 +122,184 @@ For the cream cheese frosting:
     📝 Type: ingredients
     🔢 Chunk: 1/7
     🥚 Section: 🥚 Ingredients
-  Chunk 2: Ingredients 
-For the dough (détrempe): 
-● 500 grams strong white bread flour 
-● 10 grams salt 
-● 55 grams caster sugar 
-● 10 grams instant dried yeast 
-● 300 millilitres cool whole milk 
-For the butter block (beurrage): 
-● 250 grams unsalted butter, high quality (at least 82% fat content), cold 
-For the egg wash: 
+  Chunk 7: Ingredients 
+For the crunchy pistachio filling: 
+● 75 grams kataifi pastry (shredded phyllo dough), fresh or thawed from frozen 
+● 30 grams unsalted butter 
+● 150 grams smooth pistachio paste or cream 
+● 15 grams tahini (optional, for depth of flavour) 
+For the cookie dough: 
+● 175 grams unsalted butter, softened 
+● 150 grams light brown sugar, packed 
+● 100 grams caster sugar 
 ● 1 large egg 
-● 1 tablespoon whole milk
-    📁 Source: file_008.pdf
-    🍽️  Dish: classic butter croissants
+● 1 large egg yolk 
+● 2 teaspoons vanilla extract 
+● 300 grams plain flour 
+● 1/2 teaspoon bicarbonate of soda 
+● 1/2 teaspoon salt 
+● 200 grams milk chocolate chips or chunks
+    📁 Source: file_026.pdf
+    🍽️  Dish: viral dubai chocolate cookies
     📝 Type: ingredients
     🔢 Chunk: 1/7
     🥚 Section: 🥚 Ingredients
-  Chunk 3: Allergen information 
+
+Query Rewriter Analysis:
+  original_query: what is the full recipe for dubai chocolate
+  rewritten_query: full recipe for dubai chocolate
+  extracted_dish_names: ['dubai chocolate']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 7
+  filter_applied: Yes
+  mechanism_used: semantic search only (role filter only)
+  role_used: bakers
+  llm_chain_type: baking
+--------------------------------------------------
+
+--- Interaction at 2025-08-27 23:46:22 ---
+User Query: Query: viral dubai chocolate cookies | Rewritten: viral dubai chocolate cookies full recipe | Dishes: ['dubai chocolate'] | Sections: []
+Conversation Memory:
+  1. {'role': 'assistant', 'content': 'I don\'t have the full recipe for the "Dubai Chocolate" in the pro...
+  2. {'role': 'user', 'content': 'viral dubai chocolate cookies'}...
+  3. {'role': 'assistant', 'content': 'I don\'t have the full recipe for the "Viral Dubai Chocolate Cooki...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: Preparation instructions
+1. Prepare the crunchy pistachio filling: If the kataifi pastry is in a block, use your 
+hands to separate and fluff the strands. Use scissors or a knife to chop them into 
+smaller pieces (about 1-2 cm). 
+2. Melt 30 grams of butter in a large frying pan over medium heat. Add the chopped 
+kataifi and toast, stirring frequently, until it is golden brown and crispy all over. 
+This may take 8-10 minutes. 
+3. Transfer the toasted kataifi to a bowl. Add the pistachio paste and optional tahini. 
+Mix until all the kataifi strands are evenly coated. Set aside to cool completely. 
+4. Once cool, roll the filling into small balls, about 15 grams each (or about 2 
+teaspoons). Place them on a plate lined with baking paper and freeze for at least 
+30 minutes until firm. 
+5. Make the cookie dough: In a large bowl, cream the softened 175 grams of 
+butter with the light brown sugar and caster sugar using an electric mixer until 
+light and fluffy. 
+6. Beat in the egg, egg yolk, and vanilla extract until well combined. 
+7. In a separate bowl, sift together the plain flour, bicarbonate of soda, and salt. 
+8. Gradually add the dry ingredients to the wet ingredients, mixing on a low speed 
+until just combined. Do not overmix. Fold in the chocolate chips. 
+9. Assemble the cookies: Take a portion of cookie dough (about 50-60 grams, or 
+a large ice cream scoop's worth) and flatten it in the palm of your hand. 
+10. Place one of the frozen pistachio filling balls in the centre. Carefully wrap the 
+cookie dough around the filling, ensuring it is completely sealed. Roll it into a 
+smooth ball. 
+11. Place the cookie dough balls on a baking sheet lined with baking paper. Chill in 
+the refrigerator for at least 1 hour. 
+12. Bake the cookies: Preheat your oven to 180°C (160°C Fan). Arrange the chilled 
+cookie dough balls on a baking sheet, leaving ample space between them to 
+spread. 
+13. Bake for 12-15 minutes, or until the edges are golden brown but the centres are 
+still soft. 
+14. Let the cookies cool on the baking sheet for 10 minutes before transferring them 
+to a wire rack to cool further. They are best served warm.
+    📁 Source: file_026.pdf
+    🍽️  Dish: viral dubai chocolate cookies
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients 
+For the crunchy pistachio filling: 
+● 75 grams kataifi pastry (shredded phyllo dough), fresh or thawed from frozen 
+● 30 grams unsalted butter 
+● 150 grams smooth pistachio paste or cream 
+● 15 grams tahini (optional, for depth of flavour) 
+For the cookie dough: 
+● 175 grams unsalted butter, softened 
+● 150 grams light brown sugar, packed 
+● 100 grams caster sugar 
+● 1 large egg 
+● 1 large egg yolk 
+● 2 teaspoons vanilla extract 
+● 300 grams plain flour 
+● 1/2 teaspoon bicarbonate of soda 
+● 1/2 teaspoon salt 
+● 200 grams milk chocolate chips or chunks
+    📁 Source: file_026.pdf
+    🍽️  Dish: viral dubai chocolate cookies
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Utensils needed 
+● Large frying pan 
+● Spatula 
+● Mixing bowls 
+● Electric mixer or stand mixer 
+● Sieve 
+● Ice cream scoop (optional, for uniform cookies) 
+● Baking sheets 
+● Baking paper
+    📁 Source: file_026.pdf
+    🍽️  Dish: viral dubai chocolate cookies
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 4: Allergen information 
+● Contains: Wheat (Gluten), Milk, Eggs, Nuts (Pistachios). 
+● If using tahini, it also contains: Sesame. 
+● May contain: Soya (check chocolate chip ingredients).
+    📁 Source: file_026.pdf
+    🍽️  Dish: viral dubai chocolate cookies
+    📝 Type: allergen_information
+    🔢 Chunk: 7/7
+    📝 Section: 📝 Allergen Information
+  Chunk 5: Nutritional information (per serving) 
+● Calories: Approximately 350-400 kcal 
+● Fat: 20-25g
+● Carbohydrates: 35-40g 
+● Protein: 4-6g 
+● Sugar: 20-25g 
+(Note: Nutritional information is an estimate and can vary based on the specific brands 
+of pistachio paste, chocolate, and final cookie size.)
+    📁 Source: file_026.pdf
+    🍽️  Dish: viral dubai chocolate cookies
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+  Chunk 6: Number of servings 
+● Approximately 14-16 cookies
+    📁 Source: file_026.pdf
+    🍽️  Dish: viral dubai chocolate cookies
+    📝 Type: number_of_servings
+    🔢 Chunk: 5/7
+    📝 Section: 📝 Number Of Servings
+  Chunk 7: Preparation time 
+● Active time: 40 minutes 
+● Inactive time (chilling): 1 hour 30 minutes
+    📁 Source: file_026.pdf
+    🍽️  Dish: viral dubai chocolate cookies
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+
+Query Rewriter Analysis:
+  original_query: viral dubai chocolate cookies
+  rewritten_query: viral dubai chocolate cookies full recipe
+  extracted_dish_names: ['dubai chocolate']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 7
+  filter_applied: Yes
+  mechanism_used: fuzzy matching with dish names
+  role_used: bakers
+  llm_chain_type: baking
+--------------------------------------------------
+
+--- Interaction at 2025-08-27 23:47:45 ---
+User Query: Query: crème brûlée | Rewritten: crème brûlée | Dishes: ['crème brûlée'] | Sections: []
+Conversation Memory:
+  1. {'role': 'assistant', 'content': 'I don\'t have the full recipe for the "Viral Dubai Chocolate Cooki...
+  2. {'role': 'user', 'content': 'crème brûlée'}...
+  3. {'role': 'assistant', 'content': "Crème Brûlée is a classic dessert that consists of rich custard ba...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: Allergen information 
 ● Contains: Milk, Eggs.
 Crème Brûlée 
 Ingredients 
@@ -114,415 +367,169 @@ Allergen information
     📝 Type: allergen_information
     🔢 Chunk: 7/7
     📝 Section: 📝 Allergen Information
-  Chunk 4: Ingredients 
-For the pastry: 
-● 250 grams plain flour, plus extra for dusting 
-● 125 grams cold unsalted butter, cubed 
-● 50 grams icing sugar 
-● 1 large egg yolk 
-● 2 tablespoons cold water 
-For the lemon filling: 
-● 4 large lemons (zest and juice) 
-● 200 grams caster sugar 
-● 120 millilitres double cream 
-● 3 large eggs 
-● 2 large egg yolks
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
+  Chunk 2: Ingredients 
+● 500 millilitres double cream (heavy cream, at least 40% fat) 
+● 1 vanilla pod or 1 teaspoon high-quality vanilla extract 
+● 5 large egg yolks 
+● 100 grams caster sugar, plus extra for caramelising 
+● A pinch of salt
+    📁 Source: file_022.pdf
+    🍽️  Dish: crème brûlée
     📝 Type: ingredients
     🔢 Chunk: 1/7
     🥚 Section: 🥚 Ingredients
-  Chunk 5: Ingredients 
-For the pastry: 
-● 250 grams plain flour, plus extra for dusting 
-● 125 grams cold unsalted butter, cubed 
-● 50 grams icing sugar 
-● 1 large egg yolk 
-● 2 tablespoons cold water 
-For the lemon filling: 
-● 4 large lemons (zest and juice) 
-● 200 grams caster sugar 
-● 120 millilitres double cream 
-● 3 large eggs 
-● 2 large egg yolks
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 6: Ingredients 
-For the dough: 
-● 120 millilitres whole milk, lukewarm 
-● 7 grams instant dried yeast 
-● 50 grams caster sugar 
-● 1 large egg, at room temperature 
-● 60 grams unsalted butter, melted 
-● 300 grams strong white bread flour 
-● 1/2 teaspoon salt 
-For the filling: 
-● 75 grams unsalted butter, very soft 
-● 100 grams soft brown sugar 
-● 2 tablespoons ground cinnamon 
-For the icing: 
-● 100 grams icing sugar, sifted 
-● 2-3 tablespoons milk
-    📁 Source: file_012.pdf
-    🍽️  Dish: classic cinnamon rolls
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 7: Ingredients
-
-1 sheet of ready-made all-butter puff pastry (approximately 320-375 grams)
-
-4-5 large, ripe but firm peaches
-
-100 grams unsalted butter
-
-150 grams caster sugar
-
-1 teaspoon vanilla extract (optional)
-    📁 Source: file_016.md
-    🍽️  Dish: peach tarte tatin
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-
-Query Rewriter Analysis:
-  original_query: Signature Baked Cheesecake with Curd 
-  rewritten_query: Signature Baked Cheesecake with Curd
-  extracted_dish_names: ['signature baked cheesecake with curd']
-  extracted_sections: []
-  full_recipe_requested: Yes
-  documents_found: 7
-  filter_applied: Yes
-  mechanism_used: semantic search only (role filter only)
-  role_used: bakers
-  llm_chain_type: baking
---------------------------------------------------
-
---- Interaction at 2025-08-27 12:11:09 ---
-User Query: Query: Signature Baked Cheesecake with Gamonéu Curd  | Rewritten: Signature Baked Cheesecake with Gamonéu Curd | Dishes: ['signature baked cheesecake with gamonéu curd'] | Sections: []
-Conversation Memory:
-  1. {'role': 'user', 'content': 'Signature Baked Cheesecake with Gamonéu Curd '}...
-  2. {'role': 'assistant', 'content': ' To provide strategic insights and recommendations for the Signatu...
-RAG Retrieved Data:
-  Total chunks retrieved: 7
-  Chunk 1: Ingredients 
-For the biscuit base: 
-● 250 grams digestive biscuits 
-● 125 grams unsalted butter, melted 
-● A pinch of salt 
-For the Gamonéu curd swirl: 
-● 50 grams artisan Gamonéu del Puerto cheese, rind removed, crumbled 
-● 30 millilitres double cream 
-● 1 teaspoon caster sugar 
-For the cheesecake filling: 
-● 800 grams full-fat cream cheese, at room temperature 
-● 200 grams caster sugar 
-● 200 grams crème fraîche or full-fat sour cream 
-● 3 large eggs, plus 1 egg yolk 
-● 30 grams plain flour, sifted 
-● 1 tablespoon high-quality white miso paste (secret ingredient) 
-● 1 teaspoon vanilla extract 
-● Zest of 1 small lemon
-    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
-    🍽️  Dish: signature baked cheesecake with gamonéu curd
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 2: Preparation instructions 
-1. Prepare the base and tin: Preheat your oven to 180°C (160°C Fan). Grease the 
-base and sides of the springform tin and line the base with baking paper. 
-2. Crush the digestive biscuits to a fine crumb using a food processor. Mix the 
-crumbs with the melted butter and the pinch of salt until fully combined. Press 
-this mixture firmly into the base of the prepared tin. Bake for 10 minutes. Set 
-aside to cool. 
-3. Prepare the Gamonéu curd: In a small saucepan, gently heat the double cream 
-and sugar until the sugar dissolves. Do not boil. Place the crumbled Gamonéu 
-cheese in a small bowl and pour the hot cream over it. Let it sit for 5 minutes, 
-then whisk vigorously until you have a relatively smooth, thick paste. Push the 
-mixture through a sieve to remove any lumps and set aside. 
-4. Reduce the oven temperature to 160°C (140°C Fan). 
-5. Make the cheesecake filling: In the bowl of an electric mixer, beat the room-
-temperature cream cheese on a low speed until completely smooth and free of 
-lumps. 
-6. Add the caster sugar and beat until just combined. Scrape down the sides of the 
-bowl. 
-7. In a separate small bowl, whisk the crème fraîche with the white miso paste until 
-smooth. Add this to the cream cheese mixture along with the vanilla extract and 
-lemon zest. Beat on low speed until just incorporated. 
-8. Add the eggs and the extra egg yolk one at a time, mixing on a low speed after 
-each addition until just combined. Do not overmix, as this incorporates too much 
-air. 
-9. Finally, fold in the sifted plain flour with a spatula. 
-10. Assemble and bake: Pour three-quarters of the cheesecake filling over the 
-cooled biscuit base. Dollop small spoonfuls of the Gamonéu curd over the 
-surface. Pour the remaining cheesecake filling on top. Use a skewer to gently 
-swirl the curd through the top layer of the filling once or twice. 
-11. Place the tin in the large roasting tin. Pour boiling water into the roasting tin to 
-come halfway up the sides of the cake tin (this is a bain-marie or water bath). 
-12. Bake for 60-70 minutes. The edges of the cheesecake should be set, but the 
-centre should still have a distinct wobble. 
-13. Cool the cheesecake: Turn off the oven, prop the oven door open slightly, and 
-let the cheesecake cool completely inside the oven for at least 2 hours. This 
-gradual cooling process is crucial to prevent cracking. 
-14. Remove the cheesecake from the water bath and let it cool to room temperature 
-on a wire rack. Then, cover it with cling film and refrigerate for at least 6 hours, or 
-preferably overnight, before releasing from the tin and serving.
-    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
-    🍽️  Dish: signature baked cheesecake with gamonéu curd
+  Chunk 3: Preparation instructions 
+1. Preheat oven and prepare ingredients: Preheat your oven to 160°C (140°C 
+Fan). 
+2. Infuse the cream: Pour the double cream into a medium saucepan. If using a 
+vanilla pod, split it lengthwise, scrape out the seeds with the back of a knife, and 
+add both the pod and the seeds to the cream. If using vanilla extract, you will add 
+it later. 
+3. Heat the cream over a medium-low heat until it is steaming and small bubbles 
+appear around the edge. Do not let it boil. Remove from the heat and let the 
+vanilla infuse for 15 minutes. 
+4. Prepare the custard base: In a mixing bowl, whisk the egg yolks, 100 grams of 
+caster sugar, and the pinch of salt together until the mixture is pale and has 
+thickened slightly. 
+5. Combine the mixtures: Slowly pour the warm cream into the egg yolk mixture, 
+whisking continuously to temper the eggs and prevent them from scrambling. If 
+you used a vanilla pod, remove it now. If using vanilla extract, stir it in.
+6. Strain the custard: Strain the custard through a fine-mesh sieve into a jug to 
+remove any lumps and ensure a silky-smooth texture. 
+7. Bake the custards: Arrange the ramekins in the deep roasting tin. Pour the 
+custard mixture evenly among the ramekins. Carefully pour hot water into the 
+roasting tin until it comes halfway up the sides of the ramekins (this is called a 
+bain-marie or water bath). 
+8. Bake for 30-40 minutes, or until the custards are just set but still have a slight 
+wobble in the centre. 
+9. Chill: Carefully remove the ramekins from the water bath and let them cool to 
+room temperature. Then, transfer them to the refrigerator and chill for at least1 3 
+hours, or preferably overnight, until completely firm. 
+10. Caramelise and serve: Just before serving, sprinkle an even, thin layer of caster 
+sugar (about 1-2 teaspoons) over the top of each chilled custard. Using a kitchen 
+blow torch, melt the sugar until it forms a crisp, golden-brown caramel crust. Let it 
+sit for a minute to harden before serving immediately.
+    📁 Source: file_022.pdf
+    🍽️  Dish: crème brûlée
     📝 Type: preparation_instructions
     🔢 Chunk: 4/7
     📋 Section: 📋 Preparation Instructions
-  Chunk 3: Utensils needed 
-● 23-centimetre springform cake tin 
-● Food processor or rolling pin 
-● Electric stand mixer or handheld electric whisk 
-● Spatula 
-● Several mixing bowls 
-● Small saucepan 
-● Sieve 
-● Roasting tin large enough to hold the cake tin
-    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
-    🍽️  Dish: signature baked cheesecake with gamonéu curd
+  Chunk 4: Utensils needed 
+● Medium saucepan 
+● Whisk 
+● Mixing bowl 
+● Fine-mesh sieve 
+● 4-6 shallow, round ramekins (approx. 150ml capacity) 
+● Deep roasting tin or baking dish 
+● Kitchen blow torch
+    📁 Source: file_022.pdf
+    🍽️  Dish: crème brûlée
     📝 Type: utensils_needed
     🔢 Chunk: 3/7
     📝 Section: 📝 Utensils Needed
-  Chunk 4: Preparation time 
-● Active time: 30 minutes 
-● Inactive time (baking and cooling): 8 hours, including overnight chilling
-    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
-    🍽️  Dish: signature baked cheesecake with gamonéu curd
-    📝 Type: preparation_time
-    🔢 Chunk: 2/7
-    ⏰ Section: ⏰ Preparation Time
-  Chunk 5: Allergen information 
-● Contains: Wheat (Gluten), Milk, Eggs, Soya (from miso paste).
-    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
-    🍽️  Dish: signature baked cheesecake with gamonéu curd
-    📝 Type: allergen_information
-    🔢 Chunk: 7/7
-    📝 Section: 📝 Allergen Information
-  Chunk 6: Nutritional information (per serving) 
-● Calories: Approximately 500-550 kcal 
-● Fat: 40-45g 
-● Carbohydrates: 25-30g 
-● Protein: 9-11g 
-● Sugar: 22-26g 
-(Note: Nutritional information is an estimate and can vary based on specific ingredients 
-used.)
-    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
-    🍽️  Dish: signature baked cheesecake with gamonéu curd
+  Chunk 5: Nutritional information (per serving) 
+● Calories: Approximately 450-550 kcal 
+● Fat: 40-50g 
+● Carbohydrates: 20-25g 
+● Protein: 6-8g 
+● Sugar: 20-25g 
+(Note: Nutritional information is an estimate and can vary based on the cream's fat 
+content and the amount of sugar used for the topping.)
+    📁 Source: file_022.pdf
+    🍽️  Dish: crème brûlée
     📝 Type: nutritional_information
     🔢 Chunk: 6/7
     📝 Section: 📝 Nutritional Information
+  Chunk 6: Preparation time 
+● Active time: 20 minutes 
+● Inactive time (baking and chilling): 3 hours 30 minutes
+    📁 Source: file_022.pdf
+    🍽️  Dish: crème brûlée
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
   Chunk 7: Number of servings 
-● 10-12 servings
-    📁 Source: SDG_SECRET_CAKE_RECIPE.pdf
-    🍽️  Dish: signature baked cheesecake with gamonéu curd
+● 4-6 servings
+    📁 Source: file_022.pdf
+    🍽️  Dish: crème brûlée
     📝 Type: number_of_servings
     🔢 Chunk: 5/7
     📝 Section: 📝 Number Of Servings
 
 Query Rewriter Analysis:
-  original_query: Signature Baked Cheesecake with Gamonéu Curd 
-  rewritten_query: Signature Baked Cheesecake with Gamonéu Curd
-  extracted_dish_names: ['signature baked cheesecake with gamonéu curd']
+  original_query: crème brûlée
+  rewritten_query: crème brûlée
+  extracted_dish_names: ['crème brûlée']
   extracted_sections: []
   full_recipe_requested: Yes
   documents_found: 7
   filter_applied: Yes
   mechanism_used: with content filters
-  role_used: cofounder
-  llm_chain_type: cofounder
---------------------------------------------------
-
---- Interaction at 2025-08-27 12:26:00 ---
-User Query: Query: what are the preparation needed for the lemon pie | Rewritten: lemon pie preparation | Dishes: ['lemon pie'] | Sections: ['preparation_time', 'preparation_instructions']
-Conversation Memory:
-  1. {'role': 'user', 'content': 'what are the preparation needed for the lemon pie'}...
-  2. {'role': 'assistant', 'content': 'To prepare the lemon pie, follow these steps:\n\n1. Make the pastr...
-RAG Retrieved Data:
-  Total chunks retrieved: 2
-  Chunk 1: Preparation instructions 
-1. Make the pastry: In a food processor, pulse the flour and butter until the mixture 
-resembles breadcrumbs. If making by hand, rub the butter into the flour in a large 
-bowl. Stir in the icing sugar. Add the egg yolk and cold water, and mix until the
-dough just comes together. Form it into a disc, wrap it in cling film, and chill in the 
-refrigerator for at least 30 minutes. 
-2. Blind bake the crust: Preheat your oven to 200°C (180°C Fan). Lightly flour a 
-work surface and roll out the chilled pastry until it is large enough to line the tart 
-tin. Press the pastry into the tin, trimming any excess. Prick the base with a fork. 
-Line the pastry case with baking paper and fill with baking beans or uncooked 
-rice. Bake for 15 minutes. 
-3. Remove the paper and beans, then bake for another 5-10 minutes until the 
-pastry is pale golden and cooked through. Set aside to cool slightly. 
-4. Prepare the filling: Reduce the oven temperature to 170°C (150°C Fan). In a 
-medium bowl, whisk together the lemon zest, lemon juice, and caster sugar. 
-5. In a separate bowl, whisk the double cream, whole eggs, and extra egg yolks 
-together. Pour the cream and egg mixture into the lemon and sugar mixture, 
-whisking until well combined. 
-6. Bake the pie: Pour the filling through a sieve directly into the prepared pastry 
-case. Bake for 30-35 minutes, or until the filling is just set with a slight wobble in 
-the centre. 
-7. Allow the pie to cool completely in the tin before removing and slicing. It will firm 
-up as it cools.
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
-    📝 Type: preparation_instructions
-    🔢 Chunk: 4/7
-    📋 Section: 📋 Preparation Instructions
-  Chunk 2: Preparation instructions 
-1. Make the pastry: In a food processor, pulse the flour and butter until the mixture 
-resembles breadcrumbs. If making by hand, rub the butter into the flour in a large 
-bowl. Stir in the icing sugar. Add the egg yolk and cold water, and mix until the
-dough just comes together. Form it into a disc, wrap it in cling film, and chill in the 
-refrigerator for at least 30 minutes. 
-2. Blind bake the crust: Preheat your oven to 200°C (180°C Fan). Lightly flour a 
-work surface and roll out the chilled pastry until it is large enough to line the tart 
-tin. Press the pastry into the tin, trimming any excess. Prick the base with a fork. 
-Line the pastry case with baking paper and fill with baking beans or uncooked 
-rice. Bake for 15 minutes. 
-3. Remove the paper and beans, then bake for another 5-10 minutes until the 
-pastry is pale golden and cooked through. Set aside to cool slightly. 
-4. Prepare the filling: Reduce the oven temperature to 170°C (150°C Fan). In a 
-medium bowl, whisk together the lemon zest, lemon juice, and caster sugar. 
-5. In a separate bowl, whisk the double cream, whole eggs, and extra egg yolks 
-together. Pour the cream and egg mixture into the lemon and sugar mixture, 
-whisking until well combined. 
-6. Bake the pie: Pour the filling through a sieve directly into the prepared pastry 
-case. Bake for 30-35 minutes, or until the filling is just set with a slight wobble in 
-the centre. 
-7. Allow the pie to cool completely in the tin before removing and slicing. It will firm 
-up as it cools.
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
-    📝 Type: preparation_instructions
-    🔢 Chunk: 4/7
-    📋 Section: 📋 Preparation Instructions
-
-Query Rewriter Analysis:
-  original_query: what are the preparation needed for the lemon pie
-  rewritten_query: lemon pie preparation
-  extracted_dish_names: ['lemon pie']
-  extracted_sections: ['preparation_time', 'preparation_instructions']
-  full_recipe_requested: No
-  documents_found: 2
-  filter_applied: Yes
-  mechanism_used: with content filters
   role_used: bakers
   llm_chain_type: baking
 --------------------------------------------------
 
---- Interaction at 2025-08-27 12:26:59 ---
-User Query: Query: what is its nutritional facts | Rewritten: nutritional information for lemon pie | Dishes: ['lemon pie'] | Sections: ['nutritional_information']
+--- Interaction at 2025-08-27 23:48:26 ---
+User Query: Query: creme brulee utils | Rewritten: crème brûlée preparation instructions and ingredients | Dishes: ['crème brûlée'] | Sections: ['preparation_instructions', 'ingredients']
 Conversation Memory:
-  1. {'role': 'assistant', 'content': 'To prepare the lemon pie, follow these steps:\n\n1. Make the pastr...
-  2. {'role': 'user', 'content': 'what is its nutritional facts'}...
-  3. {'role': 'assistant', 'content': 'I can only help with baking questions. Please ask about recipes, i...
-RAG Retrieved Data:
-  Total chunks retrieved: 1
-  Chunk 1: Nutritional information (per serving) 
-● Calories: Approximately 450-500 kcal 
-● Fat: 28g 
-● Carbohydrates: 45g 
-● Protein: 7g 
-● Sugar: 30g 
-(Note: Nutritional information is an estimate and can vary based on specific ingredients 
-used.)
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
-    📝 Type: nutritional_information
-    🔢 Chunk: 6/7
-    📝 Section: 📝 Nutritional Information
-
-Query Rewriter Analysis:
-  original_query: what is its nutritional facts
-  rewritten_query: nutritional information for lemon pie
-  extracted_dish_names: ['lemon pie']
-  extracted_sections: ['nutritional_information']
-  full_recipe_requested: No
-  documents_found: 1
-  filter_applied: Yes
-  mechanism_used: with content filters
-  role_used: bakers
-  llm_chain_type: baking
---------------------------------------------------
-
---- Interaction at 2025-08-27 12:41:16 ---
-User Query: Query: what are the preparation needed for the lemon pie
-
- | Rewritten: preparation for lemon pie | Dishes: ['lemon pie'] | Sections: ['preparation_time', 'preparation_instructions']
-Conversation Memory:
-  1. {'role': 'user', 'content': 'what are the preparation needed for the lemon pie\n\n'}...
-  2. {'role': 'assistant', 'content': 'To prepare the lemon pie, follow these steps:\n\n**Make the pastry...
+  1. {'role': 'assistant', 'content': "Crème Brûlée is a classic dessert that consists of rich custard ba...
+  2. {'role': 'user', 'content': 'creme brulee utils'}...
+  3. {'role': 'assistant', 'content': "To answer your question, I'll provide the preparation instructions...
 RAG Retrieved Data:
   Total chunks retrieved: 2
   Chunk 1: Preparation instructions 
-1. Make the pastry: In a food processor, pulse the flour and butter until the mixture 
-resembles breadcrumbs. If making by hand, rub the butter into the flour in a large 
-bowl. Stir in the icing sugar. Add the egg yolk and cold water, and mix until the
-dough just comes together. Form it into a disc, wrap it in cling film, and chill in the 
-refrigerator for at least 30 minutes. 
-2. Blind bake the crust: Preheat your oven to 200°C (180°C Fan). Lightly flour a 
-work surface and roll out the chilled pastry until it is large enough to line the tart 
-tin. Press the pastry into the tin, trimming any excess. Prick the base with a fork. 
-Line the pastry case with baking paper and fill with baking beans or uncooked 
-rice. Bake for 15 minutes. 
-3. Remove the paper and beans, then bake for another 5-10 minutes until the 
-pastry is pale golden and cooked through. Set aside to cool slightly. 
-4. Prepare the filling: Reduce the oven temperature to 170°C (150°C Fan). In a 
-medium bowl, whisk together the lemon zest, lemon juice, and caster sugar. 
-5. In a separate bowl, whisk the double cream, whole eggs, and extra egg yolks 
-together. Pour the cream and egg mixture into the lemon and sugar mixture, 
-whisking until well combined. 
-6. Bake the pie: Pour the filling through a sieve directly into the prepared pastry 
-case. Bake for 30-35 minutes, or until the filling is just set with a slight wobble in 
-the centre. 
-7. Allow the pie to cool completely in the tin before removing and slicing. It will firm 
-up as it cools.
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
+1. Preheat oven and prepare ingredients: Preheat your oven to 160°C (140°C 
+Fan). 
+2. Infuse the cream: Pour the double cream into a medium saucepan. If using a 
+vanilla pod, split it lengthwise, scrape out the seeds with the back of a knife, and 
+add both the pod and the seeds to the cream. If using vanilla extract, you will add 
+it later. 
+3. Heat the cream over a medium-low heat until it is steaming and small bubbles 
+appear around the edge. Do not let it boil. Remove from the heat and let the 
+vanilla infuse for 15 minutes. 
+4. Prepare the custard base: In a mixing bowl, whisk the egg yolks, 100 grams of 
+caster sugar, and the pinch of salt together until the mixture is pale and has 
+thickened slightly. 
+5. Combine the mixtures: Slowly pour the warm cream into the egg yolk mixture, 
+whisking continuously to temper the eggs and prevent them from scrambling. If 
+you used a vanilla pod, remove it now. If using vanilla extract, stir it in.
+6. Strain the custard: Strain the custard through a fine-mesh sieve into a jug to 
+remove any lumps and ensure a silky-smooth texture. 
+7. Bake the custards: Arrange the ramekins in the deep roasting tin. Pour the 
+custard mixture evenly among the ramekins. Carefully pour hot water into the 
+roasting tin until it comes halfway up the sides of the ramekins (this is called a 
+bain-marie or water bath). 
+8. Bake for 30-40 minutes, or until the custards are just set but still have a slight 
+wobble in the centre. 
+9. Chill: Carefully remove the ramekins from the water bath and let them cool to 
+room temperature. Then, transfer them to the refrigerator and chill for at least1 3 
+hours, or preferably overnight, until completely firm. 
+10. Caramelise and serve: Just before serving, sprinkle an even, thin layer of caster 
+sugar (about 1-2 teaspoons) over the top of each chilled custard. Using a kitchen 
+blow torch, melt the sugar until it forms a crisp, golden-brown caramel crust. Let it 
+sit for a minute to harden before serving immediately.
+    📁 Source: file_022.pdf
+    🍽️  Dish: crème brûlée
     📝 Type: preparation_instructions
     🔢 Chunk: 4/7
     📋 Section: 📋 Preparation Instructions
-  Chunk 2: Preparation instructions 
-1. Make the pastry: In a food processor, pulse the flour and butter until the mixture 
-resembles breadcrumbs. If making by hand, rub the butter into the flour in a large 
-bowl. Stir in the icing sugar. Add the egg yolk and cold water, and mix until the
-dough just comes together. Form it into a disc, wrap it in cling film, and chill in the 
-refrigerator for at least 30 minutes. 
-2. Blind bake the crust: Preheat your oven to 200°C (180°C Fan). Lightly flour a 
-work surface and roll out the chilled pastry until it is large enough to line the tart 
-tin. Press the pastry into the tin, trimming any excess. Prick the base with a fork. 
-Line the pastry case with baking paper and fill with baking beans or uncooked 
-rice. Bake for 15 minutes. 
-3. Remove the paper and beans, then bake for another 5-10 minutes until the 
-pastry is pale golden and cooked through. Set aside to cool slightly. 
-4. Prepare the filling: Reduce the oven temperature to 170°C (150°C Fan). In a 
-medium bowl, whisk together the lemon zest, lemon juice, and caster sugar. 
-5. In a separate bowl, whisk the double cream, whole eggs, and extra egg yolks 
-together. Pour the cream and egg mixture into the lemon and sugar mixture, 
-whisking until well combined. 
-6. Bake the pie: Pour the filling through a sieve directly into the prepared pastry 
-case. Bake for 30-35 minutes, or until the filling is just set with a slight wobble in 
-the centre. 
-7. Allow the pie to cool completely in the tin before removing and slicing. It will firm 
-up as it cools.
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
-    📝 Type: preparation_instructions
-    🔢 Chunk: 4/7
-    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients 
+● 500 millilitres double cream (heavy cream, at least 40% fat) 
+● 1 vanilla pod or 1 teaspoon high-quality vanilla extract 
+● 5 large egg yolks 
+● 100 grams caster sugar, plus extra for caramelising 
+● A pinch of salt
+    📁 Source: file_022.pdf
+    🍽️  Dish: crème brûlée
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
 
 Query Rewriter Analysis:
-  original_query: what are the preparation needed for the lemon pie
-
-
-  rewritten_query: preparation for lemon pie
-  extracted_dish_names: ['lemon pie']
-  extracted_sections: ['preparation_time', 'preparation_instructions']
+  original_query: creme brulee utils
+  rewritten_query: crème brûlée preparation instructions and ingredients
+  extracted_dish_names: ['crème brûlée']
+  extracted_sections: ['preparation_instructions', 'ingredients']
   full_recipe_requested: No
   documents_found: 2
   filter_applied: Yes

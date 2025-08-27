@@ -14,8 +14,8 @@ services:
       # Developer mode (uncomment to use host bind mount instead of named volume):
       # - ./database:/app/database
 
-      # Mount assets folder for document access
-      - ./assests:/app/assests
+      # Mount assets folder for document access (matching Python code paths)
+      - ./assests:/assests
 
       # Mount logs for persistence and inspection
       - ./backend/logs:/app/logs
