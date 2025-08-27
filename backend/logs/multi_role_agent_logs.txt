@@ -1,9 +1,173 @@
 
---- Interaction at 2025-08-26 11:35:54 ---
-User Query: Query: full recipe for lemon py | Rewritten: full recipe for lemon pie | Dishes: ['lemon pie'] | Sections: []
+--- Interaction at 2025-08-27 05:12:29 ---
+User Query: Query: hello | Rewritten: full recipe | Dishes: [] | Sections: []
 Conversation Memory:
-  1. {'role': 'user', 'content': 'full recipe for lemon py'}...
-  2. {'role': 'assistant', 'content': ' To make the Lemon Pie, you will need the following ingredients an...
+  1. {'role': 'user', 'content': 'hello'}...
+  2. {'role': 'assistant', 'content': ' To prepare the Lemon Meringue Pie, you will need the following in...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: Ingredients
+
+250 millilitres whole milk
+
+500 millilitres double cream (heavy cream)
+
+150 grams caster sugar
+
+4 large egg yolks
+
+1 vanilla pod, split lengthwise, or 2 teaspoons of vanilla extract
+    📁 Source: file_001.docx
+    🍽️  Dish: classic vanilla ice cream
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 2: Ingredients 
+For the pastry: 
+● 250 grams plain flour, plus extra for dusting 
+● 125 grams cold unsalted butter, cubed 
+● 50 grams icing sugar 
+● 1 large egg yolk 
+● 2 tablespoons cold water 
+For the lemon filling: 
+● 4 large lemons (zest and juice) 
+● 200 grams caster sugar 
+● 120 millilitres double cream 
+● 3 large eggs 
+● 2 large egg yolks
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Preparation instructions
+
+Pour the milk and cream into a medium saucepan. Scrape the seeds from the vanilla pod into the pan and add the pod itself. Heat the mixture over a medium heat until it is steaming and small bubbles form around the edge. Do not allow it to boil. Remove from the heat and allow the vanilla to infuse for 30 minutes.
+
+In a separate heatproof bowl, whisk the egg yolks and caster sugar together until the mixture is pale and has thickened.
+
+Remove the vanilla pod from the milk mixture. Slowly pour the warm milk mixture onto the egg and sugar mixture, whisking continuously to temper the eggs and prevent scrambling.
+
+Pour the entire mixture back into the saucepan. Cook over a low-medium heat, stirring constantly with the spatula, until the custard thickens enough to coat the back of the spatula. This will take approximately 8-10 minutes. Do not let it boil. If using vanilla extract instead of a pod, stir it in now.
+
+Strain the finished custard through a fine-mesh sieve into a clean bowl to ensure it is smooth.
+
+Cover the surface of the custard directly with plastic wrap to prevent a skin from forming and cool it completely in the refrigerator for at least 4 hours, or preferably overnight.
+
+Once thoroughly chilled, churn the custard in your ice cream maker according to the manufacturer’s instructions until it reaches a soft-serve consistency.
+
+Transfer the ice cream to a freezer-safe container,1 cover, and freeze for at least 2-4 hours, or until firm.
+    📁 Source: file_001.docx
+    🍽️  Dish: classic vanilla ice cream
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 4: Utensils needed
+
+Stand mixer with a dough hook (or a large mixing bowl)
+
+Rolling pin
+
+8-centimetre round cutter
+
+Heavy-bottomed pot or deep fryer
+
+Cooking thermometer
+
+Wire rack
+
+Piping bag fitted with a long, thin filling nozzle
+
+Whisk
+    📁 Source: file_003.docx
+    🍽️  Dish: oreo glazed donuts with strawberry jam filling
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 5: Utensils needed
+
+Stand mixer with a dough hook (or a large mixing bowl)
+
+Rolling pin
+
+8-centimetre round cutter
+
+Heavy-bottomed pot or deep fryer
+
+Cooking thermometer
+
+Wire rack
+
+Piping bag fitted with a long, thin filling nozzle
+
+Whisk
+    📁 Source: file_003.docx
+    🍽️  Dish: oreo glazed donuts with strawberry jam filling
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 6: Utensils needed 
+● Food processor or large mixing bowl 
+● Rolling pin 
+● 23-centimetre loose-bottomed tart tin 
+● Baking paper 
+● Baking beans or uncooked rice 
+● Zester or fine grater 
+● Juicer 
+● Medium mixing bowl 
+● Whisk 
+● Sieve
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 7: Preparation instructions 
+1. Make the pastry: In a food processor, pulse the flour and butter until the mixture 
+resembles breadcrumbs. If making by hand, rub the butter into the flour in a large 
+bowl. Stir in the icing sugar. Add the egg yolk and cold water, and mix until the
+dough just comes together. Form it into a disc, wrap it in cling film, and chill in the 
+refrigerator for at least 30 minutes. 
+2. Blind bake the crust: Preheat your oven to 200°C (180°C Fan). Lightly flour a 
+work surface and roll out the chilled pastry until it is large enough to line the tart 
+tin. Press the pastry into the tin, trimming any excess. Prick the base with a fork. 
+Line the pastry case with baking paper and fill with baking beans or uncooked 
+rice. Bake for 15 minutes. 
+3. Remove the paper and beans, then bake for another 5-10 minutes until the 
+pastry is pale golden and cooked through. Set aside to cool slightly. 
+4. Prepare the filling: Reduce the oven temperature to 170°C (150°C Fan). In a 
+medium bowl, whisk together the lemon zest, lemon juice, and caster sugar. 
+5. In a separate bowl, whisk the double cream, whole eggs, and extra egg yolks 
+together. Pour the cream and egg mixture into the lemon and sugar mixture, 
+whisking until well combined. 
+6. Bake the pie: Pour the filling through a sieve directly into the prepared pastry 
+case. Bake for 30-35 minutes, or until the filling is just set with a slight wobble in 
+the centre. 
+7. Allow the pie to cool completely in the tin before removing and slicing. It will firm 
+up as it cools.
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+
+Query Rewriter Analysis:
+  original_query: hello
+  rewritten_query: full recipe
+  extracted_dish_names: []
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 7
+  filter_applied: No
+  mechanism_used: with content filters
+--------------------------------------------------
+
+--- Interaction at 2025-08-27 05:13:18 ---
+User Query: Query: prep for lemon pie | Rewritten: full recipe for Lemon Pie | Dishes: ['lemon pie'] | Sections: []
+Conversation Memory:
+  1. {'role': 'assistant', 'content': ' To prepare the Lemon Meringue Pie, you will need the following in...
+  2. {'role': 'user', 'content': 'prep for lemon pie'}...
+  3. {'role': 'assistant', 'content': " To make the Lemon Pie, you'll need the following ingredients:\n\n...
 RAG Retrieved Data:
   Total chunks retrieved: 7
   Chunk 1: Preparation instructions 
@@ -105,48 +269,12 @@ used.)
     📝 Section: 📝 Number Of Servings
 
 Query Rewriter Analysis:
-  original_query: full recipe for lemon py
-  rewritten_query: full recipe for lemon pie
+  original_query: prep for lemon pie
+  rewritten_query: full recipe for Lemon Pie
   extracted_dish_names: ['lemon pie']
   extracted_sections: []
   full_recipe_requested: Yes
   documents_found: 7
-  filter_applied: Yes
-  mechanism_used: with content filters
---------------------------------------------------
-
---- Interaction at 2025-08-26 11:38:22 ---
-User Query: Query: what is its utensils | Rewritten: utensils needed for lemon pie | Dishes: ['lemon pie'] | Sections: ['utensils_needed']
-Conversation Memory:
-  1. {'role': 'assistant', 'content': ' To make the Lemon Pie, you will need the following ingredients an...
-  2. {'role': 'user', 'content': 'what is its utensils'}...
-  3. {'role': 'assistant', 'content': ' The utensils needed for the lemon pie, as per the provided docume...
-RAG Retrieved Data:
-  Total chunks retrieved: 1
-  Chunk 1: Utensils needed 
-● Food processor or large mixing bowl 
-● Rolling pin 
-● 23-centimetre loose-bottomed tart tin 
-● Baking paper 
-● Baking beans or uncooked rice 
-● Zester or fine grater 
-● Juicer 
-● Medium mixing bowl 
-● Whisk 
-● Sieve
-    📁 Source: file_002.pdf
-    🍽️  Dish: lemon pie
-    📝 Type: utensils_needed
-    🔢 Chunk: 3/7
-    📝 Section: 📝 Utensils Needed
-
-Query Rewriter Analysis:
-  original_query: what is its utensils
-  rewritten_query: utensils needed for lemon pie
-  extracted_dish_names: ['lemon pie']
-  extracted_sections: ['utensils_needed']
-  full_recipe_requested: No
-  documents_found: 1
   filter_applied: Yes
   mechanism_used: with content filters
 --------------------------------------------------

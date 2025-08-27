@@ -1,95 +1,93 @@
 
---- Interaction at 2025-08-26 11:46:16 ---
-User Query: what is the utensils for last recipe
-Conversation Memory:
-  1. what is the utensils for last recipe
-  2.  The utensil used in the last recipe (cheesecake or quiche) would typically be a spatula or a large ...
-RAG Retrieved Data:
+--- Interaction at 2025-08-27 06:06:26 ---
+User Query: what is the dress code for shop assistants
+
+Conversation Memory (last 3 items):
+  1. what is the dress code for shop assistants
+  2.  Based on the provided context, the dress code for shop assistants is as follows:
+
+Top: Company-provided black polo shirt or a plain white/black button-down shirt, must be tucked in or have a tidy fit.
+Apron: Company-provided branded half-apron, to be worn at all times.
+Trousers/Skirt: Smart, solid black or dark grey trousers, chinos, or a knee-length skirt. No jeans, leggings, or cargo trousers.
+
+However, on days with external candidate interviews, a higher standard might be expected, but the context does not specify what that higher standard would be for shop assistants. It is mentioned that the HR team should dress in "Business Casual," consistent with the Sales Department, but no specifics are given for shop assistants in this situation.
+
+RAG Retrieved Data (content only):
   Total chunks retrieved: 7
-  Chunk 1: food product frequently with a clean, sanitized utensil to bring the hotter liquid from the 
-centre to the colder edges, which dramatically speeds up the cooling process. 
-3. Ice Wands/Paddles: These are purpose-made, food-safe plastic paddles that are filled 
-with water and frozen. They can be stirred directly into large pots of liquids to cool the 
-product from the inside out, working in conjunction with an ice bath for maximum
-    📁 Source: file_035.pdf
-    🍽️  Dish: Unknown
-    📝 Type: Unknown
-    🔢 Chunk: ?/?
-    📝 Section: 📝 Unknown
-  Chunk 2: for the kitchen. 
-○ Use a CO2 or Dry Powder (ABC) fire extinguisher. 
-● Gas Shut-Off: The emergency gas shut-off valve is located on the back wall of the 
-kitchen, marked with a large red handle. In the event of a kitchen fire, the Head Chef or 
-designated safety lead should shut this off only if it is safe to approach. 
-● Using a Fire Extinguisher: Remember the P.A.S.S. acronym: 
-○ P - PULL the pin. 
-○ A - AIM the nozzle at the base of the fire. 
-○ S - SQUEEZE the lever slowly and evenly.
-    📁 Source: file_034.pdf
-    🍽️  Dish: Unknown
-    📝 Type: Unknown
-    🔢 Chunk: ?/?
-    📝 Section: 📝 Unknown
-  Chunk 3: This detailed procedure must be followed methodically for all food contact surfaces 
-(workbenches, tables), equipment (mixers, slicers), and utensils (knives, bowls, spatulas). 
-1. Pre-Clean (Scrape): Before introducing water, remove all loose and large food debris 
-from the surface. Scrape them directly into a designated waste bin. This step makes the 
-washing process more effective and keeps the wash water cleaner for longer.
-    📁 Source: file_035.pdf
-    🍽️  Dish: Unknown
-    📝 Type: Unknown
-    🔢 Chunk: ?/?
-    📝 Section: 📝 Unknown
-  Chunk 4: Implementation: 
-● A chart displaying the colour-coding system will be prominently posted in the kitchen. 
-● All staff must be trained on the system and its importance. 
-● Cutting boards and knife handles corresponding to these colours will be used exclusively 
-for their designated food type. 
-● Mixing these items is a serious breach of food safety protocol. For example, a green 
-board used for chopping strawberries must never be used to slice a finished cake.
-    📁 Source: file_035.pdf
-    🍽️  Dish: Unknown
-    📝 Type: Unknown
-    🔢 Chunk: ?/?
-    📝 Section: 📝 Unknown
-  Chunk 5: To provide a clear, visual aid in preventing cross-contamination, this kitchen will implement a 
-mandatory colour-coding system for cutting boards, knives, and other transferable equipment. 
-● Green: For fresh fruits and vegetables. 
-● Yellow: For cooked products. 
-● Red: For raw meats (if ever used for specialty savoury items).  
-● White: For bakery and dairy products (e.g., bread, cheese). 
-● Blue: For raw fish (if ever used).  
-Implementation:
-    📁 Source: file_035.pdf
-    🍽️  Dish: Unknown
-    📝 Type: Unknown
-    🔢 Chunk: ?/?
-    📝 Section: 📝 Unknown
-  Chunk 6: check should confirm the mixture has visibly 
-thickened and coats the back of a spoon 
-without running. 
-Cheesecakes (Baked) 70°C Reaching this temperature ensures that the 
-egg proteins have fully coagulated, which sets 
-the structure of the cheesecake and ensures it 
-is pasteurized and safe to eat. The centre 
-should be just set with a slight wobble. 
-Quiches & Savoury 
-Pies with Egg 
-74°C This ensures that all ingredients, including the 
-egg and dairy filling, are safely cooked through
-    📁 Source: file_035.pdf
-    🍽️  Dish: Unknown
-    📝 Type: Unknown
-    🔢 Chunk: ?/?
-    📝 Section: 📝 Unknown
-  Chunk 7: large batches of hot liquids (like crème anglaise or pastry cream) into multiple smaller, 
-shallow pans (e.g., stainless steel hotel pans). A larger surface area allows heat to 
-dissipate much more rapidly into the surrounding air. 
-2. Ice Bath: This method actively draws heat out of the product. Place the shallow pan of 
-hot food into a larger container (or a clean, sanitized sink) filled with a mixture of ice and
-    📁 Source: file_035.pdf
-    🍽️  Dish: Unknown
-    📝 Type: Unknown
-    🔢 Chunk: ?/?
-    📝 Section: 📝 Unknown
---------------------------------------------------
+  Chunk 1:
+false nails are allowed. 
+3.2 Shop Assistants 
+As the public face of our bakery, shop assistants must project a warm, professional, and 
+trustworthy image. 
+● Uniform: 
+○ Top: Company-provided black polo shirt or a plain white/black button-
+down shirt. Must be tucked in or have a tidy fit. 
+○ Apron: Company-provided branded half-apron, to be worn at all times. 
+○ Trousers/Skirt: Smart, solid black or dark grey trousers, chinos, or a 
+knee-length skirt. No jeans, leggings, or cargo trousers.
+
+  Chunk 2:
+false nails are allowed. 
+3.2 Shop Assistants 
+As the public face of our bakery, shop assistants must project a warm, professional, and 
+trustworthy image. 
+● Uniform: 
+○ Top: Company-provided black polo shirt or a plain white/black button-
+down shirt. Must be tucked in or have a tidy fit. 
+○ Apron: Company-provided branded half-apron, to be worn at all times. 
+○ Trousers/Skirt: Smart, solid black or dark grey trousers, chinos, or a 
+knee-length skirt. No jeans, leggings, or cargo trousers.
+
+  Chunk 3:
+sportswear (tracksuits, athletic shorts) are not permitted. 
+3. Dress Code by Department 
+3.1 Bakery Chefs & Production Staff 
+The dress code for our production team is designed for maximum safety, hygiene, and 
+compliance with food handling regulations. 
+● Uniform (Company-Provided): 
+○ Jacket: Clean, white chef's jacket. 
+○ Trousers: Black or checkered chef's trousers. 
+○ Apron: Full-length white or black apron.
+
+  Chunk 4:
+sportswear (tracksuits, athletic shorts) are not permitted. 
+3. Dress Code by Department 
+3.1 Bakery Chefs & Production Staff 
+The dress code for our production team is designed for maximum safety, hygiene, and 
+compliance with food handling regulations. 
+● Uniform (Company-Provided): 
+○ Jacket: Clean, white chef's jacket. 
+○ Trousers: Black or checkered chef's trousers. 
+○ Apron: Full-length white or black apron.
+
+  Chunk 5:
+OFFICIAL DRESS CODE POLICY 
+To: All Employees & Partners 
+From: Human Resources 
+Subject: Company Dress Code and Professional Appearance Policy 
+ 
+1. Purpose & Philosophy 
+This document outlines the official dress code for all personnel. Our brand is built on 
+quality, professionalism, and the trust of our customers. A unified and professional 
+appearance is crucial for maintaining our brand image, ensuring a safe and hygienic
+
+  Chunk 6:
+OFFICIAL DRESS CODE POLICY 
+To: All Employees & Partners 
+From: Human Resources 
+Subject: Company Dress Code and Professional Appearance Policy 
+ 
+1. Purpose & Philosophy 
+This document outlines the official dress code for all personnel. Our brand is built on 
+quality, professionalism, and the trust of our customers. A unified and professional 
+appearance is crucial for maintaining our brand image, ensuring a safe and hygienic
+
+  Chunk 7:
+The HR team must maintain a high level of professionalism and approachability. The 
+dress code is "Business Casual," consistent with the Sales Department. 
+● Standard Attire: Professional blouses, collared shirts, smart trousers, and skirts 
+are the standard. The overall appearance should be polished and authoritative, 
+reflecting the department's role in company policy and employee relations. 
+● Interview Days: On days with external candidate interviews, a higher standard,
+
+------------------------------------------------------------

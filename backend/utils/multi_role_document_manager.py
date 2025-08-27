@@ -151,7 +151,7 @@ class MultiRoleDocumentManager:
                 print(f"    📊 Original content length: {len(full_content)} characters")
                 full_doc = Document(page_content=full_content)
                 chunks = self._split_by_sections(full_doc, filename, folder_path)
-                print(f"    ✂️  Split into {len(chunks)} chunks")
+
                 
                 # Log chunk details
                 for i, chunk in enumerate(chunks):
@@ -230,8 +230,6 @@ class MultiRoleDocumentManager:
             
             # Convert recipe name to lowercase for case-insensitive filtering
             dish_name_lower = recipe_name.lower()
-            if recipe_name != dish_name_lower:
-                print(f"    🔄 Converting dish name to lowercase: '{recipe_name}' → '{dish_name_lower}'")
             
             # Export dish names to JSON file
             self._export_dish_names(dish_name_lower)

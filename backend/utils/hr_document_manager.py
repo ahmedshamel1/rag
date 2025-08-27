@@ -1,3 +1,14 @@
+import os
+import json
+import hashlib
+from typing import List
+from langchain_community.document_loaders import (
+    PyPDFLoader, TextLoader, UnstructuredMarkdownLoader, 
+    UnstructuredWordDocumentLoader
+)
+from langchain.schema import Document
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
 ## Document tracking file path
 HR_TRACKING_FILE = "logs/hr_agent_document_tracking.json"
 
@@ -198,6 +209,9 @@ def get_hr_document_stats():
 
 
 def get_document_tracking_stats():
+
+
+
     """
     Get statistics about document tracking and changes.
     
@@ -219,3 +233,69 @@ def get_document_tracking_stats():
         
     except Exception as e:
         return {"error": f"Failed to get tracking stats: {e}"}
+
+
+def load_documents_from_folder(folder_path):
+    """
+    Loads all supported documents from the specified folder.
+    
+    Args:
+        folder_path (str): Path to the folder containing documents
+        
+    Returns:
+        list: List of document chunks
+    """
+    documents = []
+    # Use the same chunking parameters as multi-role agent for consistency
+    splitter = RecursiveCharacterTextSplitter(
+        chunk_size=500,  # Increased chunk size for better context
+        chunk_overlap=50,  # Increased overlap for better continuity
+        length_function=len,
+        separators=["\n\n", "\n", " ", ""]
+    )
+    
+    if os.path.exists(folder_path):
+        for filename in os.listdir(folder_path):
+            file_path = os.path.join(folder_path, filename)
+            try:
+                if filename.lower().endswith('.pdf'):
+                    loader = PyPDFLoader(file_path)
+                    docs = loader.load()
+                    # Add role metadata to HR documents
+                    for doc in docs:
+                        doc.metadata['role'] = 'hr'
+                        doc.metadata['source_file'] = filename
+                    documents.extend(splitter.split_documents(docs))
+                elif filename.lower().endswith('.txt'):
+                    loader = TextLoader(file_path, encoding='utf-8')
+                    docs = loader.load()
+                    # Add role metadata to HR documents
+                    for doc in docs:
+                        doc.metadata['role'] = 'hr'
+                        doc.metadata['source_file'] = filename
+                    documents.extend(splitter.split_documents(docs))
+                elif filename.lower().endswith('.md'):
+                    loader = UnstructuredMarkdownLoader(file_path)
+                    docs = loader.load()
+                    # Add role metadata to HR documents
+                    for doc in docs:
+                        doc.metadata['role'] = 'hr'
+                        doc.metadata['source_file'] = filename
+                    documents.extend(splitter.split_documents(docs))
+                elif filename.lower().endswith('.docx'):
+                    # Note: Requires python-docx package
+                    try:
+                        from langchain_community.document_loaders import Docx2txtLoader
+                        loader = Docx2txtLoader(file_path)
+                        docs = loader.load()
+                        # Add role metadata to HR documents
+                        for doc in docs:
+                            doc.metadata['role'] = 'hr'
+                            doc.metadata['source_file'] = filename
+                        documents.extend(splitter.split_documents(docs))
+                    except ImportError:
+                        print(f"python-docx not installed, skipping {filename}")
+            except Exception as e:
+                print(f"Error loading {filename}: {e}")
+    
+    return documents

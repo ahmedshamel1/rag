@@ -140,7 +140,7 @@ def _get_role_response(user_input: str, role: str, k_multiplier: int = 1) -> str
         
         history = conversation_histories.setdefault(role, [])
         # Rewrite query
-        rewrite_result = query_rewriter.rewrite_query(user_input, conversation_history)
+        rewrite_result = query_rewriter.rewrite_query(user_input, conversation_histories[role])
         print(f"🔄 Query Rewriter Result: {rewrite_result}")
 
         if isinstance(rewrite_result, dict):

@@ -104,7 +104,7 @@ class QueryRewriter:
         )
         
         # Log the system prompt for debugging
-        print(f"🔄 System Prompt: {system_prompt}")
+
 
         user_prompt = (
             "CONVERSATION HISTORY: {chat_history}\n"

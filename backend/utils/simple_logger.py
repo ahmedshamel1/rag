@@ -151,3 +151,59 @@ class SimpleLogger:
             
         except Exception as e:
             return f"Error getting summary: {e}"
+
+    def hr_log_interaction(self, user_query, memory, rag_data, extra_data=None):
+        """
+        Log a simple interaction including user query, memory, and RAG data,
+        but WITHOUT any document metadata (source file, chunk indices, etc.).
+        """
+        try:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            
+            with open(self.log_file_path, 'a', encoding='utf-8') as f:
+                f.write(f"\n--- Interaction at {timestamp} ---\n")
+                f.write(f"User Query: {user_query}\n\n")
+                
+                # Log memory (last 3 items)
+                f.write("Conversation Memory (last 3 items):\n")
+                if memory:
+                    for i, item in enumerate(memory[-3:], 1):
+                        if hasattr(item, 'content'):
+                            content = item.content
+                            f.write(f"  {i}. {content}\n")
+                        elif isinstance(item, str):
+                            f.write(f"  {i}. {item}\n")
+                        else:
+                            f.write(f"  {i}. {str(item)}\n")
+                else:
+                    f.write("  No memory\n")
+                
+                f.write("\nRAG Retrieved Data (content only):\n")
+                if rag_data:
+                    f.write(f"  Total chunks retrieved: {len(rag_data)}\n")
+                    for i, doc in enumerate(rag_data, 1):
+                        # Prefer page_content when available (LangChain Document)
+                        if hasattr(doc, 'page_content'):
+                            # Full content for HR documents (no trimming)
+                            content = doc.page_content
+                            f.write(f"  Chunk {i}:\n{content}\n\n")
+                        elif isinstance(doc, str):
+                            f.write(f"  Chunk {i}:\n{doc}\n\n")
+                        else:
+                            f.write(f"  Chunk {i}:\n{str(doc)}\n\n")
+                else:
+                    f.write("  No chunks retrieved\n\n")
+                
+                # Log extra structured data if provided (simple key: value)
+                if extra_data:
+                    f.write("Extra Data:\n")
+                    for key, value in (extra_data.items() if isinstance(extra_data, dict) else []):
+                        f.write(f"  {key}: {value}\n")
+                    f.write("\n")
+                
+                f.write("-" * 60 + "\n")
+            
+            print(f"Logged interaction for {getattr(self, 'agent_name', 'agent')} agent (no metadata)")
+        
+        except Exception as e:
+            print(f"Error logging interaction: {e}")

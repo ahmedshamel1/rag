@@ -27,6 +27,8 @@ from langchain_ollama import OllamaLLM
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from utils.simple_logger import SimpleLogger
 from utils.hr_document_manager import check_document_changes, load_documents_from_folder
+from utils.hr_retrievel_manager import init_hr_retriever, fetch_hr_documents, get_vector_store_status
+
 
 # Load environment variables from .env file
 load_dotenv()
@@ -87,26 +89,8 @@ else:
     print("✅ No document changes detected, skipping document loading")
     hr_docs = []
 
-# Creating ChromaDB directory for HR
-hr_store = Chroma(persist_directory="database/chroma_hr",
-                  embedding_function=embedding_model)
+hr_store, hr_retriever = init_hr_retriever(embedding_model, hr_docs)
 
-# Only add documents if we have them
-if hr_docs:
-    try:
-        hr_store.add_documents(hr_docs)
-        print(f"✅ HR documents added to vector store")
-    except Exception as e:
-        print(f"❌ Error adding HR documents: {e}")
-else:
-    print("⚠️ No documents to add to vector store")
-
-# Configure retriever with the same parameters as multi-role agent
-hr_retriever = hr_store.as_retriever(
-    search_kwargs={
-        "k": 7  # Default number of chunks to retrieve
-    }
-)
 hr_chain = ConversationalRetrievalChain.from_llm(llm, hr_retriever, memory=memory_hr,
                                                  output_key="answer")
 
@@ -116,66 +100,6 @@ hr_chain = ConversationalRetrievalChain.from_llm(llm, hr_retriever, memory=memor
 # Initialize simple logger for HR Agent
 hr_logger = SimpleLogger("hr", "logs/hr_agent_logs.txt")
 print("📝 HR Agent: Full content logging enabled (no trimming)")
-
-
-
-def get_vector_store_status():
-    """
-    Get the current status of the HR vector store.
-    
-    Returns:
-        dict: Dictionary containing vector store status
-    """
-    try:
-        has_docs = hr_store._collection.count() > 0 if hasattr(hr_store, '_collection') else False
-        if has_docs:
-            count = hr_store._collection.count()
-            return {
-                "status": "active",
-                "document_count": count,
-                "persist_directory": "database/chroma_hr"
-            }
-        else:
-            return {
-                "status": "empty",
-                "document_count": 0,
-                "persist_directory": "database/chroma_hr"
-            }
-    except Exception as e:
-        return {
-            "status": "error",
-            "error": str(e),
-            "persist_directory": "database/chroma_hr"
-        }
-
-
-def _fetch_hr_documents(query: str, k: int = 7):
-    """
-    Fetch relevant documents from the HR vector store using semantic search.
-    
-    Args:
-        query (str): The user's query
-        k (int): Number of documents to retrieve
-        
-    Returns:
-        list: List of relevant documents
-    """
-    try:
-        print(f"🔍 HR Agent: Retrieving documents for query: '{query}'")
-        documents = hr_retriever.get_relevant_documents(query)
-        print(f"📊 HR Agent retrieved {len(documents)} documents")
-        
-        # Debug: Show full content of retrieved documents
-        for i, doc in enumerate(documents):
-            print(f"\n📄 Document {i+1} Content:")
-            print(f"Source: {doc.metadata.get('source_file', 'Unknown')}")
-            print(f"Content: {doc.page_content}")
-            print("-" * 50)
-        
-        return documents
-    except Exception as e:
-        print(f"⚠️ Error retrieving HR documents: {e}")
-        return []
 
 
 def hr_qa(prompt):
@@ -190,7 +114,7 @@ def hr_qa(prompt):
     """
     try:
         # Get RAG documents using the dedicated retrieval function
-        rag_documents = _fetch_hr_documents(prompt)
+        rag_documents = fetch_hr_documents(hr_retriever, prompt)
         
         # Get current memory
         current_memory = memory_hr.chat_memory.messages if hasattr(memory_hr, 'chat_memory') else []
@@ -200,7 +124,7 @@ def hr_qa(prompt):
         response = result.get("answer", str(result))
         
         # Log the interaction with detailed information
-        hr_logger.log_interaction(
+        hr_logger.hr_log_interaction(
             user_query=prompt,
             memory=current_memory,
             rag_data=rag_documents
