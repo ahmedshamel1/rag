@@ -1,13 +1,128 @@
 
---- Interaction at 2025-08-24 14:45:24 ---
-User Query: Query: utils needed for making strawberry
-
- | Rewritten: utensils_needed for making strawberry | Dishes: ['strawberry'] | Sections: ['utensils_needed']
+--- Interaction at 2025-08-26 11:35:54 ---
+User Query: Query: full recipe for lemon py | Rewritten: full recipe for lemon pie | Dishes: ['lemon pie'] | Sections: []
 Conversation Memory:
-  1. {'role': 'user', 'content': 'utils needed for making strawberry\n\n'}...
-  2. {'role': 'assistant', 'content': ' To make a strawberry dessert, you will need the following utensil...
+  1. {'role': 'user', 'content': 'full recipe for lemon py'}...
+  2. {'role': 'assistant', 'content': ' To make the Lemon Pie, you will need the following ingredients an...
 RAG Retrieved Data:
   Total chunks retrieved: 7
+  Chunk 1: Preparation instructions 
+1. Make the pastry: In a food processor, pulse the flour and butter until the mixture 
+resembles breadcrumbs. If making by hand, rub the butter into the flour in a large 
+bowl. Stir in the icing sugar. Add the egg yolk and cold water, and mix until the
+dough just comes together. Form it into a disc, wrap it in cling film, and chill in the 
+refrigerator for at least 30 minutes. 
+2. Blind bake the crust: Preheat your oven to 200°C (180°C Fan). Lightly flour a 
+work surface and roll out the chilled pastry until it is large enough to line the tart 
+tin. Press the pastry into the tin, trimming any excess. Prick the base with a fork. 
+Line the pastry case with baking paper and fill with baking beans or uncooked 
+rice. Bake for 15 minutes. 
+3. Remove the paper and beans, then bake for another 5-10 minutes until the 
+pastry is pale golden and cooked through. Set aside to cool slightly. 
+4. Prepare the filling: Reduce the oven temperature to 170°C (150°C Fan). In a 
+medium bowl, whisk together the lemon zest, lemon juice, and caster sugar. 
+5. In a separate bowl, whisk the double cream, whole eggs, and extra egg yolks 
+together. Pour the cream and egg mixture into the lemon and sugar mixture, 
+whisking until well combined. 
+6. Bake the pie: Pour the filling through a sieve directly into the prepared pastry 
+case. Bake for 30-35 minutes, or until the filling is just set with a slight wobble in 
+the centre. 
+7. Allow the pie to cool completely in the tin before removing and slicing. It will firm 
+up as it cools.
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: preparation_instructions
+    🔢 Chunk: 4/7
+    📋 Section: 📋 Preparation Instructions
+  Chunk 2: Ingredients 
+For the pastry: 
+● 250 grams plain flour, plus extra for dusting 
+● 125 grams cold unsalted butter, cubed 
+● 50 grams icing sugar 
+● 1 large egg yolk 
+● 2 tablespoons cold water 
+For the lemon filling: 
+● 4 large lemons (zest and juice) 
+● 200 grams caster sugar 
+● 120 millilitres double cream 
+● 3 large eggs 
+● 2 large egg yolks
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: ingredients
+    🔢 Chunk: 1/7
+    🥚 Section: 🥚 Ingredients
+  Chunk 3: Utensils needed 
+● Food processor or large mixing bowl 
+● Rolling pin 
+● 23-centimetre loose-bottomed tart tin 
+● Baking paper 
+● Baking beans or uncooked rice 
+● Zester or fine grater 
+● Juicer 
+● Medium mixing bowl 
+● Whisk 
+● Sieve
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: utensils_needed
+    🔢 Chunk: 3/7
+    📝 Section: 📝 Utensils Needed
+  Chunk 4: Preparation time 
+● Active time: 35 minutes 
+● Inactive time (chilling and baking): 1 hour 30 minutes
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: preparation_time
+    🔢 Chunk: 2/7
+    ⏰ Section: ⏰ Preparation Time
+  Chunk 5: Nutritional information (per serving) 
+● Calories: Approximately 450-500 kcal 
+● Fat: 28g 
+● Carbohydrates: 45g 
+● Protein: 7g 
+● Sugar: 30g 
+(Note: Nutritional information is an estimate and can vary based on specific ingredients 
+used.)
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: nutritional_information
+    🔢 Chunk: 6/7
+    📝 Section: 📝 Nutritional Information
+  Chunk 6: Allergen information 
+● Contains: Wheat (Gluten), Eggs, Milk.
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: allergen_information
+    🔢 Chunk: 7/7
+    📝 Section: 📝 Allergen Information
+  Chunk 7: Number of servings 
+● 8 servings
+    📁 Source: file_002.pdf
+    🍽️  Dish: lemon pie
+    📝 Type: number_of_servings
+    🔢 Chunk: 5/7
+    📝 Section: 📝 Number Of Servings
+
+Query Rewriter Analysis:
+  original_query: full recipe for lemon py
+  rewritten_query: full recipe for lemon pie
+  extracted_dish_names: ['lemon pie']
+  extracted_sections: []
+  full_recipe_requested: Yes
+  documents_found: 7
+  filter_applied: Yes
+  mechanism_used: with content filters
+--------------------------------------------------
+
+--- Interaction at 2025-08-26 11:38:22 ---
+User Query: Query: what is its utensils | Rewritten: utensils needed for lemon pie | Dishes: ['lemon pie'] | Sections: ['utensils_needed']
+Conversation Memory:
+  1. {'role': 'assistant', 'content': ' To make the Lemon Pie, you will need the following ingredients an...
+  2. {'role': 'user', 'content': 'what is its utensils'}...
+  3. {'role': 'assistant', 'content': ' The utensils needed for the lemon pie, as per the provided docume...
+RAG Retrieved Data:
+  Total chunks retrieved: 1
   Chunk 1: Utensils needed 
 ● Food processor or large mixing bowl 
 ● Rolling pin 
@@ -24,212 +139,14 @@ RAG Retrieved Data:
     📝 Type: utensils_needed
     🔢 Chunk: 3/7
     📝 Section: 📝 Utensils Needed
-  Chunk 2: Utensils needed
-
-Cherry pitter
-
-Large mixing bowl or food processor
-
-Rolling pin
-
-23-centimetre pie dish
-
-Sharp knife
-
-Large bowl for filling
-
-Pastry brush
-    📁 Source: file_019.docx
-    🍽️  Dish: cherry pie
-    📝 Type: utensils_needed
-    🔢 Chunk: 3/7
-    📝 Section: 📝 Utensils Needed
-  Chunk 3: Utensils needed
-
-Lemon juicer
-
-Small saucepan
-
-Sieve
-
-Large pitcher or jug
-
-Long spoon for stirring
-    📁 Source: file_014.docx
-    🍽️  Dish: homemade lemonade
-    📝 Type: utensils_needed
-    🔢 Chunk: 3/7
-    📝 Section: 📝 Utensils Needed
-  Chunk 4: Utensils needed
-
-23-centimetre loose-bottomed tart tin or pie dish
-
-Food processor or rolling pin and a sealable plastic bag
-
-Small saucepan
-
-Spatula or wooden spoon
-
-Whisk (electric or manual)
-
-Mixing bowl
-    📁 Source: file_020.docx
-    🍽️  Dish: banoffee pie
-    📝 Type: utensils_needed
-    🔢 Chunk: 3/7
-    📝 Section: 📝 Utensils Needed
-  Chunk 5: Utensils needed 
-● Medium saucepan 
-● Whisk 
-● Mixing bowl 
-● Fine-mesh sieve 
-● 4-6 shallow, round ramekins (approx. 150ml capacity) 
-● Deep roasting tin or baking dish 
-● Kitchen blow torch
-    📁 Source: file_022.pdf
-    🍽️  Dish: crème brûlée
-    📝 Type: utensils_needed
-    🔢 Chunk: 3/7
-    📝 Section: 📝 Utensils Needed
-  Chunk 6: Utensils needed 
-● Large bowl 
-● Fine-mesh sieve or colander 
-● Steamer (bamboo or metal) with cheesecloth or muslin 
-● Small saucepan 
-● Medium saucepan 
-● Sharp knife
-    📁 Source: file_021.pdf
-    🍽️  Dish: mango sticky rice (khao niao mamuang)
-    📝 Type: utensils_needed
-    🔢 Chunk: 3/7
-    📝 Section: 📝 Utensils Needed
-  Chunk 7: Utensils needed 
-● Heavy-bottomed saucepan 
-● Wooden spoon or spatula 
-● Serving bowls
-    📁 Source: file_011.pdf
-    🍽️  Dish: creamy rice pudding
-    📝 Type: utensils_needed
-    🔢 Chunk: 3/7
-    📝 Section: 📝 Utensils Needed
 
 Query Rewriter Analysis:
-  original_query: utils needed for making strawberry
-
-
-  rewritten_query: utensils_needed for making strawberry
-  extracted_dish_names: ['strawberry']
+  original_query: what is its utensils
+  rewritten_query: utensils needed for lemon pie
+  extracted_dish_names: ['lemon pie']
   extracted_sections: ['utensils_needed']
   full_recipe_requested: No
-  documents_found: 7
+  documents_found: 1
   filter_applied: Yes
-  mechanism_used: semantic search only (role filter only)
---------------------------------------------------
-
---- Interaction at 2025-08-24 14:46:06 ---
-User Query: Query: utils needed for making strawberry shakyy | Rewritten: utensils needed for making strawberry shakyy | Dishes: ['strawberry shakyy'] | Sections: []
-Conversation Memory:
-  1. {'role': 'assistant', 'content': ' To make a strawberry dessert, you will need the following utensil...
-  2. {'role': 'user', 'content': 'utils needed for making strawberry shakyy'}...
-  3. {'role': 'assistant', 'content': ' To make Strawberry Shakyy, you will need the following utensils:\...
-RAG Retrieved Data:
-  Total chunks retrieved: 7
-  Chunk 1: Preparation instructions
-
-Place the strawberries, cold milk, vanilla ice cream, and optional sugar and vanilla extract into the blender jug.
-
-Secure the lid on the blender.
-
-Blend on a high speed for 30-60 seconds, or until the mixture is smooth and creamy.
-
-If the milkshake is too thick, add a small splash of extra milk and blend again briefly until it reaches your desired consistency.
-
-Pour the milkshake into serving glasses immediately.
-    📁 Source: file_009.docx
-    🍽️  Dish: strawberry milkshake
-    📝 Type: preparation_instructions
-    🔢 Chunk: 4/7
-    📋 Section: 📋 Preparation Instructions
-  Chunk 2: Ingredients
-
-250 grams fresh or frozen strawberries, hulled
-
-150 millilitres whole milk, cold
-
-3 large scoops (approximately 150 grams) vanilla ice cream
-
-15 grams (1 tablespoon) caster sugar or to taste (optional)
-
-1 teaspoon vanilla extract (optional)
-    📁 Source: file_009.docx
-    🍽️  Dish: strawberry milkshake
-    📝 Type: ingredients
-    🔢 Chunk: 1/7
-    🥚 Section: 🥚 Ingredients
-  Chunk 3: Utensils needed
-
-Blender
-
-Serving glasses
-    📁 Source: file_009.docx
-    🍽️  Dish: strawberry milkshake
-    📝 Type: utensils_needed
-    🔢 Chunk: 3/7
-    📝 Section: 📝 Utensils Needed
-  Chunk 4: Allergen information
-
-Contains: Milk.
-
-Some ice cream products may contain eggs or have warnings for potential cross-contamination with nuts, soya, or gluten. Always check the ice cream label.
-    📁 Source: file_009.docx
-    🍽️  Dish: strawberry milkshake
-    📝 Type: allergen_information
-    🔢 Chunk: 7/7
-    📝 Section: 📝 Allergen Information
-  Chunk 5: Nutritional information (per serving)
-
-Calories: Approximately 280-320 kcal
-
-Fat: 12g
-
-Carbohydrates: 35g
-
-Protein: 7g
-
-Sugar: 33g
-
-(Note: Nutritional information is an estimate and can vary based on the specific ice cream and amount of sugar used.)
-    📁 Source: file_009.docx
-    🍽️  Dish: strawberry milkshake
-    📝 Type: nutritional_information
-    🔢 Chunk: 6/7
-    📝 Section: 📝 Nutritional Information
-  Chunk 6: Number of servings
-
-2 servings
-    📁 Source: file_009.docx
-    🍽️  Dish: strawberry milkshake
-    📝 Type: number_of_servings
-    🔢 Chunk: 5/7
-    📝 Section: 📝 Number Of Servings
-  Chunk 7: Preparation time
-
-Active time: 5 minutes
-
-Inactive time: 0 minutes
-    📁 Source: file_009.docx
-    🍽️  Dish: strawberry milkshake
-    📝 Type: preparation_time
-    🔢 Chunk: 2/7
-    ⏰ Section: ⏰ Preparation Time
-
-Query Rewriter Analysis:
-  original_query: utils needed for making strawberry shakyy
-  rewritten_query: utensils needed for making strawberry shakyy
-  extracted_dish_names: ['strawberry shakyy']
-  extracted_sections: []
-  full_recipe_requested: Yes
-  documents_found: 7
-  filter_applied: Yes
-  mechanism_used: fuzzy matching with dish names
+  mechanism_used: with content filters
 --------------------------------------------------

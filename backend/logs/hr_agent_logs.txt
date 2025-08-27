@@ -1,0 +1,95 @@
+
+--- Interaction at 2025-08-26 11:46:16 ---
+User Query: what is the utensils for last recipe
+Conversation Memory:
+  1. what is the utensils for last recipe
+  2.  The utensil used in the last recipe (cheesecake or quiche) would typically be a spatula or a large ...
+RAG Retrieved Data:
+  Total chunks retrieved: 7
+  Chunk 1: food product frequently with a clean, sanitized utensil to bring the hotter liquid from the 
+centre to the colder edges, which dramatically speeds up the cooling process. 
+3. Ice Wands/Paddles: These are purpose-made, food-safe plastic paddles that are filled 
+with water and frozen. They can be stirred directly into large pots of liquids to cool the 
+product from the inside out, working in conjunction with an ice bath for maximum
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 2: for the kitchen. 
+○ Use a CO2 or Dry Powder (ABC) fire extinguisher. 
+● Gas Shut-Off: The emergency gas shut-off valve is located on the back wall of the 
+kitchen, marked with a large red handle. In the event of a kitchen fire, the Head Chef or 
+designated safety lead should shut this off only if it is safe to approach. 
+● Using a Fire Extinguisher: Remember the P.A.S.S. acronym: 
+○ P - PULL the pin. 
+○ A - AIM the nozzle at the base of the fire. 
+○ S - SQUEEZE the lever slowly and evenly.
+    📁 Source: file_034.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 3: This detailed procedure must be followed methodically for all food contact surfaces 
+(workbenches, tables), equipment (mixers, slicers), and utensils (knives, bowls, spatulas). 
+1. Pre-Clean (Scrape): Before introducing water, remove all loose and large food debris 
+from the surface. Scrape them directly into a designated waste bin. This step makes the 
+washing process more effective and keeps the wash water cleaner for longer.
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 4: Implementation: 
+● A chart displaying the colour-coding system will be prominently posted in the kitchen. 
+● All staff must be trained on the system and its importance. 
+● Cutting boards and knife handles corresponding to these colours will be used exclusively 
+for their designated food type. 
+● Mixing these items is a serious breach of food safety protocol. For example, a green 
+board used for chopping strawberries must never be used to slice a finished cake.
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 5: To provide a clear, visual aid in preventing cross-contamination, this kitchen will implement a 
+mandatory colour-coding system for cutting boards, knives, and other transferable equipment. 
+● Green: For fresh fruits and vegetables. 
+● Yellow: For cooked products. 
+● Red: For raw meats (if ever used for specialty savoury items).  
+● White: For bakery and dairy products (e.g., bread, cheese). 
+● Blue: For raw fish (if ever used).  
+Implementation:
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 6: check should confirm the mixture has visibly 
+thickened and coats the back of a spoon 
+without running. 
+Cheesecakes (Baked) 70°C Reaching this temperature ensures that the 
+egg proteins have fully coagulated, which sets 
+the structure of the cheesecake and ensures it 
+is pasteurized and safe to eat. The centre 
+should be just set with a slight wobble. 
+Quiches & Savoury 
+Pies with Egg 
+74°C This ensures that all ingredients, including the 
+egg and dairy filling, are safely cooked through
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+  Chunk 7: large batches of hot liquids (like crème anglaise or pastry cream) into multiple smaller, 
+shallow pans (e.g., stainless steel hotel pans). A larger surface area allows heat to 
+dissipate much more rapidly into the surrounding air. 
+2. Ice Bath: This method actively draws heat out of the product. Place the shallow pan of 
+hot food into a larger container (or a clean, sanitized sink) filled with a mixture of ice and
+    📁 Source: file_035.pdf
+    🍽️  Dish: Unknown
+    📝 Type: Unknown
+    🔢 Chunk: ?/?
+    📝 Section: 📝 Unknown
+--------------------------------------------------

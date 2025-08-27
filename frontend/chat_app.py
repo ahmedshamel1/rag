@@ -9,8 +9,10 @@ are applied for an improved user experience.
 import streamlit as st
 import requests
 import time
+import os
 
 # Configuration
+#BACKEND_URL = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000/process/")
 BACKEND_URL = "http://127.0.0.1:8000/process/"  # Replace with your backend API URL
 
 

@@ -1,0 +1,33 @@
+# Backend Dependencies for RAG Application
+
+# Core LangChain and LLM
+langchain==0.3.23
+langchain-community==0.3.21
+langchain-ollama==0.1.0
+langchain-text-splitters==0.2.0
+
+# Document Processing
+PyPDF2==3.0.1
+python-docx==1.1.0
+unstructured
+markdown==3.5.2
+
+# Vector Database and Embeddings
+chromadb==0.4.22
+sentence-transformers==3.2.1
+transformers==4.46.2
+
+# Web Framework and API
+fastapi==0.115.12
+uvicorn==0.34.0
+
+# Utilities
+requests==2.32.2
+numpy==1.26.4
+openpyxl==3.1.2
+pydantic==2.11.2
+beautifulsoup4==4.12.3
+fuzzywuzzy==0.18.0
+
+# Ollama for local LLM
+ollama==0.4.7

@@ -20,8 +20,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain_community.vectorstores import Chroma
 from langchain_ollama.llms import OllamaLLM
-from fuzzywuzzy import fuzz
-import json
+
 
 # Load environment variables from .env file
 load_dotenv()
@@ -35,9 +34,10 @@ except ImportError:
     OPENAI_AVAILABLE = False
 
 
-from backend.utils.simple_logger import SimpleLogger
-from backend.utils.multi_role_document_manager import create_multi_role_document_manager
-from backend.utils.query_rewriter import create_query_rewriter
+from utils.simple_logger import SimpleLogger
+from utils.multi_role_document_manager import create_multi_role_document_manager
+from utils.query_rewriter import create_query_rewriter
+from utils.multi_role_retrievel_manager import _fetch_documents_with_filters
 
 # Check for OpenRouter API key, otherwise use Ollama
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
@@ -66,54 +66,9 @@ embedding_model = HuggingFaceEmbeddings(
 vector_store = Chroma(persist_directory="database/chroma_multi_role_nomic", embedding_function=embedding_model)
 """Chroma: Persistent vector database used to store and retrieve embedded documents for multiple roles."""
 
-# Initialize document manager for Multi-Role Agent
 doc_manager = create_multi_role_document_manager("multi_role_agent")
-
-# Load new documents from both bakers and cofounder folders
-print("Loading documents for Multi-Role Agent...")
-bakers_docs = doc_manager.get_new_documents("assests/bakers_agent")
-print("Loading documents for Cofounder Agent...")
-cofounder_docs = doc_manager.get_new_documents("assests/cofounder_agent")
-
-# Combine all new documents
-new_docs = bakers_docs + cofounder_docs
-
-if new_docs:
-    # Log detailed chunk information before adding to vector store
-    print(f"\n📋 Detailed Chunk Information:")
-    print("=" * 50)
-    
-    # Group chunks by source file
-    chunks_by_file = {}
-    for doc in new_docs:
-        if hasattr(doc, 'metadata') and doc.metadata:
-            source_file = doc.metadata.get('source_file', 'Unknown')
-            if source_file not in chunks_by_file:
-                chunks_by_file[source_file] = []
-            chunks_by_file[source_file].append(doc)
-    
-    # Show chunks per file
-    for filename, chunks in chunks_by_file.items():
-        print(f"\n📁 File: {filename}")
-        print(f"  📊 Total chunks: {len(chunks)}")
-        for i, chunk in enumerate(chunks, 1):
-            metadata = chunk.metadata
-            content_type = metadata.get('content_type', 'Unknown')
-            dish_name = metadata.get('dish_name', 'Unknown')
-            chunk_size = len(chunk.page_content)
-            print(f"    Chunk {i}: {content_type} - {dish_name} ({chunk_size} chars)")
-    
-    # Add new documents to existing vector store
-    vector_store.add_documents(new_docs)
-    print(f"\n✅ Added {len(new_docs)} new document chunks to Multi-Role Agent")
-else:
-    print("✅ No new documents to add. All documents are already loaded.")
-
-# Show tracking info
-tracked_files = doc_manager.get_all_loaded_files()
-print(f"📚 Total documents tracked: {len(tracked_files)}")
-if tracked_files:
-    print(f"📁 Files: {', '.join(tracked_files[:5])}{'...' if len(tracked_files) > 5 else ''}")
+from utils.multi_role_document_manager import load_and_index_documents
+load_and_index_documents(doc_manager, vector_store)
 
 # Configure a default retriever (used if no filters are extracted)
 default_retriever = vector_store.as_retriever(
@@ -169,178 +124,89 @@ llm_chain = RetrievalQA.from_chain_type(
 """RetrievalQA: Simple retrieval-augmented generation with professional baking assistant prompt."""
 
 # Initialize simple logger for Multi-Role Agent
-multi_role_logger = SimpleLogger("multi_role", "backend/logs/multi_role_agent_logs.txt")
+multi_role_logger = SimpleLogger("multi_role", "logs/multi_role_agent_logs.txt")
 
 
 # Store conversation history manually for query rewriting (since we removed ConversationBufferMemory)
-conversation_history: List[Dict[str, Any]] = []
-
-
-def _build_chroma_filter(dish_names: List[str], sections: List[str], role: str = "bakers") -> Dict[str, Any]:
-    """Build a Chroma-compatible filter dict from dish_names and sections.
-
-    Uses simple $or / $and operators when multiple values are present.
-    Matches the metadata keys: `dish_name` and `content_type` (section key).
-    Always includes role-based access control.
-    """
-    clauses = []
-
-    # Role-based access control: can only access documents of the specified role
-    if role == "cofounder":
-        # Cofounders have access to both cofounder and bakers documents
-        clauses.append({"$or": [{"role": "cofounder"}, {"role": "bakers"}]})
-    else:
-        # Bakers can only access bakers documents
-        clauses.append({"role": role})
-
-    if dish_names:
-        # Convert dish names to lowercase for case-insensitive filtering
-        dish_names_lower = [d.lower() for d in dish_names if d]
-        if dish_names != dish_names_lower:
-            print(f"🔄 Converting dish names to lowercase: {dish_names} → {dish_names_lower}")
-        
-        if len(dish_names_lower) == 1:
-            clauses.append({"dish_name": dish_names_lower[0]})
-        else:
-            clauses.append({"$or": [{"dish_name": d} for d in dish_names_lower]})
-
-    if sections:
-        if len(sections) == 1:
-            clauses.append({"content_type": sections[0]})
-        else:
-            clauses.append({"$or": [{"content_type": s} for s in sections]})
-
-    if len(clauses) == 1:
-        return clauses[0]
-
-    return {"$and": clauses}
-
-
-def _load_dish_names_from_json() -> List[str]:
-    """Load dish names from the JSON file for fuzzy matching."""
+#conversation_history: List[Dict[str, Any]] = []
+# Store separate histories for each role
+conversation_histories: Dict[str, List[Dict[str, Any]]] = {
+    "bakers": [],
+    "cofounder": []
+}
+def _get_role_response(user_input: str, role: str, k_multiplier: int = 1) -> str:
+    #global conversation_history
     try:
-        dish_file = "backend/logs/multi_role_dish_names.json"
-        if os.path.exists(dish_file):
-            with open(dish_file, 'r') as f:
-                return json.load(f)
-        return []
-    except Exception as e:
-        print(f"⚠️ Error loading dish names: {e}")
-        return []
+        
+        history = conversation_histories.setdefault(role, [])
+        # Rewrite query
+        rewrite_result = query_rewriter.rewrite_query(user_input, conversation_history)
+        print(f"🔄 Query Rewriter Result: {rewrite_result}")
 
+        if isinstance(rewrite_result, dict):
+            rewritten_query = rewrite_result.get("rewritten_query", user_input)
+            dish_names = rewrite_result.get("dish_names", []) or []
+            sections = rewrite_result.get("sections", []) or []
+        else:
+            rewritten_query = str(rewrite_result)
+            dish_names, sections = [], []
 
-def _find_fuzzy_dish_match(query: str, dish_names: List[str], threshold: int = 80) -> List[str]:
-    """Find dish names that fuzzy match the query above the threshold."""
-    matched_dishes = []
-    query_lower = query.lower()
-    
-    for dish in dish_names:
-        # Check if query contains dish name or vice versa
-        if fuzz.partial_ratio(query_lower, dish.lower()) >= threshold:
-            matched_dishes.append(dish)
-        elif fuzz.token_sort_ratio(query_lower, dish.lower()) >= threshold:
-            matched_dishes.append(dish)
-    
-    return matched_dishes
+        # Fetch docs with filters based on role
+        rag_documents, mechanism_used = _fetch_documents_with_filters(
+            rewritten_query, dish_names, sections, role, vector_store
+        )
+        print(f"📊 Retrieved {len(rag_documents)} documents using {mechanism_used} - Dishes: {dish_names}, Sections: {sections}")
 
-
-def _fetch_documents_with_filters(rewritten_query: str, dish_names: List[str], sections: List[str], role: str = "bakers"):
-    """Fetch relevant documents from the vector store applying metadata filters.
-    
-    Implements a three-tier fallback mechanism:
-    1. Try with metadata filters + semantic search (with role)
-    2. Try fuzzy matching with dish names from JSON + semantic search (with role)
-    3. Fall back to semantic search only (with role)
-
-    Returns a tuple of (documents, mechanism_used).
-    """
-    # Determine how many chunks to request
-    if sections and dish_names:
-        k = len(sections) * max(1, len(dish_names))
-    elif dish_names:
-        k = 7 * len(dish_names)
-    else:
-        # No sections means full recipe - request more chunks
-        k = 7 
-
-    # Build a chroma filter with role
-    chroma_filter = _build_chroma_filter(dish_names, sections, role)
-
-    # First mechanism: Try with metadata filters + semantic search (with role)
-    if chroma_filter:
+        # Temporary retriever
+        original_retriever = llm_chain.retriever
         try:
-            print(f"🔍 Mechanism 1: Filters + semantic search with role '{role}'")
-            documents = vector_store.similarity_search(query=rewritten_query, k=k, filter=chroma_filter)
-            print(f"📊 Mechanism 1 returned {len(documents)} documents")
-            
-            # If we got documents, return them
-            if documents:
-                return documents, "with content filters"
+            if rag_documents:
+                temp_retriever = vector_store.as_retriever(
+                    search_kwargs={"k": k_multiplier * max(1, len(rag_documents))}
+                )
+                llm_chain.retriever = temp_retriever
+                result = llm_chain.invoke({"query": rewritten_query})
             else:
-                # No documents found with filters, fall back to second mechanism
-                print("🔄 Mechanism 1 returned 0 documents, falling back to Mechanism 2: Semantic search only with role...")
-                
-        except Exception as e:
-            print(f"⚠️ Mechanism 1 failed with exception: {e}")
-            print("🔄 Falling back to Mechanism 2: Semantic search only with role...")
-    
-    # Second mechanism: Try fuzzy matching with dish names from JSON
-    try:
-        print(f"🔍 Mechanism 2: Fuzzy matching with dish names for role '{role}'")
-        
-        # Load dish names from JSON file
-        available_dishes = _load_dish_names_from_json()
-        if available_dishes:
-            # Try fuzzy matching on the query
-            fuzzy_matched_dishes = _find_fuzzy_dish_match(rewritten_query, available_dishes, threshold=75)
-            
-            if fuzzy_matched_dishes:
-                print(f"🍽️ Fuzzy matched dishes: {fuzzy_matched_dishes}")
-                # Build filter with fuzzy matched dishes
-                fuzzy_filter = _build_chroma_filter(fuzzy_matched_dishes, sections, role)
-                if fuzzy_filter:
-                    # Use fuzzy matched dishes with semantic search
-                    k_fuzzy = 7 * len(fuzzy_matched_dishes) if sections else 7
-                    documents = vector_store.similarity_search(query=rewritten_query, k=k_fuzzy, filter=fuzzy_filter)
-                    print(f"📊 Mechanism 2 (fuzzy) returned {len(documents)} documents")
-                    if documents:
-                        return documents, "fuzzy matching with dish names"
-                else:
-                    print("⚠️ No fuzzy filter available")
-            else:
-                print("🔍 No fuzzy matches found in query")
-        else:
-            print("⚠️ No dish names available for fuzzy matching")
-        
-        print("🔄 Mechanism 2 (fuzzy) returned 0 documents, falling back to Mechanism 3: Semantic search only with role...")
-                
+                result = llm_chain.invoke({"query": rewritten_query})
+        finally:
+            llm_chain.retriever = original_retriever
+
+        response = result.get("result", str(result))
+
+        # Update history
+        #conversation_history.append({"role": "user", "content": user_input})
+        #conversation_history.append({"role": "assistant", "content": response})
+        #if len(conversation_history) > 6:
+        #   conversation_history = conversation_history[-6:]
+        # Update history for this role only
+        history.append({"role": "user", "content": user_input})
+        history.append({"role": "assistant", "content": response})
+        if len(history) > 4:
+            conversation_histories[role] = history[-4:]
+
+        # Log interaction
+        multi_role_logger.log_interaction(
+            user_query=f"Query: {user_input} | Rewritten: {rewritten_query} | Dishes: {dish_names} | Sections: {sections}",
+            memory=history,
+            rag_data=rag_documents,
+            extra_data={
+                "original_query": user_input,
+                "rewritten_query": rewritten_query,
+                "extracted_dish_names": dish_names,
+                "extracted_sections": sections,
+                "full_recipe_requested": len(sections) == 0,
+                "documents_found": len(rag_documents),
+                "filter_applied": bool(dish_names or sections),
+                "mechanism_used": mechanism_used,
+            },
+        )
+
+        return response
+
     except Exception as e:
-        print(f"⚠️ Mechanism 2 (fuzzy) failed with exception: {e}")
-        print("🔄 Falling back to Mechanism 3: Semantic search only with role...")
-    
-    # Third mechanism: Fallback to semantic search only (with role)
-    try:
-        print(f"🔍 Mechanism 3: Semantic search only with role '{role}'")
-        # Only apply role-based access control, no content filters
-        role_filter = _build_chroma_filter([], [], role)
-        
-        if role_filter:
-            # Use semantic search with role filter only (no dish/section filters)
-            # Always use k=7 for fallback mechanism to be more generous
-            documents = vector_store.similarity_search(query=rewritten_query, k=7, filter=role_filter)
-            print(f"📊 Mechanism 3 (no filters) returned {len(documents)} documents (using k=7)")
-            return documents, "semantic search only (role filter only)"
-        else:
-            # Fallback to semantic search without any filters
-            print("⚠️ No role filter available, using semantic search without filters")
-            documents = vector_store.similarity_search(query=rewritten_query, k=7)
-            print(f"📊 Mechanism 3 (no filters) returned {len(documents)} documents (using k=7)")
-            return documents, "semantic search only (no filters)"
-            
-    except Exception as e:
-        print(f"❌ Both mechanisms failed: {e}")
-        # Return empty list as last resort
-        return [], "no documents found"
+        print(f"Error in role={role} response: {e}")
+        import traceback; traceback.print_exc()
+        return "Sorry, I encountered an error while processing your request. Please try again!"
 
 
 def get_baker_response(user_input: str) -> str:
@@ -354,90 +220,7 @@ def get_baker_response(user_input: str) -> str:
         Returns:
             str: The assistant's response generated based on retrieval and LLM reasoning.
         """
-    try:
-        global conversation_history
-
-        # Use query rewriter to improve retrieval for follow-up questions
-        rewrite_result = query_rewriter.rewrite_query(user_input, conversation_history)
-        print(f"🔄 Query Rewriter Result: {rewrite_result}")
-
-        # rewrite_result is expected to be a dict with keys: rewritten_query, dish_names, sections
-        if isinstance(rewrite_result, dict):
-            rewritten_query = rewrite_result.get('rewritten_query', user_input)
-            dish_names = rewrite_result.get('dish_names', []) or []
-            sections = rewrite_result.get('sections', []) or []
-        else:
-            # Backwards compatibility: if old rewriter returns a string
-            rewritten_query = str(rewrite_result)
-            dish_names = []
-            sections = []
-
-        # Fetch RAG documents applying metadata filters (bakers role)
-        rag_documents, mechanism_used = _fetch_documents_with_filters(rewritten_query, dish_names, sections, "bakers")
-        
-        # Determine which mechanism was used based on whether we have content filters
-        print(f"📊 Retrieved {len(rag_documents)} documents using {mechanism_used} - Dishes: {dish_names}, Sections: {sections}")
-
-        # If we have documents, create a temporary retriever that returns these documents
-        # and patch it into the llm_chain for the single invocation so the chain's
-        # prompt can include the retrieved context normally.
-        original_retriever = llm_chain.retriever
-        try:
-            if rag_documents:
-                # Build a temporary retriever from the subset of documents by creating
-                # an in-memory Chroma retriever (or use LangChain's use of existing vector store)
-                # Simpler: create a small retriever from the same vectorstore but restrict k to len(rag_documents)
-                temp_retriever = vector_store.as_retriever(search_kwargs={"k": max(1, len(rag_documents))})
-                llm_chain.retriever = temp_retriever
-
-                # We also temporarily add the found documents as context by letting the chain perform another
-                # similarity search; to ensure the exact documents are used, we pass the rewritten query and let
-                # the retriever return the top-k results (which should match rag_documents in content).
-                result = llm_chain.invoke({"query": rewritten_query})
-            else:
-                # No documents found - use the default chain
-                result = llm_chain.invoke({"query": rewritten_query})
-        finally:
-            # restore the original retriever
-            llm_chain.retriever = original_retriever
-
-        response = result.get("result", str(result))
-
-        # Update conversation history for future query rewriting
-        conversation_history.append({"role": "user", "content": user_input})
-        conversation_history.append({"role": "assistant", "content": response})
-
-        # Keep only last 6 messages (3 exchanges) to avoid token overflow
-        if len(conversation_history) > 6:
-            conversation_history = conversation_history[-6:]
-
-        # Log the interaction with structured rewriter output
-        rewriter_info = {
-            "original_query": user_input,
-            "rewritten_query": rewritten_query,
-            "extracted_dish_names": dish_names,
-            "extracted_sections": sections,
-            "full_recipe_requested": len(sections) == 0,  # No sections means full recipe
-            "documents_found": len(rag_documents),
-            "filter_applied": bool(dish_names or sections),
-            "mechanism_used": mechanism_used
-        }
-        
-        multi_role_logger.log_interaction(
-            user_query=f"Query: {user_input} | Rewritten: {rewritten_query} | Dishes: {dish_names} | Sections: {sections}",
-            memory=conversation_history,
-            rag_data=rag_documents,
-            extra_data=rewriter_info
-        )
-
-        return response
-
-    except Exception as e:
-        print(f"Error in get_response: {e}")
-        import traceback
-        traceback.print_exc()
-        return "Sorry, I encountered an error while processing your request. Please try again!"
-
+    return _get_role_response(user_input, role="bakers", k_multiplier=7)
 
 def get_cofounder_response(user_input: str) -> str:
     """
@@ -450,86 +233,4 @@ def get_cofounder_response(user_input: str) -> str:
     Returns:
         str: The assistant's response generated based on retrieval and LLM reasoning.
     """
-    try:
-        global conversation_history
-
-        # Use query rewriter to improve retrieval for follow-up questions
-        rewrite_result = query_rewriter.rewrite_query(user_input, conversation_history)
-        print(f"🔄 Query Rewriter Result: {rewrite_result}")
-
-        # rewrite_result is expected to be a dict with keys: rewritten_query, dish_names, sections
-        if isinstance(rewrite_result, dict):
-            rewritten_query = rewrite_result.get('rewritten_query', user_input)
-            dish_names = rewrite_result.get('dish_names', []) or []
-            sections = rewrite_result.get('sections', []) or []
-        else:
-            # Backwards compatibility: if old rewriter returns a string
-            rewritten_query = str(rewrite_result)
-            dish_names = []
-            sections = []
-
-        # Fetch RAG documents applying metadata filters (cofounder role)
-        rag_documents, mechanism_used = _fetch_documents_with_filters(rewritten_query, dish_names, sections, "cofounder")
-        
-        # Determine which mechanism was used based on whether we have content filters
-        print(f"📊 Retrieved {len(rag_documents)} documents using {mechanism_used} - Dishes: {dish_names}, Sections: {sections}")
-
-        # If we have documents, create a temporary retriever that returns these documents
-        # and patch it into the llm_chain for the single invocation so the chain's
-        # prompt can include the retrieved context normally.
-        original_retriever = llm_chain.retriever
-        try:
-            if rag_documents:
-                # Build a temporary retriever from the subset of documents by creating
-                # an in-memory Chroma retriever (or use LangChain's use of existing vector store)
-                # Simpler: create a small retriever from the same vectorstore but restrict k to len(rag_documents)
-                temp_retriever = vector_store.as_retriever(search_kwargs={"k": max(1, len(rag_documents))})
-                llm_chain.retriever = temp_retriever
-
-                # We also temporarily add the found documents as context by letting the chain perform another
-                # similarity search; to ensure the exact documents are used, we pass the rewritten query and let
-                # the retriever return the top-k results (which should match rag_documents in content).
-                result = llm_chain.invoke({"query": rewritten_query})
-            else:
-                # No documents found - use the default chain
-                result = llm_chain.invoke({"query": rewritten_query})
-        finally:
-            # restore the original retriever
-            llm_chain.retriever = original_retriever
-
-        response = result.get("result", str(result))
-
-        # Update conversation history for future query rewriting
-        conversation_history.append({"role": "user", "content": user_input})
-        conversation_history.append({"role": "assistant", "content": response})
-
-        # Keep only last 6 messages (3 exchanges) to avoid token overflow
-        if len(conversation_history) > 6:
-            conversation_history = conversation_history[-6:]
-
-        # Log the interaction with structured rewriter output
-        rewriter_info = {
-            "original_query": user_input,
-            "rewritten_query": rewritten_query,
-            "extracted_dish_names": dish_names,
-            "extracted_sections": sections,
-            "full_recipe_requested": len(sections) == 0,  # No sections means full recipe
-            "documents_found": len(rag_documents),
-            "filter_applied": bool(dish_names or sections),
-            "mechanism_used": mechanism_used
-        }
-        
-        multi_role_logger.log_interaction(
-            user_query=f"Query: {user_input} | Rewritten: {rewritten_query} | Dishes: {dish_names} | Sections: {sections}",
-            memory=conversation_history,
-            rag_data=rag_documents,
-            extra_data=rewriter_info
-        )
-
-        return response
-
-    except Exception as e:
-        print(f"Error in get_cofounder_response: {e}")
-        import traceback
-        traceback.print_exc()
-        return "Sorry, I encountered an error while processing your request. Please try again!"
+    return _get_role_response(user_input, role="cofounder", k_multiplier=7)

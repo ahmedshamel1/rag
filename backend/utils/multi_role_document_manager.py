@@ -254,7 +254,7 @@ class MultiRoleDocumentManager:
     def _export_dish_names(self, dish_name: str):
         """Export dish names to a JSON file for easy access."""
         try:
-            dish_file = "backend/logs/multi_role_dish_names.json"
+            dish_file = "logs/multi_role_dish_names.json"
             os.makedirs(os.path.dirname(dish_file), exist_ok=True)
             
             # Load existing dish names or create new list
@@ -302,5 +302,59 @@ def create_multi_role_document_manager(folder_name: str) -> MultiRoleDocumentMan
     Returns:
         MultiRoleDocumentManager: Configured multi-role document manager
     """
-    tracking_file = f"backend/logs/{folder_name}_document_tracking.json"
+    tracking_file = f"logs/{folder_name}_document_tracking.json"
     return MultiRoleDocumentManager(tracking_file)
+
+def load_and_index_documents(doc_manager, vector_store) -> int:
+    """
+    Load new documents for all roles, log detailed chunk information,
+    and add them into the vector store.
+
+    Args:
+        doc_manager: The MultiRoleDocumentManager instance
+        vector_store: The Chroma vector store
+
+    Returns:
+        int: Number of new document chunks added
+    """
+    print("Loading documents for Multi-Role Agent...")
+    bakers_docs = doc_manager.get_new_documents("../assests/bakers_agent")
+    print("Loading documents for Cofounder Agent...")
+    cofounder_docs = doc_manager.get_new_documents("../assests/cofounder_agent")
+
+    new_docs = bakers_docs + cofounder_docs
+
+    if not new_docs:
+        print("✅ No new documents to add. All documents are already loaded.")
+        return 0
+
+    # Log detailed chunk information
+    print(f"\n📋 Detailed Chunk Information:")
+    print("=" * 50)
+    chunks_by_file = {}
+    for doc in new_docs:
+        if hasattr(doc, 'metadata') and doc.metadata:
+            source_file = doc.metadata.get('source_file', 'Unknown')
+            chunks_by_file.setdefault(source_file, []).append(doc)
+
+    for filename, chunks in chunks_by_file.items():
+        print(f"\n📁 File: {filename}")
+        print(f"  📊 Total chunks: {len(chunks)}")
+        for i, chunk in enumerate(chunks, 1):
+            metadata = chunk.metadata
+            content_type = metadata.get('content_type', 'Unknown')
+            dish_name = metadata.get('dish_name', 'Unknown')
+            chunk_size = len(chunk.page_content)
+            print(f"    Chunk {i}: {content_type} - {dish_name} ({chunk_size} chars)")
+
+    # Add to vector store
+    vector_store.add_documents(new_docs)
+    print(f"\n✅ Added {len(new_docs)} new document chunks to Multi-Role Agent")
+
+    # Show tracking info
+    tracked_files = doc_manager.get_all_loaded_files()
+    print(f"📚 Total documents tracked: {len(tracked_files)}")
+    if tracked_files:
+        print(f"📁 Files: {', '.join(tracked_files[:5])}{'...' if len(tracked_files) > 5 else ''}")
+
+    return len(new_docs)

@@ -1,0 +1,57 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      network: host
+    container_name: rag-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Production/Test mode: use named Docker volume to persist ChromaDB
+      - chroma_data:/app/database
+
+      # Developer mode (uncomment to use host bind mount instead of named volume):
+      # - ./database:/app/database
+
+      # Mount assets folder for document access
+      - ./assests:/app/assests
+
+      # Mount logs for persistence and inspection
+      - ./backend/logs:/app/logs
+
+    environment:
+      - PYTHONPATH=/app
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: rag-frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    environment:
+      # frontend can call backend by service name "backend" inside docker network
+      - BACKEND_URL=http://backend:8000/process/
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+
+volumes:
+  chroma_data:
+    driver: local
