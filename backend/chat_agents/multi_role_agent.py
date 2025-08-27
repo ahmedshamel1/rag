@@ -46,10 +46,10 @@ if OPENROUTER_API_KEY and OPENAI_AVAILABLE:
     llm = ChatOpenAI(
         base_url="https://openrouter.ai/api/v1",
         api_key=OPENROUTER_API_KEY,
-        model="mistralai/mistral-7b-instruct:free",
+        model="meta-llama/llama-3.1-8b-instruct",
         temperature=0.2
     )
-    print("🌐 Using OpenRouter (Mistral 7B) for multi-role agent")
+    print("🌐 Using OpenRouter (llama-3.1-8b) for multi-role agent")
 else:
     llm = OllamaLLM(model="llama3.1:8b")
     print("🏠 Using Ollama (llama3.1:8b) for multi-role agent")
@@ -80,48 +80,112 @@ default_retriever = vector_store.as_retriever(
 # Initialize query rewriter with a small, fast LLM
 # Use the same model selection for query rewriter
 if OPENROUTER_API_KEY and OPENAI_AVAILABLE:
-    query_rewriter = create_query_rewriter("mistralai/mistral-7b-instruct:free", use_openrouter=True)
+    query_rewriter = create_query_rewriter("meta-llama/llama-3.1-8b-instruct", use_openrouter=True)
 else:
     query_rewriter = create_query_rewriter("llama3.2:1b")
 """QueryRewriter: Uses a small LLM to rewrite follow-up questions with conversation context."""
 
-# Create comprehensive baking assistant prompt
-baking_assistant_prompt_template = """You are an expert professional baking assistant with deep knowledge of baking techniques, recipes, ingredients, and equipment. 
-You are friendly, helpful, and passionate about baking.
+# Create focused baking assistant prompt with workshop tone
+baking_assistant_prompt_template = """You are a professional baking workshop assistant with years of experience helping bakers in commercial kitchens. You help bakers with ALL aspects of recipes and food-related procedures from the provided documents.
 
-PERSONALITY:
-- Enthusiastic and encouraging about baking
-- Patient and thorough in explanations
-- Professional but warm and approachable
-- Share tips and best practices when relevant
+TONE & PERSONALITY:
+- Professional yet warm and encouraging - like a senior baker mentoring junior staff
+- Patient and thorough - bakers need precise, reliable information
+- Workshop-focused - use terminology and measurements that professional bakers understand
 
-GUIDELINES:
-- Use ONLY the provided baking documents as your source of information
-- DO NOT invent, guess, or add information that is not explicitly present in the context
-- If the answer cannot be found in the context, say: "I don’t have that information in the provided documents."
-- Provide practical, actionable advice when the context allows
-- Include relevant tips, warnings, or best practices **only if they are present in the context**
-- Be specific about measurements, temperatures, and timing when available in the context
-- If asked about substitutions, mention them only if the context provides them
+CRITICAL RULES:
+- Answer ANY recipe-related questions using the provided chunks, including:
+  * Ingredients and measurements
+  * Preparation time and instructions
+  * Utensils and equipment needed
+  * Number of servings
+  * Nutritional information and allergen details
+  * Full recipes and specific sections
+- Use ONLY information present in the chunks - never invent or add external knowledge
+- If the question is not recipe/food-related, say: "I can only help with recipe and food-related questions. Please ask about recipes, ingredients, preparation, nutrition, or baking procedures."
+- If the answer is not in the chunks, say: "I don't have that information in the available documents."
+- Keep answers brief but complete - include all relevant details from chunks
+- Use chunk metadata when relevant (dish name, section type, chunk number)
 
-Context from baking documents:
+RESPONSE FORMAT:
+- Be concise and practical
+- Use professional baking terminology and measurements exactly as shown in chunks
+- Focus on actionable steps and procedures for workshop use
+- Include relevant chunk details when they add value
+- For full recipes, include all available sections
+
+Context chunks from baking documents:
 {context}
 
 Question: {question}
 
-As your professional baking assistant, here's my response:"""
+Professional Baking Workshop Response:"""
 
 baking_assistant_prompt = PromptTemplate.from_template(baking_assistant_prompt_template)
 
-# Use simple RetrievalQA since query rewriter already handles conversation context
-llm_chain = RetrievalQA.from_chain_type(
+# Create focused co-founder prompt with executive access to ALL recipes
+cofounder_prompt_template = """You are the Co-founder Agent with FULL ACCESS to ALL recipes in the system, including confidential and secret recipes like the SDG cake recipe. You have executive-level access to help with strategic recipe decisions and confidential information.
+
+TONE & PERSONALITY:
+- Executive and strategic - like a business leader making high-level decisions
+- Confident and authoritative - you have access to all information
+- Discreet and professional - handle confidential recipes with appropriate care
+- Results-oriented - focus on what's needed for business success
+- Strategic thinking - consider recipe implications for the business
+
+CRITICAL RULES:
+- Answer ANY questions about ALL recipes using the provided chunks, including:
+  * Ingredients and measurements
+  * Preparation time and instructions
+  * Utensils and equipment needed
+  * Number of servings
+  * Nutritional information and allergen details
+  * Full recipes and specific sections
+  * Access to both regular and secret/confidential recipes
+- Use ONLY information present in the chunks - never invent or add external knowledge
+- If the question is not recipe-related, say: "I can help with all recipe-related questions, including confidential recipes. Please ask about recipes, ingredients, preparation, nutrition, or any other recipe details."
+- If the answer is not in the chunks, say: "I don't have that information in the available recipe documents."
+- Keep answers brief but complete - include all relevant details from chunks
+- Reference chunk metadata when relevant (dish name, section type, chunk number)
+- For confidential recipes, maintain appropriate discretion while providing necessary information
+
+RESPONSE FORMAT:
+- Be concise and strategic
+- Use recipe terminology and measurements exactly as shown in chunks
+- Focus on recipe details, ingredients, and procedures
+- Include relevant chunk details when they add value
+- For nutritional questions, provide the exact information from chunks
+- For full recipes, include all available sections
+- Handle confidential information appropriately for executive-level access
+
+Context chunks from ALL recipe documents (including confidential):
+{context}
+
+Question: {question}
+
+Co-founder Executive Response (Full Recipe Access):"""
+
+cofounder_prompt = PromptTemplate.from_template(cofounder_prompt_template)
+
+# Create role-specific LLM chains
+baking_llm_chain = RetrievalQA.from_chain_type(
     llm=llm,
     chain_type="stuff",
     retriever=default_retriever,
     return_source_documents=True,
     chain_type_kwargs={"prompt": baking_assistant_prompt}
 )
-"""RetrievalQA: Simple retrieval-augmented generation with professional baking assistant prompt."""
+
+cofounder_llm_chain = RetrievalQA.from_chain_type(
+    llm=llm,
+    chain_type="stuff",
+    retriever=default_retriever,
+    return_source_documents=True,
+    chain_type_kwargs={"prompt": cofounder_prompt}
+)
+
+# Keep the original llm_chain for backward compatibility (defaults to baking)
+llm_chain = baking_llm_chain
 
 # Initialize simple logger for Multi-Role Agent
 multi_role_logger = SimpleLogger("multi_role", "logs/multi_role_agent_logs.txt")
@@ -157,19 +221,30 @@ def _get_role_response(user_input: str, role: str, k_multiplier: int = 1) -> str
         )
         print(f"📊 Retrieved {len(rag_documents)} documents using {mechanism_used} - Dishes: {dish_names}, Sections: {sections}")
 
+        # Select the appropriate LLM chain based on role
+        if role == "bakers":
+            role_llm_chain = baking_llm_chain
+            print(f"🥖 Using BAKING prompt for role: {role}")
+        elif role == "cofounder":
+            role_llm_chain = cofounder_llm_chain
+            print(f"🚀 Using COFOUNDER prompt for role: {role}")
+        else:
+            role_llm_chain = baking_llm_chain  # default fallback
+            print(f"⚠️  Unknown role '{role}', defaulting to BAKING prompt")
+        
         # Temporary retriever
-        original_retriever = llm_chain.retriever
+        original_retriever = role_llm_chain.retriever
         try:
             if rag_documents:
                 temp_retriever = vector_store.as_retriever(
                     search_kwargs={"k": k_multiplier * max(1, len(rag_documents))}
                 )
-                llm_chain.retriever = temp_retriever
-                result = llm_chain.invoke({"query": rewritten_query})
+                role_llm_chain.retriever = temp_retriever
+                result = role_llm_chain.invoke({"query": rewritten_query})
             else:
-                result = llm_chain.invoke({"query": rewritten_query})
+                result = role_llm_chain.invoke({"query": rewritten_query})
         finally:
-            llm_chain.retriever = original_retriever
+            role_llm_chain.retriever = original_retriever
 
         response = result.get("result", str(result))
 
@@ -198,6 +273,8 @@ def _get_role_response(user_input: str, role: str, k_multiplier: int = 1) -> str
                 "documents_found": len(rag_documents),
                 "filter_applied": bool(dish_names or sections),
                 "mechanism_used": mechanism_used,
+                "role_used": role,
+                "llm_chain_type": "baking" if role == "bakers" else "cofounder" if role == "cofounder" else "unknown",
             },
         )
 
@@ -211,26 +288,26 @@ def _get_role_response(user_input: str, role: str, k_multiplier: int = 1) -> str
 
 def get_baker_response(user_input: str) -> str:
     """
-        Generates a response using direct LLM invocation with a professional baking assistant prompt
-        and intelligent query rewriting for follow-up questions.
+    Generates a response using direct LLM invocation with access to baking recipes and procedures.
+    Bakers can access all food-related guides and recipes for workshop use.
 
-        Args:
-            user_input (str): The user's message or query.
+    Args:
+        user_input (str): The user's message or query about baking, recipes, or food procedures.
 
-        Returns:
-            str: The assistant's response generated based on retrieval and LLM reasoning.
-        """
+    Returns:
+        str: The assistant's response based on baking documents and recipes.
+    """
     return _get_role_response(user_input, role="bakers", k_multiplier=7)
 
 def get_cofounder_response(user_input: str) -> str:
     """
-    Generates a response using direct LLM invocation with a professional business strategy assistant prompt
-    and intelligent query rewriting for follow-up questions. Cofounders can only access cofounder documents.
+    Generates a response using direct LLM invocation with FULL ACCESS to ALL recipes including confidential ones.
+    Co-founders have executive-level access to all recipe information for strategic business decisions.
 
     Args:
-        user_input (str): The user's message or query.
+        user_input (str): The user's message or query about any recipe (regular or confidential).
 
     Returns:
-        str: The assistant's response generated based on retrieval and LLM reasoning.
+        str: The assistant's response based on all available recipe documents with executive-level access.
     """
     return _get_role_response(user_input, role="cofounder", k_multiplier=7)

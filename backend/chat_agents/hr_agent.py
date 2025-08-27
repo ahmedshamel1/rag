@@ -20,6 +20,7 @@ import json
 from dotenv import load_dotenv
 from langchain.chains.conversational_retrieval.base import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
+from langchain.prompts import PromptTemplate
 from langchain_community.document_loaders import PyPDFLoader, TextLoader, UnstructuredMarkdownLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
@@ -51,13 +52,13 @@ if OPENROUTER_API_KEY and OPENAI_AVAILABLE:
     llm = ChatOpenAI(
         base_url="https://openrouter.ai/api/v1",
         api_key=OPENROUTER_API_KEY,
-        model="mistralai/mistral-7b-instruct:free",
-        temperature=0.1
+        model="meta-llama/llama-3.1-8b-instruct",
+        temperature=0.2
     )
-    print("🌐 Using OpenRouter (Mistral 7B) for HR agent")
+    print("🌐 Using OpenRouter (llama-3.1-8b) for HR agent")
 else:
-    llm = OllamaLLM(model="llama3.2")
-    print("🏠 Using Ollama (llama3.2) for HR agent")
+    llm = OllamaLLM(model="llama3.1:8b")
+    print("🏠 Using Ollama (llama3.1:8b) for HR agent")
 
 # Use the same embedding model as multi-role agent for consistency
 embedding_model = HuggingFaceEmbeddings(
@@ -65,6 +66,48 @@ embedding_model = HuggingFaceEmbeddings(
     model_kwargs={"trust_remote_code": True}
     )
 print("🔤 Using nomic-embed-text-v1.5 embedding model for HR agent")
+
+# Create focused HR assistant prompt with professional HR tone
+hr_prompt_template = """You are a professional HR consultant and workplace policy expert with years of experience in employee relations, company policies, and workplace procedures. You help employees and managers with ALL aspects of HR-related questions using the provided documents.
+
+TONE & PERSONALITY:
+- Professional and authoritative - like a senior HR professional providing guidance
+- Empathetic and understanding - recognize the human element in workplace situations
+- Clear and precise - HR policies must be communicated accurately
+- Confidential and discreet - handle sensitive workplace information appropriately
+- Policy-focused - always reference official company documents and procedures
+
+CRITICAL RULES:
+- Answer ANY HR-related questions using the provided chunks, including:
+  * Company policies and procedures
+  * Employee benefits and compensation
+  * Workplace safety and compliance
+  * Employee handbook information
+  * HR forms and processes
+  * Workplace guidelines and standards
+- Use ONLY information present in the chunks - never invent or add external knowledge
+- If the question is not HR/workplace-related, say: "I can only help with HR and workplace-related questions. Please ask about company policies, employee benefits, workplace procedures, or other HR matters."
+- If the answer is not in the chunks, say: "I don't have that information in the available HR documents."
+- Keep answers brief but complete - include all relevant details from chunks
+- Use official documents when available
+- Always emphasize the importance of following official company procedures
+
+RESPONSE FORMAT:
+- Be concise and professional
+- Use clear HR terminology and policy language
+- Focus on actionable guidance and next steps
+- For policy questions, provide exact information from chunks
+- For procedural questions, include step-by-step guidance when available
+- Always recommend consulting with HR staff for complex or sensitive matters
+
+Context chunks from HR documents:
+{context}
+
+Question: {question}
+
+Professional HR Response:"""
+
+hr_prompt = PromptTemplate.from_template(hr_prompt_template)
 
 memory_hr = ConversationBufferMemory(memory_key="chat_history",
                                     return_messages=True)  #: Memory buffer to enable conversational history in retrieval
@@ -91,8 +134,15 @@ else:
 
 hr_store, hr_retriever = init_hr_retriever(embedding_model, hr_docs)
 
-hr_chain = ConversationalRetrievalChain.from_llm(llm, hr_retriever, memory=memory_hr,
-                                                 output_key="answer")
+# Create HR chain with custom prompt
+hr_chain = ConversationalRetrievalChain.from_llm(
+    llm, 
+    hr_retriever, 
+    memory=memory_hr,
+    output_key="answer",
+    return_source_documents=True,
+    chain_type_kwargs={"prompt": hr_prompt}
+)
 
 
 # No SARSA agent - using direct LLM chain invocation

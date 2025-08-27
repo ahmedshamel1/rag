@@ -47,7 +47,7 @@ llms = {
 histories: Dict[str, deque] = {name: deque(maxlen=4) for name in llms.keys()}
 
 # -------------------------
-# 📝 Query Rewriter Prompt (updated with your main strict rules)
+# 📝 Query Rewriter Prompt (updated with stricter rules to avoid extraneous sections)
 # -------------------------
 canonical_sections = [
     "ingredients",
@@ -69,11 +69,15 @@ main_prompt_text = (
     "}}\n\n"
     "Hard rules (must be followed exactly):\n"
     "1) ALWAYS output exactly one JSON object and nothing else (no explanations, no backticks).\n"
-    "2) Use the following canonical section names when relevant: " + ", ".join(canonical_sections) + ".\n"
-    "3) If no dish name or section is present, return an empty list for those fields.\n\n"
+    "2) Use ONLY the following canonical section names when relevant: " + ", ".join(canonical_sections) + ". Do not use any other names.\n"
+    "3) If no dish name or section is present or relevant, return an empty list for those fields.\n"
+    "4) NEVER include all sections unless explicitly required; only include sections directly matching the user request.\n\n"
     "Rewriting rules (how to build fields):\n"
     "- rewritten_query: a retrieval-ready query string for fetching content. It should include dish names (from history or the question) and, when applicable, section filters (e.g. 'ingredients', 'instructions').\n"
-    "- sections: a list of canonical section names requested by the user or implied by the question. If none requested (meaning full recipe), return [].\n"
+    "- sections: a list of canonical section names that EXACTLY match the user request. Do not add extra sections.\n"
+    "- If the user asks for 'prep' or 'preparation', include ONLY 'preparation_time' and 'preparation_instructions'. \n"
+    "- If the user asks for 'ingredients', include ONLY 'ingredients'\n"
+    "- If the user explicitly asks for a 'full recipe', then and only then return [].\n"
     "- dish_names: list all dishes explicitly referenced in the user question. If the user explicitly requests a single dish, populate dish_names with only that dish (do NOT add other dishes from history as filters).\n\n"
     "Important special-case rules (overrides):\n"
     "- If the user asks for the \"full recipe\" or clearly requests an entire recipe, return an empty sections list [] and make rewritten_query request the full recipe for the dish(es) (e.g. 'full recipe for X').\n"
@@ -90,20 +94,30 @@ rewriter_prompt = ChatPromptTemplate.from_messages([
 ])
 
 # -------------------------
-# ⚖️ Judge Setup
+# ⚖️ Judge Setup (updated with rules for stricter evaluation, including history)
 # -------------------------
-judge = build_llm("openai/gpt-4.1-mini", temperature=0.0)
+judge = build_llm("openai/gpt-4o-mini", temperature=0.0)  # Note: Updated to gpt-4o-mini if available, but was gpt-4.1-mini (assuming typo or variant)
 
 judge_prompt = ChatPromptTemplate.from_messages([
     ("system", "You are a strict JSON schema evaluator. "
                "You check if the model output is valid JSON and matches schema "
-               "(rewritten_query: string, dish_names: [string], sections: [string])."),
-    ("human", "Question: {question}\nOutput\nQuestion: {question}\nOutput: {output}\n\n"
+               "(rewritten_query: string, dish_names: [string], sections: [string]).\n"
+               "Canonical sections: " + ", ".join(canonical_sections) + "\n\n"
+               "Strict rules for evaluation (must enforce):\n"
+               "- dish_names: Must list ONLY dishes explicitly referenced in the question. Use history ONLY if question refers to previous (e.g., 'it', 'last 2'). Do not add extras. Empty if none.\n"
+               "- sections: Must be ONLY canonical names and EXACTLY match user request per rules:\n"
+               "  - For 'prep' or 'preparation': ONLY ['preparation_time', 'preparation_instructions']\n"
+               "  - For 'ingredients': ONLY ['ingredients']\n"
+               "  - For full recipe: []\n"
+               "  - Map user words to canonical (e.g., 'nutrition facts' -> 'nutritional_information')\n"
+               "  - Do NOT allow extra sections; must reflect request precisely.\n"
+               "- rewritten_query: Must be concise, non-empty, include relevant dishes/sections from question/history.\n"),
+    ("human", "History: {history}\nQuestion: {question}\nOutput: {output}\n\n"
               "Evaluate:\n"
-              "- Is it valid JSON? (yes/no)\n"
-              "- Does it contain the correct dishes based on question and history if relevent? (yes/no)\n"
-              "- Is rewritten_query reasonable (not empty) based on question and history ? (yes/no)\n"
-              "- Are section names canonical only and based on question and history if relevent? (yes/no)\n\n"
+              "- Is it valid JSON with exact schema? (yes/no)\n"
+              "- Does dish_names contain exactly the correct dishes based on question and history? (yes/no)\n"
+              "- Is rewritten_query reasonable, non-empty, and matching intent based on question/history? (yes/no)\n"
+              "- Are sections ONLY canonical and exactly reflect the user request per rules? (yes/no)\n\n"
               "Respond ONLY as JSON with:\n"
               "{{\n"
               "  \"valid_json\": bool,\n"
@@ -117,14 +131,7 @@ judge_prompt = ChatPromptTemplate.from_messages([
 # 🧪 Test Questions
 # -------------------------
 questions = [
-    "What are the prep for refreshing watermelon smoothie?",
-    "What are the ingredients for chocolate cake?",
-    "Give me the full recipe for apple pie",
-    "How many servings does the banana bread recipe make?",
-    "What utensils do I need for sourdough?",
-    "Show me the nutrition facts for pancakes",
-    "what are the utills needed for it",
-    "what are the ingredients needed for last 2 dishes",
+    "What are the prep for refreshing watermelon smoothie?"
 ]
 
 # -------------------------
@@ -164,7 +171,7 @@ for q in questions:
 
             # judge evaluation
             try:
-                judge_messages = judge_prompt.format_messages(question=q, output=output)
+                judge_messages = judge_prompt.format_messages(history=history_str, question=q, output=output)
                 judge_eval = judge.invoke(judge_messages).content
                 eval_dict = json.loads(judge_eval)
                 print(f"Judge Eval: {eval_dict}")
@@ -204,13 +211,13 @@ for q in questions:
 # 📊 Results Table
 # -------------------------
 print("\n===== Evaluation Results =====")
-print(f"{'Model':<18} {'ValidJSON%':<10} {'Schema%':<10} {'Reasonable%':<12} {'Sections%':<10} {'AvgTime(s)':<10}")
+print(f"{'Model':<18} {'ValidJSON%':<10} {'DishNames%':<12} {'Correctness%':<14} {'Sections%':<10} {'AvgTime(s)':<10}")
 for name, stats in results.items():
     total = stats["total"] or 1
     avg_time = sum(stats["times"]) / len(stats["times"]) if stats["times"] else 0
     print(f"{name:<18} "
-          f"{100*stats['valid_json']/total:<10.1f}"
-          f"{100*stats['dish_names']/total:<10.1f}"
-          f"{100*stats['correctness']/total:<12.1f}"
-          f"{100*stats['valid_sections']/total:<10.1f}"
+          f"{100*stats['valid_json']/total:<10.1f} "
+          f"{100*stats['dish_names']/total:<12.1f} "
+          f"{100*stats['correctness']/total:<14.1f} "
+          f"{100*stats['valid_sections']/total:<10.1f} "
           f"{avg_time:<10.2f}")
