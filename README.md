@@ -1,12 +1,12 @@
 # 🏪 Multi-Agent Bakery Shop RAG System
 
-A sophisticated **multi-agent system** designed for bakery operations, leveraging **Retrieval-Augmented Generation (RAG)** with specialized agents for different business functions. Built using **LangChain**, **OpenRouter** for multi-LLM access, **Ollama** as backup, and **ChromaDB** for intelligent document retrieval and management.
+A **multi-agent system** designed for bakery operations, leveraging **Retrieval-Augmented Generation (RAG)** with specialized agents for different business functions. Built using **LangChain**, **OpenRouter** for multi-LLM access, **Ollama** as backup, and **ChromaDB** for intelligent document retrieval and management.
 
 ---
 
 ## 🎯 System Overview
 
-This intelligent chatbot system serves bakery operations through three specialized agents, each designed to handle domain-specific queries with advanced document retrieval capabilities. The system automatically tracks document changes through hashing mechanisms and employs sophisticated chunking strategies optimized for different content types.
+This intelligent chatbot system serves bakery operations through three specialized agents, each designed to handle domain-specific queries with advanced document retrieval capabilities. The system automatically tracks document changes through hashing mechanisms and employs chunking strategies optimized for different content types.
 
 ---
 
@@ -16,10 +16,22 @@ This intelligent chatbot system serves bakery operations through three specializ
 Specialized in recipe management, ingredient queries, and baking techniques. Processes structured recipe documents with section-based chunking for optimal retrieval.
 
 ### 2. 👔 **Co-Founder Agent**
-Handles business strategy, financial planning, and operational decisions. Utilizes the same section-based chunking methodology as the baker agent for consistent document processing.
+Same exact features as the Baker Agent but with additional access to secret recipes and proprietary baking formulas for strategic oversight.
 
 ### 3. 👥 **HR Agent**
 Manages employee-related queries, policies, and HR documentation. Employs embedding-based chunking for flexible content retrieval from diverse HR documents.
+
+---
+
+## 🗄️ Data Isolation & Database Architecture
+
+### **Database Separation**
+- **HR Agent**: Has its own isolated database (`chroma_hr`) for employee and policy documents
+- **Baker & Co-Founder Agents**: Share the same database (`chroma_multi_role_nomic`) for recipe and business documents
+- **Secret Recipe Access**: Co-Founder has exclusive access to secret recipes through metadata filtering, while Baker can only access standard recipes
+
+### **Isolation Mechanism**
+The data isolation is enforced through **metadata filtering** - each agent can only access documents that match their specific metadata tags, ensuring secure separation of sensitive information while allowing shared access to common resources.
 
 ---
 
@@ -164,6 +176,8 @@ cp .env.example .env
 # OLLAMA_BASE_URL=http://localhost:11434
 ```
 
+**Important**: Before running the system, you must create a `.env` file and add your OpenRouter API key (`OPENROUTER_API_KEY=your_actual_key_here`). This is required for the system to access multiple LLMs through OpenRouter. If no API key is provided, the system will fall back to using Ollama locally.
+
 ### 3. Docker Deployment (Recommended)
 ```bash
 # Start all services
@@ -228,10 +242,7 @@ streamlit run chat_app.py
 
 ## 🔒 Security Features
 
-- **Input Sanitization**: Prevents injection attacks
 - **Prompt Templates**: Controlled response generation
-- **Access Logging**: Comprehensive audit trails
-- **Rate Limiting**: API abuse prevention
 
 
 
