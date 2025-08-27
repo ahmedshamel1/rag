@@ -18,7 +18,7 @@ from langchain.prompts import ChatPromptTemplate
 # -------------------------
 # 🔑 API Key (STATIC here, replace with your own)
 # -------------------------
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = ""
 
 # -------------------------
 # 🤖 Define LLM Builders
