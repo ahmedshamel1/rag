@@ -58,17 +58,21 @@ def _fetch_documents_with_filters(rewritten_query: str, dish_names: List[str], s
         print("⚠️ No vector store provided")
         return [], "no vector store"
         
-    # Determine how many chunks to request
-    if sections and dish_names:
-        k = len(sections) * max(1, len(dish_names))
+   
+    available_dishes = _load_dish_names_from_json()
+    # Build a chroma filter with role
+    fuzzy_matched_dishes = _find_fuzzy_dish_match(dish_names, available_dishes, threshold=75)
+
+    chroma_filter = _build_chroma_filter(fuzzy_matched_dishes, sections, role)
+
+     # Determine how many chunks to request
+    if sections and fuzzy_matched_dishes:
+        k = len(sections) * max(1, len(fuzzy_matched_dishes))
     elif dish_names:
-        k = 7 * len(dish_names)
+        k = 7 * len(fuzzy_matched_dishes)
     else:
         # No sections means full recipe - request more chunks
         k = 7 
-
-    # Build a chroma filter with role
-    chroma_filter = _build_chroma_filter(dish_names, sections, role)
 
     # First mechanism: Try with metadata filters + semantic search (with role)
     if chroma_filter:
@@ -88,39 +92,39 @@ def _fetch_documents_with_filters(rewritten_query: str, dish_names: List[str], s
             print(f"⚠️ Mechanism 1 failed with exception: {e}")
             print("🔄 Falling back to Mechanism 2: Semantic search only with role...")
     
-    # Second mechanism: Try fuzzy matching with dish names from JSON
-    try:
-        print(f"🔍 Mechanism 2: Fuzzy matching with dish names for role '{role}'")
+    # # Second mechanism: Try fuzzy matching with dish names from JSON
+    # try:
+    #     print(f"🔍 Mechanism 2: Fuzzy matching with dish names for role '{role}'")
         
-        # Load dish names from JSON file
-        available_dishes = _load_dish_names_from_json()
-        if available_dishes:
-            # Try fuzzy matching on the query
-            fuzzy_matched_dishes = _find_fuzzy_dish_match(rewritten_query, available_dishes, threshold=75)
+    #     # Load dish names from JSON file
+    #     available_dishes = _load_dish_names_from_json()
+    #     if available_dishes:
+    #         # Try fuzzy matching on the query
+    #         fuzzy_matched_dishes = _find_fuzzy_dish_match(dish_names, available_dishes, threshold=75)
             
-            if fuzzy_matched_dishes:
-                print(f"🍽️ Fuzzy matched dishes: {fuzzy_matched_dishes}")
-                # Build filter with fuzzy matched dishes
-                fuzzy_filter = _build_chroma_filter(fuzzy_matched_dishes, sections, role)
-                if fuzzy_filter:
-                    # Use fuzzy matched dishes with semantic search
-                    k_fuzzy = 7 * len(fuzzy_matched_dishes) if sections else 7
-                    documents = vector_store.similarity_search(query=rewritten_query, k=k_fuzzy, filter=fuzzy_filter)
-                    print(f"📊 Mechanism 2 (fuzzy) returned {len(documents)} documents")
-                    if documents:
-                        return documents, "fuzzy matching with dish names"
-                else:
-                    print("⚠️ No fuzzy filter available")
-            else:
-                print("🔍 No fuzzy matches found in query")
-        else:
-            print("⚠️ No dish names available for fuzzy matching")
+    #         if fuzzy_matched_dishes:
+    #             print(f"🍽️ Fuzzy matched dishes: {fuzzy_matched_dishes}")
+    #             # Build filter with fuzzy matched dishes
+    #             fuzzy_filter = _build_chroma_filter(fuzzy_matched_dishes, sections, role)
+    #             if fuzzy_filter:
+    #                 # Use fuzzy matched dishes with semantic search
+    #                 k_fuzzy = 7 * len(fuzzy_matched_dishes) if sections else 7
+    #                 documents = vector_store.similarity_search(query=rewritten_query, k=k_fuzzy, filter=fuzzy_filter)
+    #                 print(f"📊 Mechanism 2 (fuzzy) returned {len(documents)} documents")
+    #                 if documents:
+    #                     return documents, "fuzzy matching with dish names"
+    #             else:
+    #                 print("⚠️ No fuzzy filter available")
+    #         else:
+    #             print("🔍 No fuzzy matches found in query")
+    #     else:
+    #         print("⚠️ No dish names available for fuzzy matching")
         
-        print("🔄 Mechanism 2 (fuzzy) returned 0 documents, falling back to Mechanism 3: Semantic search only with role...")
+    #     print("🔄 Mechanism 2 (fuzzy) returned 0 documents, falling back to Mechanism 3: Semantic search only with role...")
                 
-    except Exception as e:
-        print(f"⚠️ Mechanism 2 (fuzzy) failed with exception: {e}")
-        print("🔄 Falling back to Mechanism 3: Semantic search only with role...")
+    # except Exception as e:
+    #     print(f"⚠️ Mechanism 2 (fuzzy) failed with exception: {e}")
+    #     print("🔄 Falling back to Mechanism 3: Semantic search only with role...")
     
     # Third mechanism: Fallback to semantic search only (with role)
     try:

@@ -101,7 +101,6 @@ class MultiRoleDocumentManager:
                             new_files.append(filename)
                             # Update tracking data
                             self.loaded_documents[filename] = file_hash
-                            print(f"✅ New/Modified: {filename} ({len(file_docs)} chunks)")
                     except Exception as e:
                         print(f"❌ Error processing {filename}: {e}")
                 else:
@@ -148,7 +147,6 @@ class MultiRoleDocumentManager:
             # Split documents into section-based chunks
             if docs:
                 full_content = '\n'.join(d.page_content for d in docs)
-                print(f"    📊 Original content length: {len(full_content)} characters")
                 full_doc = Document(page_content=full_content)
                 chunks = self._split_by_sections(full_doc, filename, folder_path)
 
@@ -269,7 +267,6 @@ class MultiRoleDocumentManager:
                 existing_dishes.append(dish_name)
                 with open(dish_file, 'w') as f:
                     json.dump(existing_dishes, f, indent=2)
-                print(f"    🍽️ Added dish: {dish_name}")
         except Exception as e:
             print(f"    ⚠️ Error exporting dish name: {e}")
     

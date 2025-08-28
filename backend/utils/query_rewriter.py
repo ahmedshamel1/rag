@@ -123,7 +123,6 @@ class QueryRewriter:
         print(f"🔄 Chat History Length: {len(chat_history)}")
         
         formatted_history = self._format_chat_history(chat_history)
-        print(f"🔄 Formatted History: {formatted_history}")
 
         fallback = {
             "rewritten_query": question,
@@ -139,11 +138,6 @@ class QueryRewriter:
                 question=question
             )
             
-            # Show the actual text being sent to the LLM
-            for i, message in enumerate(prompt_messages):
-                role = message.__class__.__name__.replace('Message', '').lower()
-                content = message.content if hasattr(message, 'content') else str(message)
-                print(f"🔄 Message {i} ({role}): {content}")
             
             response = self.llm.invoke(prompt_messages)
             print(f"🔄 LLM Response received: {type(response)}")

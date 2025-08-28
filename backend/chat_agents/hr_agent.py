@@ -15,6 +15,7 @@ Author: Saran Kirthic Sivakumar
 Date: April 8, 2025
 """
 import os
+import time
 import hashlib
 import json
 from dotenv import load_dotenv
@@ -170,6 +171,9 @@ def hr_qa(prompt):
         str: The HR agent's generated response based on retrieval and policy.
     """
     try:
+        # Start timing
+        start_time = time.time()
+        
         # Get RAG documents using the dedicated retrieval function
         rag_documents = fetch_hr_documents(hr_retriever, prompt)
         
@@ -180,11 +184,16 @@ def hr_qa(prompt):
         result = hr_chain.invoke({"question": prompt})
         response = result.get("answer", str(result))
         
+        # End timing
+        end_time = time.time()
+        
         # Log the interaction with detailed information
         hr_logger.hr_log_interaction(
             user_query=prompt,
             memory=current_memory,
-            rag_data=rag_documents
+            rag_data=rag_documents,
+            start_time=start_time,
+            end_time=end_time
         )
         
         print(f"✅ HR Agent: Generated response for query: '{prompt[:50]}...'")

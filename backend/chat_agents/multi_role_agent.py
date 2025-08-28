@@ -13,6 +13,7 @@ Author: AI Assistant (updated)
 Date: Current
 """
 import os
+import time
 from dotenv import load_dotenv
 from typing import List, Dict, Any
 from langchain.chains import RetrievalQA
@@ -46,8 +47,8 @@ if OPENROUTER_API_KEY and OPENAI_AVAILABLE:
     llm = ChatOpenAI(
         base_url="https://openrouter.ai/api/v1",
         api_key=OPENROUTER_API_KEY,
-        model="meta-llama/llama-3.1-8b-instruct",
-        temperature=0.2
+        model="meta-llama/llama-4-maverick",
+        temperature=0.1
     )
     print("🌐 Using OpenRouter (llama-3.1-8b) for multi-role agent")
 else:
@@ -82,7 +83,7 @@ default_retriever = vector_store.as_retriever(
 if OPENROUTER_API_KEY and OPENAI_AVAILABLE:
     query_rewriter = create_query_rewriter("meta-llama/llama-3.1-8b-instruct", use_openrouter=True)
 else:
-    query_rewriter = create_query_rewriter("llama3.2:1b")
+    query_rewriter = create_query_rewriter("llama3.1:8b")
 """QueryRewriter: Uses a small LLM to rewrite follow-up questions with conversation context."""
 
 # Create focused baking assistant prompt with workshop tone
@@ -101,7 +102,7 @@ CRITICAL RULES:
   * Number of servings
   * Nutritional information and allergen details
   * Full recipes and specific sections
-- Use ONLY information present in the chunks - never invent or add external knowledge
+- Use ONLY information present in the chunks as it is - never invent or add external knowledge
 - If the question is not recipe/food-related, say: "I can only help with recipe and food-related questions. Please ask about recipes, ingredients, preparation, nutrition, or baking procedures."
 - If the answer is not in the chunks, say: "I don't have that information in the available documents."
 - Keep answers brief but complete - include all relevant details from chunks
@@ -201,6 +202,8 @@ conversation_histories: Dict[str, List[Dict[str, Any]]] = {
 def _get_role_response(user_input: str, role: str, k_multiplier: int = 1) -> str:
     #global conversation_history
     try:
+        # Start timing
+        start_time = time.time()
         
         history = conversation_histories.setdefault(role, [])
         # Rewrite query
@@ -219,7 +222,7 @@ def _get_role_response(user_input: str, role: str, k_multiplier: int = 1) -> str
         rag_documents, mechanism_used = _fetch_documents_with_filters(
             rewritten_query, dish_names, sections, role, vector_store
         )
-        print(f"📊 Retrieved {len(rag_documents)} documents using {mechanism_used} - Dishes: {dish_names}, Sections: {sections}")
+        print(f"📊 Retrieved {len(rag_documents)} documents using {mechanism_used}")
 
         # Select the appropriate LLM chain based on role
         if role == "bakers":
@@ -259,11 +262,16 @@ def _get_role_response(user_input: str, role: str, k_multiplier: int = 1) -> str
         if len(history) > 4:
             conversation_histories[role] = history[-4:]
 
+        # End timing
+        end_time = time.time()
+        
         # Log interaction
         multi_role_logger.log_interaction(
             user_query=f"Query: {user_input} | Rewritten: {rewritten_query} | Dishes: {dish_names} | Sections: {sections}",
             memory=history,
             rag_data=rag_documents,
+            start_time=start_time,
+            end_time=end_time,
             extra_data={
                 "original_query": user_input,
                 "rewritten_query": rewritten_query,

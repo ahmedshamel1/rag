@@ -16,16 +16,39 @@ def _load_dish_names_from_json() -> List[str]:
         return []
 
 
-def _find_fuzzy_dish_match(query: str, dish_names: List[str], threshold: int = 80) -> List[str]:
-    """Find dish names that fuzzy match the query above the threshold."""
+def _find_fuzzy_dish_match(dish_names: List[str], available_dishes: List[str], threshold: int = 80) -> List[str]:
+    """Find the best match for each dish name from the available dishes. Returns one match per dish name."""
     matched_dishes = []
-    query_lower = query.lower()
     
-    for dish in dish_names:
-        # Check if query contains dish name or vice versa
-        if fuzz.partial_ratio(query_lower, dish.lower()) >= threshold:
-            matched_dishes.append(dish)
-        elif fuzz.token_sort_ratio(query_lower, dish.lower()) >= threshold:
-            matched_dishes.append(dish)
+    for dish_name in dish_names:
+        dish_lower = dish_name.lower()
+        best_match = ""
+        best_score = 0
+        
+        print(f"🔍 DEBUG: Looking for best match for: {dish_name}")
+        
+        # Find the best matching dish from available dishes
+        for available_dish in available_dishes:
+            available_lower = available_dish.lower()
+            
+            # Calculate both similarity scores
+            partial_score = fuzz.partial_ratio(dish_lower, available_lower)
+            token_score = fuzz.token_sort_ratio(dish_lower, available_lower)
+            
+            # Use the higher score
+            current_score = max(partial_score, token_score)
+                        
+            # Update best match if this score is higher and meets threshold
+            if current_score >= threshold and current_score > best_score:
+                best_score = current_score
+                best_match = available_dish
+        
+        # Add the best match for this dish name (or empty string if no match found)
+        if best_match:
+            print(f"🎯 Final match for '{dish_name}': '{best_match}' (Score: {best_score})")
+        else:
+            print(f"❌ No match found for '{dish_name}' above threshold {threshold}")
+        
+        matched_dishes.append(best_match)
     
     return matched_dishes

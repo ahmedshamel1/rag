@@ -1,0 +1,153 @@
+
+--- Interaction at 2025-08-28 09:20:43 | ⏱️ Response Time: 2.65 seconds ---
+User Query: time needed for lemon pie
+
+Conversation Memory (last 3 items):
+  1. time needed for lemon pie
+  2. I can only help with HR and workplace-related questions. Please ask about company policies, employee benefits, workplace procedures, or other HR matters.
+
+RAG Retrieved Data (content only):
+  Total chunks retrieved: 7
+  Chunk 1:
+check should confirm the mixture has visibly 
+thickened and coats the back of a spoon 
+without running. 
+Cheesecakes (Baked) 70°C Reaching this temperature ensures that the 
+egg proteins have fully coagulated, which sets 
+the structure of the cheesecake and ensures it 
+is pasteurized and safe to eat. The centre 
+should be just set with a slight wobble. 
+Quiches & Savoury 
+Pies with Egg 
+74°C This ensures that all ingredients, including the 
+egg and dairy filling, are safely cooked through
+
+  Chunk 2:
+items like savoury pastries, pies, or hot dessert sauces may require reheating or hot holding for 
+service. These processes also have critical temperature requirements to ensure safety. 
+Reheating Procedure: 
+● Objective: The goal of reheating is to move the food through the Temperature Danger 
+Zone as quickly as possible to prevent the regrowth of any bacteria. 
+● Critical Limit: When reheating a previously cooked and cooled high-risk food, its core
+
+  Chunk 3:
+moves the food through the most dangerous part of the temperature range where 
+bacteria multiply fastest. 
+● Stage 2: From 20°C down to 5°C or below within the next 4 hours. Once the food is 
+out of the highest-risk temperature range, this second stage ensures it is brought to a 
+safe refrigeration temperature. 
+The total maximum time for the entire cooling process is 6 hours. 
+Approved Rapid Cooling Methods: Simply placing a large, hot pot of custard directly into a
+
+  Chunk 4:
+may have survived the cooking process to germinate and multiply to dangerous levels. Rapid 
+cooling is therefore a critical control point. 
+The Mandatory Two-Stage Cooling Process: This process is a legal requirement and must be 
+strictly followed for cooling all high-risk cooked foods, such as custards, pastry creams, and 
+savoury fillings. 
+● Stage 1: From 60°C down to 20°C within 2 hours. This is the most critical phase, as it
+
+  Chunk 5:
+● Fresh cream, whipped cream, and cream cheese frostings. 
+● Any product containing dairy and eggs. 
+Rules of the Danger Zone: 
+● Cold foods must be held at 5°C or colder. 
+● Hot foods must be held at 60°C or hotter. 
+● The 2-Hour/4-Hour Rule: This rule applies to high-risk foods that need to be at room 
+temperature for preparation or service. 
+○ 0-2 Hours: Food can be used, or returned to the refrigerator (below 5°C) for later 
+use.
+
+  Chunk 6:
+seconds before recording it. 
+● Record the Temperature: All critical temperature checks must be logged in the 
+appropriate record book with the time, date, and initials of the person checking. 
+4.3 Critical Cooking and Baking Temperatures 
+Cooking and baking are the most effective Critical Control Points (CCPs) for eliminating 
+biological hazards. Reaching a specific internal temperature for a sufficient amount of time is the
+
+  Chunk 7:
+periodically to verify the concentration of sanitizing solutions. 
+○ Required Contact Time: The sanitizer needs time to work. The required contact 
+time (e.g., 30-60 seconds) will be stated on the product label and must be 
+adhered to. Wiping the sanitizer off immediately will render it useless. 
+5. Final Rinse (If required): Some chemical sanitizers require a final rinse with clean, 
+potable water to remove any chemical residue that could taint food. Check the product
+
+------------------------------------------------------------
+
+--- Interaction at 2025-08-28 09:21:08 | ⏱️ Response Time: 5.30 seconds ---
+User Query: what are the utensils needed
+
+Conversation Memory (last 3 items):
+  1. I can only help with HR and workplace-related questions. Please ask about company policies, employee benefits, workplace procedures, or other HR matters.
+  2. what are the utensils needed
+  3. I can only provide guidance on HR and workplace-related matters. The question about utensils needed to make a lemon pie is not related to HR policies or procedures. However, I can suggest that you refer to the kitchen's standard operating procedures or recipe guidelines for specific information on utensils required for making a lemon pie.
+
+If you have any HR-related questions or concerns, please feel free to ask, and I'll do my best to assist you.
+
+RAG Retrieved Data (content only):
+  Total chunks retrieved: 7
+  Chunk 1:
+This detailed procedure must be followed methodically for all food contact surfaces 
+(workbenches, tables), equipment (mixers, slicers), and utensils (knives, bowls, spatulas). 
+1. Pre-Clean (Scrape): Before introducing water, remove all loose and large food debris 
+from the surface. Scrape them directly into a designated waste bin. This step makes the 
+washing process more effective and keeps the wash water cleaner for longer.
+
+  Chunk 2:
+cannot be effective without the other. Both are required for all food contact surfaces to ensure a 
+safe environment. 
+● Cleaning: This is the physical process of removing visible matter. It involves using 
+detergent, hot water, and physical friction (scrubbing with a cloth or brush) to remove 
+food debris, dirt, grease, and other residues. Cleaning is what makes a surface look 
+clean. It is the essential first step, but it does not effectively kill pathogenic bacteria or 
+viruses.
+
+  Chunk 3:
+food product frequently with a clean, sanitized utensil to bring the hotter liquid from the 
+centre to the colder edges, which dramatically speeds up the cooling process. 
+3. Ice Wands/Paddles: These are purpose-made, food-safe plastic paddles that are filled 
+with water and frozen. They can be stirred directly into large pots of liquids to cool the 
+product from the inside out, working in conjunction with an ice bath for maximum
+
+  Chunk 4:
+Implementation: 
+● A chart displaying the colour-coding system will be prominently posted in the kitchen. 
+● All staff must be trained on the system and its importance. 
+● Cutting boards and knife handles corresponding to these colours will be used exclusively 
+for their designated food type. 
+● Mixing these items is a serious breach of food safety protocol. For example, a green 
+board used for chopping strawberries must never be used to slice a finished cake.
+
+  Chunk 5:
+● People-to-Food: When unwashed hands transfer pathogens to food after touching a 
+contaminated surface or raw ingredient. 
+● Equipment-to-Food: When contaminated utensils, cutting boards, or surfaces are used 
+for RTE food without being properly cleaned and sanitized. 
+Preventing cross-contamination is a non-negotiable aspect of our daily operations. 
+3.2 Segregation of Raw and Ready-to-Eat (RTE) Foods 
+A physical separation must be maintained between raw materials and RTE products at all
+
+  Chunk 6:
+○ Cosmetics: The use of heavy makeup, perfume, and aftershave is discouraged 
+as strong scents can be absorbed by food products, particularly those with high 
+fat content like butter and cream. 
+● Disposable Gloves: 
+○ Gloves are not a substitute for handwashing. Hands must be washed before 
+putting on gloves and after removing them. 
+○ Gloves must be changed frequently: 
+■ If they become torn or soiled. 
+■ After handling raw ingredients and before touching ready-to-eat food.
+
+  Chunk 7:
+To provide a clear, visual aid in preventing cross-contamination, this kitchen will implement a 
+mandatory colour-coding system for cutting boards, knives, and other transferable equipment. 
+● Green: For fresh fruits and vegetables. 
+● Yellow: For cooked products. 
+● Red: For raw meats (if ever used for specialty savoury items).  
+● White: For bakery and dairy products (e.g., bread, cheese). 
+● Blue: For raw fish (if ever used).  
+Implementation:
+
+------------------------------------------------------------

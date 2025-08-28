@@ -44,7 +44,7 @@ class SimpleLogger:
         else:
             print(f"Log file already exists: {self.log_file_path}")
     
-    def log_interaction(self, user_query, memory, rag_data, extra_data=None):
+    def log_interaction(self, user_query, memory, rag_data, extra_data=None, start_time=None, end_time=None):
         """
         Log a simple interaction including user query, memory, and RAG data.
         
@@ -53,12 +53,20 @@ class SimpleLogger:
             memory (list): Current conversation memory
             rag_data (list): RAG retrieved documents
             extra_data (dict, optional): Additional structured data to log
+            start_time (float, optional): Start time from time.time()
+            end_time (float, optional): End time from time.time()
         """
         try:
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             
+            # Calculate timing if provided
+            timing_info = ""
+            if start_time and end_time:
+                elapsed_time = end_time - start_time
+                timing_info = f" | ⏱️ Response Time: {elapsed_time:.2f} seconds"
+            
             with open(self.log_file_path, 'a', encoding='utf-8') as f:
-                f.write(f"\n--- Interaction at {timestamp} ---\n")
+                f.write(f"\n--- Interaction at {timestamp}{timing_info} ---\n")
                 f.write(f"User Query: {user_query}\n")
                 
                 # Log memory
@@ -152,16 +160,30 @@ class SimpleLogger:
         except Exception as e:
             return f"Error getting summary: {e}"
 
-    def hr_log_interaction(self, user_query, memory, rag_data, extra_data=None):
+    def hr_log_interaction(self, user_query, memory, rag_data, extra_data=None, start_time=None, end_time=None):
         """
         Log a simple interaction including user query, memory, and RAG data,
         but WITHOUT any document metadata (source file, chunk indices, etc.).
+        
+        Args:
+            user_query (str): The user's question
+            memory (list): Current conversation memory
+            rag_data (list): RAG retrieved documents
+            extra_data (dict, optional): Additional structured data to log
+            start_time (float, optional): Start time from time.time()
+            end_time (float, optional): End time from time.time()
         """
         try:
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             
+            # Calculate timing if provided
+            timing_info = ""
+            if start_time and end_time:
+                elapsed_time = end_time - start_time
+                timing_info = f" | ⏱️ Response Time: {elapsed_time:.2f} seconds"
+            
             with open(self.log_file_path, 'a', encoding='utf-8') as f:
-                f.write(f"\n--- Interaction at {timestamp} ---\n")
+                f.write(f"\n--- Interaction at {timestamp}{timing_info} ---\n")
                 f.write(f"User Query: {user_query}\n\n")
                 
                 # Log memory (last 3 items)

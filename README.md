@@ -180,11 +180,17 @@ cp .env.example .env
 
 ### 3. Docker Deployment (Recommended)
 ```bash
-# Start all services
-docker-compose up -d
+# Build backend service
+cd backend
+docker-compose build backend
 
-# View logs
-docker-compose logs -f
+# Build frontend service
+cd frontend
+docker-compose build frontend
+
+# Start all services (from root directory)
+cd ..
+docker-compose up
 
 # Stop services
 docker-compose down
@@ -217,9 +223,6 @@ streamlit run chat_app.py
   - Request body: `{"user_prompt": "your question", "agent": "agent_type"}`
   - Supported agents: `"bakers"`, `"hr"`, `"cofounder"`
 
-### Root Endpoint
-- `GET /` - Welcome message
-
 ### Note
 The API uses a single `/process/` endpoint with an `agent` parameter to route requests to the appropriate agent, rather than separate endpoints for each agent type.
 
@@ -240,6 +243,12 @@ The API uses a single `/process/` endpoint with an `agent` parameter to route re
 - **Response Time**: Query processing latency tracking
 - **Retrieval Accuracy**: Success rates for different retrieval tiers
 - **Document Processing**: Chunking and embedding generation statistics
+
+### Memory Management
+- **Limited Context**: Maintains only the last 4 conversation turns to prevent memory bloat
+- **Small LLM Optimization**: Designed for smaller language models with limited context windows
+- **Scalable Design**: Memory limit can be increased as model parameters increase
+- **Efficient Processing**: Prevents context overflow and maintains consistent response quality
 
 ### Query Rewritter Evaluation
 - **LLM Performance Testing**: Individual script (`llm_eval_query_rewritter.py`) for evaluating different LLMs
