@@ -138,7 +138,6 @@ class QueryRewriter:
                 chat_history=formatted_history,
                 question=question
             )
-            print(f"🔄 Prompt messages: {prompt_messages}")
             
             # Show the actual text being sent to the LLM
             for i, message in enumerate(prompt_messages):

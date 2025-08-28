@@ -44,6 +44,19 @@ def get_backend_response(prompt: str, mode: str):
 # Streamlit UI
 
 st.set_page_config(page_title="Multi-Chatbot", layout="wide")
+
+# Initialize all session state variables
+if "chat_mode_selector" not in st.session_state:
+    st.session_state.chat_mode_selector = "Bakers Agent"
+if "bakers_chat_history" not in st.session_state:
+    st.session_state.bakers_chat_history = [
+        {"role": "assistant", "content": "Hi, I'm the Bakers Agent. I can help with all your baking questions!"}]
+if "hr_chat_history" not in st.session_state:
+    st.session_state.hr_chat_history = [
+        {"role": "assistant", "content": "Greetings! I'm the HR Agent. How can I assist with HR matters?"}]
+if "cofounder_chat_history" not in st.session_state:
+    st.session_state.cofounder_chat_history = [
+        {"role": "assistant", "content": "Hello! I'm the Co-founder Agent. Ready to help with startup strategy!"}]
 st.markdown("""
     <style>
 
@@ -107,16 +120,7 @@ chat_mode = st.sidebar.radio(
     key="chat_mode_selector"
 )
 
-# Initialize chat history for each mode if not present in session state
-if "bakers_chat_history" not in st.session_state:
-    st.session_state.bakers_chat_history = [
-        {"role": "assistant", "content": "Hi, I'm the Bakers Agent. I can help with all your baking questions!"}]
-if "hr_chat_history" not in st.session_state:
-    st.session_state.hr_chat_history = [
-        {"role": "assistant", "content": "Greetings! I'm the HR Agent. How can I assist with HR matters?"}]
-if "cofounder_chat_history" not in st.session_state:
-    st.session_state.cofounder_chat_history = [
-        {"role": "assistant", "content": "Hello! I'm the Co-founder Agent. Ready to help with startup strategy!"}]
+# Chat history is already initialized in session state above
 
 agent_mode = ""
 current_chat_history = ""
@@ -136,6 +140,7 @@ for i, message in enumerate(current_chat_history):
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
+
 if prompt := st.chat_input(f"Ask the '{chat_mode.replace(' Chat', '')}' agent..."):
     current_chat_history.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
@@ -153,9 +158,11 @@ if prompt := st.chat_input(f"Ask the '{chat_mode.replace(' Chat', '')}' agent...
         current_chat_history.append({"role": "assistant", "content": response_text})
 
     # Update the session state with the new chat history
-    if chat_mode == "General Assistant":
-        st.session_state.general_chat_history = current_chat_history
-    elif chat_mode == "AI Specialist":
-        st.session_state.ai_chat_history = current_chat_history
-    elif chat_mode == "Concordia HelpDesk":
-        st.session_state.concordia_chat_history = current_chat_history
+    if chat_mode == "Bakers Agent":
+        st.session_state.bakers_chat_history = current_chat_history
+    elif chat_mode == "HR Agent":
+        st.session_state.hr_chat_history = current_chat_history
+    elif chat_mode == "Co-founder Agent":
+        st.session_state.cofounder_chat_history = current_chat_history
+
+   
