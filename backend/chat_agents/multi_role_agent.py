@@ -102,12 +102,17 @@ CRITICAL RULES:
   * Number of servings
   * Nutritional information and allergen details
   * Full recipes and specific sections
-- Use ONLY information present in the chunks as it is - never invent or add external knowledge
-- If the question is not recipe/food-related, say: "I can only help with recipe and food-related questions. Please ask about recipes, ingredients, preparation, nutrition, or baking procedures."
+- Use ONLY information from the chunks verbatim. 
+- If the answer requires details not present in the chunks, say exactly: 
+- "I don't have that information in the available documents."
+- Do not guess, rephrase, or add utensils/ingredients that are not explicitly listed.- If the question is not recipe/food-related, say: "I can only help with recipe and food-related questions. Please ask about recipes, ingredients, preparation, nutrition, or baking procedures."
 - If the answer is not in the chunks, say: "I don't have that information in the available documents."
 - Keep answers brief but complete - include all relevant details from chunks
 - Use chunk metadata when relevant (dish name, section type, chunk number)
-
+- If the retrieved chunk Type does not match the requested Section/Type 
+- (e.g., the user asked for utensils but the chunk is ingredients), 
+- respond only with: 
+- "I don't have that information in the available documents."
 RESPONSE FORMAT:
 - Be concise and practical
 - Use professional baking terminology and measurements exactly as shown in chunks
@@ -235,21 +240,60 @@ def _get_role_response(user_input: str, role: str, k_multiplier: int = 1) -> str
             role_llm_chain = baking_llm_chain  # default fallback
             print(f"⚠️  Unknown role '{role}', defaulting to BAKING prompt")
         
-        # Temporary retriever
-        original_retriever = role_llm_chain.retriever
+        # Create custom context with only essential metadata and clean content
+        def create_clean_context(docs):
+            """Create clean context with only dish_name, content_type and clean content"""
+            context_parts = []
+            for doc in docs:
+                dish_name = doc.metadata.get('dish_name', 'Unknown')
+                content_type = doc.metadata.get('content_type', 'Unknown')
+                # Clean content by removing emojis and extra metadata
+                content = doc.page_content
+                import re
+                # Remove emoji patterns
+                content = re.sub(r'[📁🍽️📝🔢📋🥚⏰🔧👥📊⚠️🍰]', '', content)
+                # Remove "Source:", "Chunk:", "Section:" lines
+                content = re.sub(r'Source:.*\n?', '', content)
+                content = re.sub(r'Chunk:.*\n?', '', content)
+                content = re.sub(r'Section:.*\n?', '', content)
+                # Clean up extra whitespace
+                content = re.sub(r'\n\s*\n', '\n', content).strip()
+                
+                # Format: Dish: [dish_name] | Type: [content_type] | Content: [clean_content]
+                context_parts.append(f"Dish: {dish_name} | Type: {content_type} | Content: {content}")
+            
+            return "\n\n".join(context_parts)
+        
+        # Create clean context
+        clean_context = create_clean_context(rag_documents)
+        
+        # Print clean context
+        print(f"🧹 CLEAN CONTEXT FOR LLM:")
+        print(clean_context)
+        print("=" * 80)
+        
+        # Direct LLM invocation with custom context
         try:
-            if rag_documents:
-                temp_retriever = vector_store.as_retriever(
-                    search_kwargs={"k": k_multiplier * max(1, len(rag_documents))}
+            # Create the prompt with our clean context
+            if role == "bakers":
+                prompt = baking_assistant_prompt_template.format(
+                    context=clean_context,
+                    question=rewritten_query
                 )
-                role_llm_chain.retriever = temp_retriever
-                result = role_llm_chain.invoke({"query": rewritten_query})
-            else:
-                result = role_llm_chain.invoke({"query": rewritten_query})
-        finally:
-            role_llm_chain.retriever = original_retriever
-
-        response = result.get("result", str(result))
+            else:  # cofounder
+                prompt = cofounder_prompt_template.format(
+                    context=clean_context,
+                    question=rewritten_query
+                )
+            
+            # Invoke LLM directly with the custom prompt
+            result = llm.invoke(prompt)
+            response = result.content if hasattr(result, 'content') else str(result)
+        except Exception as e:
+            print(f"Error in direct LLM invocation: {e}")
+            # Fallback to original chain
+            result = role_llm_chain.invoke({"query": rewritten_query})
+            response = result.get("result", str(result))
 
         # Update history
         #conversation_history.append({"role": "user", "content": user_input})
