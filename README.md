@@ -83,19 +83,17 @@ The data isolation is enforced through **metadata filtering** - each agent can o
 
 ## 🔍 Advanced Retrieval Mechanisms
 
-### Three-Tier Retrieval System (Baker & Co-Founder)
+### Two-Tier Retrieval System (Baker & Co-Founder)
 
-#### Tier 1: Metadata Filtering
-- **Primary Strategy**: Filters by dish names and sections using document metadata
-- **High Precision**: Direct matching for exact queries
-- **Fast Response**: Minimal computational overhead
+#### Meta-data retrieval & Fuzzy matching
+- **Combined Approach**: Integrates metadata filtering and fuzzy matching in a single tier
+- **Smart Filtering**: Uses dish names and sections from document metadata for precise queries
+- **Fuzzy**: Automatically falls back to Fuzzy Wuzzy algorithm for approximate matches
+- **Typo Tolerance**: Handles user input variations and spelling mistakes seamlessly
+- **Confidence Scoring**: Ranks all matches by similarity percentage for optimal results
+- **Efficient Processing**: Single-pass retrieval with intelligent fallback mechanisms
 
-#### Tier 2: Fuzzy Matching
-- **Fallback Strategy**: Uses Fuzzy Wuzzy algorithm for approximate dish name matching
-- **Typo Tolerance**: Handles user input variations and spelling mistakes
-- **Confidence Scoring**: Ranks matches by similarity percentage
-
-#### Tier 3: Embedding Retrieval
+#### Tier 2: Embedding Retrieval
 - **Final Fallback**: Semantic search using vector embeddings
 - **Context Understanding**: Captures meaning beyond exact text matches
 - **Comprehensive Coverage**: Ensures relevant results even with vague queries
@@ -116,7 +114,6 @@ The data isolation is enforced through **metadata filtering** - each agent can o
 
 ### Security Measures
 - **Prompt Templates**: Predefined response patterns for each agent
-- **Input Validation**: Sanitizes user queries to prevent injection attacks
 - **Access Control**: Agent-specific response limitations and guidelines
 
 ---
@@ -241,7 +238,6 @@ The API uses a single `/process/` endpoint with an `agent` parameter to route re
 
 ### Metrics
 - **Response Time**: Query processing latency tracking
-- **Retrieval Accuracy**: Success rates for different retrieval tiers
 - **Document Processing**: Chunking and embedding generation statistics
 
 ### Memory Management
