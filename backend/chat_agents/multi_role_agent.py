@@ -47,7 +47,7 @@ if OPENROUTER_API_KEY and OPENAI_AVAILABLE:
     llm = ChatOpenAI(
         base_url="https://openrouter.ai/api/v1",
         api_key=OPENROUTER_API_KEY,
-        model="meta-llama/llama-4-maverick",
+        model="meta-llama/llama-3.1-8b-instruct",
         temperature=0.1
     )
     print("🌐 Using OpenRouter (llama-3.1-8b) for multi-role agent")
